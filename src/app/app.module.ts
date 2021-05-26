@@ -12,6 +12,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ProductsComponent } from './market/products/products.component';
 import { SingleProductComponent } from './market/single-product/single-product.component';
 import { CartComponent } from './market/cart/cart.component';
+import { MarketComponent } from './composants/market/market.component';
+import { ProductComponent } from './composants/product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CartComponent } from './market/cart/cart.component';
     RegisterComponent,
     ProductsComponent,
     SingleProductComponent,
-    CartComponent
+    CartComponent,
+    MarketComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
