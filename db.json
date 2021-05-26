@@ -1,9 +1,48 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+  "articles": [
+    {
+      "id": 1,
+      "title": "Asics S3",
+      "prix": 102
+    },
+    {
+      "id": 2,
+      "title": "Puma 3000",
+      "prix": 89
+    },
+    {
+      "id": 3,
+      "title": "New Balance 4X",
+      "prix": 136
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Brillant",
+      "articleId": 1
+    },
+    {
+      "id": 2,
+      "body": "Sympa",
+      "articleId": 2
+    }
+  ],
+  "inscrits": [
+    {
+      "id": 1,
+      "username": "rpierlot",
+      "title": "Romain Pierlot"
+    },
+    {
+      "id": 2,
+      "username": "qneyrat",
+      "title": "Quentin Neyrat"
+    },
+    {
+      "id": 3,
+      "username": "Pedro Leblanc",
+      "mail": "pedro@mail.com"
+    }
+  ]
+}
