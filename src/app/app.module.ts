@@ -12,6 +12,7 @@ import { LoginComponent } from './composants/login/login.component';
 import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { ErrorComponent } from './composants/error/error.component';
+import { OrderComponent } from './composants/order/order.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ErrorComponent } from './composants/error/error.component';
     MarketComponent,
     ProductComponent,
     ReservationComponent,
-    ErrorComponent
+    ErrorComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

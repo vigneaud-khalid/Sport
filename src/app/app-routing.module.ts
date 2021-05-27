@@ -9,6 +9,7 @@ import { LoginComponent } from './composants/login/login.component';
 import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { ErrorComponent } from './composants/error/error.component';
+import { OrderComponent } from './composants/order/order.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,8 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     // localhost:4200/cart
     { path: 'cart', component: CartComponent },
+    // localhost:4200/cart
+    { path: 'order', component: OrderComponent },
     // localhost:4200/register
     { path: 'register', component: RegisterComponent },
     // localhost:4200/error

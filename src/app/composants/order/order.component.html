@@ -1,0 +1,116 @@
+<h1 class="text-light text-center my-5">Votre commande</h1>
+
+<h3 class="my-4 py-3 text-light text-center order-section-title-background">Récapitulatif de vos achats</h3>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tbody>
+          <tr class="text-light">
+            <th scope="row">ASICS GEL-NOOSA TRI 13 M</th>
+            <td>139,99€</td>
+            <td>* 3</td>
+            <td class="text-center">419,97€</td>
+          </tr>
+          <tr class="text-light">
+            <th scope="row">ASICS GEL-NOOSA TRI 13 M</th>
+            <td>139,99€</td>
+            <td>* 3</td>
+            <td class="text-center">419,97€</td>
+          </tr>
+          <tr class="text-light">
+            <th scope="row">ASICS GEL-NOOSA TRI 13 M</th>
+            <td>139,99€</td>
+            <td>* 3</td>
+            <td class="text-center">419,97€</td>
+          </tr>
+          <tr class="text-light">
+              <th scope="row" colspan="3" class="text-end">Total sans remise </th>
+              <td scope="row" colspan="2" class="text-center">1259,91€</td>
+          </tr>
+          <tr class="text-info">
+              <th scope="row" colspan="3" class="text-end">Total avec remise </th>
+              <td scope="row" colspan="2" class="text-center">1133,91€</td>
+          </tr>
+          <tr class="text-info">
+            <th scope="row" colspan="3" class="text-end">Montant de la remise </th>
+            <td scope="row" colspan="2" class="text-center">126€</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 class="my-4 py-3 text-light text-center order-section-title-background">Votre adresse de livraison</h3>
+<form class="text-light">
+    <div class="form-group row mb-3">
+        <label for="lastName" class="col-2 col-form-label">Nom</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="firstName" class="col-2 col-form-label">Prénom</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="firstName" name="firstName" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="street" class="col-2 col-form-label">Rue</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="street" name="street" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="city" class="col-2 col-form-label">Ville</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="city" name="city" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="postalCode" class="col-2 col-form-label">Code Postal</label>
+        <div class="col-10">
+            <input type="number" class="form-control" id="postalCode" name="postalCode" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="phone" class="col-2 col-form-label">Téléphone</label>
+        <div class="col-10">
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="remarks" class="col-12 mb-3">Vos remarques à notre attention</label>
+        <div class="col-12 text-center">
+            <textarea id="remarks" name="remarks" rows="5" cols="33"></textarea>
+        </div>
+    </div>
+</form>
+
+<h3 class="my-4 py-3 text-light text-center order-section-title-background">Paiement</h3>
+<form class="text-light">
+    <div class="form-group mb-4 text-center">
+        <img src="../../../assets/img/cards.png" alt="Cards">
+    </div>
+    <div class="form-group mb-3 text-center">
+        <h5>Paiement d'un montant de</h5>
+        <h5 class="text-info">1133,91€</h5>
+    </div>
+    <div class="form-group mb-3">
+        <label for="cardHolder">Titulaire de la carte</label>
+        <input type="text" class="form-control mt-2" id="cardHolder" name="cardHolder" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="cardNumber">Numéro de la carte</label>
+        <input type="number" class="form-control mt-2" id="cardNumber" name="cardNumber" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="cardExpirationDate">Expire fin</label>
+        <input type="text" class="form-control mt-2" id="cardExpirationDate" name="cardExpirationDate" placeholder="MM/AA" required>
+    </div>
+    <div class="form-group mb-3">
+        <label for="cryptogram">Cryptogramme</label>
+        <input type="number" class="form-control mt-2" id="cryptogram" name="cryptogram" placeholder="Nombre composé de 3 chiffres au dos de la carte" required>
+    </div>
+    <div class="form-group text-center">
+        <button type="button" class="btn btn-primary btn-lg my-5 me-5">Annuler</button>    
+        <button type="button" class="btn btn-info btn-lg text-light my-5">&#10003; Valider</button>    
+    </div>
+</form>
