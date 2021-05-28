@@ -15,6 +15,8 @@ import { RegisterComponent } from './composants/register/register.component';
 import { ErrorComponent } from './composants/error/error.component';
 import { OrderComponent } from './composants/order/order.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductDetailsComponent } from './composants/product-details/product-details.component';
+import { ContactUsComponent } from './composants/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProductComponent,
     ReservationComponent,
     ErrorComponent,
-    OrderComponent
+    OrderComponent,
+    ProductDetailsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

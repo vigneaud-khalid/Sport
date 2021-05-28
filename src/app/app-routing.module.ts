@@ -10,6 +10,8 @@ import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { ErrorComponent } from './composants/error/error.component';
 import { OrderComponent } from './composants/order/order.component';
+import { ProductDetailsComponent } from './composants/product-details/product-details.component';
+import { ContactUsComponent } from './composants/contact-us/contact-us.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,10 @@ const routes: Routes = [
     { path: 'market', component: MarketComponent },
     // localhost:4200/product
     { path: 'product', component: ProductComponent },
+    // localhost:4200/product
+    { path: 'product-details', component: ProductDetailsComponent },
+    // localhost:4200/product
+    { path: 'contact-us', component: ContactUsComponent },
     // localhost:4200/reservation
     { path: 'reservation', component: ReservationComponent },
     // localhost:4200/contact
