@@ -27,7 +27,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     // localhost:4200/cart
     { path: 'cart', component: CartComponent },
-    // localhost:4200/cart
+    // localhost:4200/order
     { path: 'order', component: OrderComponent },
     // localhost:4200/register
     { path: 'register', component: RegisterComponent },

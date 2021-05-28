@@ -1,19 +1,34 @@
 {
-  "articles": [
+  "products": [
+    {
+      "id": 0,
+      "url": "../../../assets/img/asics.png",
+      "title": "ASICS GEL-NOOSA TRI 13 M",
+      "description": "Chaussures basses running homme",
+      "size": "44",
+      "reference": "300826",
+      "stock": 0,
+      "price": 139
+    },
     {
       "id": 1,
-      "title": "Asics S3",
-      "prix": 102
+      "url": "../../../assets/img/puma3000.jpg",
+      "title": "Puma 3000",
+      "description": "Baskets homme",
+      "size": "42",
+      "reference": "300962",
+      "stock": 50,
+      "price": 89
     },
     {
       "id": 2,
-      "title": "Puma 3000",
-      "prix": 89
-    },
-    {
-      "id": 3,
+      "url": "../../../assets/img/newbalance.jpg",
       "title": "New Balance 4X",
-      "prix": 136
+      "description": "Baskets homme",
+      "size": "43",
+      "reference": "300394",
+      "stock": 30,
+      "price": 99
     }
   ],
   "comments": [
@@ -28,21 +43,66 @@
       "articleId": 2
     }
   ],
-  "inscrits": [
+  "users": [
     {
       "id": 1,
-      "username": "rpierlot",
-      "title": "Romain Pierlot"
+      "username": "Romain Pierlot",
+      "email": "romain@mail.com",
+      "password": "bestPassw0rd"
     },
     {
       "id": 2,
-      "username": "qneyrat",
-      "title": "Quentin Neyrat"
+      "username": "Quentin Neyrat",
+      "email": "pedrtto@mail.com",
+      "password": "bestPassw0rd"
     },
     {
       "id": 3,
       "username": "Pedro Leblanc",
-      "mail": "pedro@mail.com"
+      "email": "pedro@mail.com",
+      "password": "bestPassw0rd"
+    },
+    {
+      "id": 4,
+      "username": "Pedrrot Leblanc",
+      "email": "pedrtto@mail.com",
+      "password": "bestPassw0rd"
+    },
+    {
+      "email": "marco@mail.com",
+      "password": "$2a$10$uQH7NKDPC/gLna1Na3yzq.hv5liNbAZjVf1F.iZj3tY35ino/H1QC",
+      "username": "Marco Polo",
+      "id": 5
+    },
+    {
+      "email": "marcffo@mail.com",
+      "password": "$2a$10$0OZv46vP3FboGEgFAHkepOxM.X/BtnkDXOXTXca1T/tbZTPgC8x0W",
+      "username": "Marcofff Polo",
+      "id": 6
+    },
+    {
+      "email": "marcffRRRo@mail.com",
+      "password": "$2a$10$PvJYuHVWka38npHHHDSJP.WTSvcnq2yiXGl.nCmit3qjl8/oz71D2",
+      "username": "MarcRRofff Polo",
+      "id": 7
+    },
+    {
+      "email": "maro@mail.com",
+      "password": "$2a$10$UCNGudH9ipy40AmZBzs7Jevw00xUbIS/gBalTpZumpZHMCJ0wIhMi",
+      "username": "Molo",
+      "id": 8
+    },
+    {
+      "email": "marjo@mail.com",
+      "password": "$2a$10$Kd/rSbq4ARaIzHxXTR.BHeaAu5Xh3E6LoWWpBHDqvKfQ7PZO1RDcu",
+      "id": 9
+    },
+    {
+      "email": "marfo@mail.com",
+      "password": "$2a$10$aVnYrRw.qHfHAl/xYjO6buSgZ/dJuF/6ygV66unVFLlwWClb84P6i",
+      "username": "Moflo",
+      "id": 10
     }
   ]
 }
+

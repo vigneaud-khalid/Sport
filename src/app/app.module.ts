@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { MarketComponent } from './composants/market/market.component';
 import { ProductComponent } from './composants/product/product.component';
 import { ReservationComponent } from './composants/reservation/reservation.component';
@@ -13,6 +14,7 @@ import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { ErrorComponent } from './composants/error/error.component';
 import { OrderComponent } from './composants/order/order.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { OrderComponent } from './composants/order/order.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
