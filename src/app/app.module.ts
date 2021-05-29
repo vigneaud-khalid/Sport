@@ -1,39 +1,52 @@
 import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { ProductsComponent } from './market/products/products.component';
-import { SingleProductComponent } from './market/single-product/single-product.component';
-import { CartComponent } from './market/cart/cart.component';
+import { CartComponent } from './composants/cart/cart.component';
+import { ContactComponent } from './composants/contact/contact.component';
+import { HomeComponent } from './composants/home/home.component';
+import { LoginComponent } from './composants/login/login.component';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 import { MarketComponent } from './composants/market/market.component';
 import { ProductComponent } from './composants/product/product.component';
+import { RegisterComponent } from './composants/register/register.component';
+import { ErrorComponent } from './composants/error/error.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdministrationComponent } from './composants/admi/administration/administration.component';
+import { SuppCommentComponent } from './composants/admi/supp-comment/supp-comment.component';
+import { ModifArticleComponent } from './composants/admi/modif-article/modif-article.component';
+import { EditArticleComponent } from './composants/admi/edit-article/edit-article.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
     HomeComponent,
     ContactComponent,
-    LoginComponent,
-    RegisterComponent,
-    ProductsComponent,
-    SingleProductComponent,
+   LoginComponent,
+   RegisterComponent,
     CartComponent,
+    AppComponent,
     MarketComponent,
-    ProductComponent
+    ProductComponent,
+    ErrorComponent,
+    AdministrationComponent,
+    SuppCommentComponent,
+    ModifArticleComponent,
+    EditArticleComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log("App-module");
+  }
+}

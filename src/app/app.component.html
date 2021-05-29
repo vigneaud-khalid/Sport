@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar">
+  <a href="" class="navbar-brand">SportMarket.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -8,11 +10,18 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Accueil</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="register">Inscription</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="administration">Administration</a>
+        </li>
       </ul>
     </div>
-  </div>
 </nav>
-
 <div class="container p-0">
   <router-outlet></router-outlet>
 </div>
