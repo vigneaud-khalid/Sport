@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/interfaces/products';
+import { Products } from 'src/app/interfaces/products';
 import { ProductsService } from 'src/app/shared/products.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProductsService } from 'src/app/shared/products.service';
 })
 export class CartComponent implements OnInit {
 
-  products: Product[]|null = null;
+  products: Products[]|null = null;
 
   constructor(private productsService: ProductsService) { }
 

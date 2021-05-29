@@ -1,5 +1,5 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar">
+
+  <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar">
   <a href="" class="navbar-brand">SportMarket.com</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,10 +14,47 @@
         <li><a class="nav-link item" aria-current="page" routerLink="register" routerLinkActive="active">Inscription</a></li>
         <li><a class="nav-link item" aria-current="page" routerLink="contact" routerLinkActive="active">Contact</a></li>
         <li><a class="nav-link item" aria-current="page" routerLink="administration" routerLinkActive="active">Administration</a></li>
+      </ul>
+    </div>
+</nav>
+<div class="container p-0">
+  <router-outlet></router-outlet>
+</div> -->
 
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar">
+  <a href="" class="navbar-brand">SportMarket.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="register">Inscription</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="administration">Administration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="market">Catalogue</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="cart">Panier</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="contact">Contact</a>
+        </li>
+        
       </ul>
     </div>
 </nav>
 <div class="container p-0">
   <router-outlet></router-outlet>
 </div>
+

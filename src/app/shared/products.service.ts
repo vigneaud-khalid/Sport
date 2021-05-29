@@ -45,18 +45,18 @@ unreachableHost:string= "http://localhost:9000";
         let host= this.reachableHost;
         return this.http.post<Products>(host+"/products/",product);
     }
-    getAllCartProducts():Observable<Product[]> {
+    getAllCartProducts():Observable<Products[]> {
         let host = environment.host;
-        return this.http.get<Product[]>(host + "/products");
+        return this.http.get<Products[]>(host + "/products");
     }
 
-    deleteCartProduct(id: any): Observable<Product[]> {
+    deleteCartProduct(id: any): Observable<Products[]> {
         let host = environment.host;
-        return this.http.delete<Product[]>(host + "/products/" + id + "/");
+        return this.http.delete<Products[]>(host + "/products/" + id + "/");
     }
 
-    updateQuantity(id: number, data: any): Observable<Product[]>{
+    updateQuantity(id: number, data: any): Observable<Products[]>{
         let host = environment.host;
-        return this.http.patch<Product[]>(host + "/products/" + id + "/", data);
+        return this.http.patch<Products[]>(host + "/products/" + id + "/", data);
     }
 }
