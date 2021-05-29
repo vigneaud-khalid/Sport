@@ -3,6 +3,8 @@
     {
       "id": 2,
       "name": "Puma 3000",
+      "description": "Chaussures basses running homme",
+      "reference": "300826",
       "price": 131,
       "quantity": 43,
       "selected": false,
@@ -11,6 +13,8 @@
     },
     {
       "name": "New Balance X6",
+      "description": "Chaussures basses running homme",
+      "reference": "300826",
       "price": 98,
       "quantity": 47,
       "selected": false,
@@ -20,6 +24,8 @@
     },
     {
       "name": "New Balance X3",
+      "description": "Chaussures basses running homme",
+      "reference": "300826",
       "price": 93,
       "quantity": 43,
       "selected": true,
@@ -29,6 +35,8 @@
     },
     {
       "name": "New Balance X7",
+      "description": "Chaussures basses running homme",
+      "reference": "300826",
       "price": 54,
       "quantity": 77,
       "selected": true,
@@ -38,6 +46,8 @@
     },
     {
       "name": "New Balance X3",
+      "description": "Chaussures basses running homme",
+      "reference": "300826",
       "price": 83,
       "quantity": 45,
       "selected": true,

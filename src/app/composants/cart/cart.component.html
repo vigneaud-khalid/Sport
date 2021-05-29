@@ -1,1 +1,36 @@
-<p>cart works!</p>
+<h1 class="text-light text-center my-5">Mon panier</h1>
+
+<div class="card-group" *ngIf="products">
+    <div *ngFor="let product of products" class="card bg-transparent" attr.id="{{product.id}}">
+        <img class="card-img-top" src="{{product.url}}" alt="Card image cap">
+        <div class="card-body">
+            <div class="card-title text-light">
+                <h5 class="d-inline">{{product.title}}</h5>
+                <button type="button" class="btn ms-4" aria-label="Close" (click)="onDeleteProduct(product.id)"><i class="fa fa-trash"></i></button>
+            </div>
+            <p class="card-text text-light">{{product.description}}</p>
+            <p class="card-text text-light">{{product.size}}</p>
+            <p class="card-text text-light">{{product.reference}}</p>
+            <p *ngIf="product.stock" class="card-text text-info">En stock</p>
+            <p *ngIf="!product.stock" class="card-text text-warning">Indisponible</p>
+            <p class="card-text text-light text-end">Prix unitaire</p>
+            <p class="card-text text-light text-end">{{product.price}}€</p>
+            <p class="card-text text-light text-center">Quantité</p>
+            <form id='myform' class="text-center" method='POST' action='#'>
+                <input type='button' value='-' class='bg-info text-light' field='quantity' (click)="qtyminus(product.id, product.quantity)"/>
+                <input type='text' name='quantity' value='{{product.quantity}}' class='qty text-center w-25' />
+                <input type='button' value='+' class='bg-info text-light' field='quantity' (click)="qtyplus(product.id, product.quantity)"/>
+            </form>            
+            <p class="card-text text-light text-end mt-5">Total</p>
+            <p class="card-text text-info text-end ">Avec notre remise immédiate de 10%</p>
+            <p *ngIf="product.price && product.quantity" class="card-text text-info text-end ">{{0.9 * (product.price * product.quantity) | number:'1.0-1'}}€</p>
+            <p class="card-text text-light text-end ">Au lieu de</p>
+            <p *ngIf="product.price && product.quantity" class="card-text text-light text-end ">{{product.price * product.quantity}}€</p>
+        </div>
+    </div> 
+</div>
+
+<div class="form-group text-end">
+    <a href="market" class="btn btn-success btn-lg my-5 me-5 text-light" role="button">Reprendre mes achats</a>
+    <a href="purchases" class="btn btn-info btn-lg my-5 me-5" role="button">Commander ></a>
+</div>
