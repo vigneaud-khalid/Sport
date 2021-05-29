@@ -1,6 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 .main-background {
-    background-color: #4C3C63;
+    background-color: #8164aa;
+}
+.brand {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.logo {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    color: #fff;
+}
+.titleAD {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
 }
 
 .order-section-title-background {

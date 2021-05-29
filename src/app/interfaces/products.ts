@@ -1,11 +1,12 @@
-export interface Product {
+
+export interface Products {
     id?: number;
-    url?: string;
-    title?: string;
+    name?: string;
     description?: string;
-    size?: string;
-    reference?: string;
-    stock?: number;
     price?: number;
-    quantity?: number;
+    category?: number
+    quantity:number;
+    image?: string;
+    selected:boolean;
+    available:boolean;
 }
