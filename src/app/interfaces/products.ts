@@ -7,4 +7,5 @@ export interface Product {
     reference?: string;
     stock?: number;
     price?: number;
+    quantity?: number;
 }

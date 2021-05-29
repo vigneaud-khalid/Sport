@@ -9,7 +9,8 @@ import { LoginComponent } from './composants/login/login.component';
 import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { ErrorComponent } from './composants/error/error.component';
-import { OrderComponent } from './composants/order/order.component';
+import { PurchasesComponent } from './composants/purchases/purchases.component';
+import { DeliveryComponent } from './composants/delivery/delivery.component';
 
 
 const routes: Routes = [
@@ -27,8 +28,10 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     // localhost:4200/cart
     { path: 'cart', component: CartComponent },
-    // localhost:4200/order
-    { path: 'order', component: OrderComponent },
+    // localhost:4200/purchases
+    { path: 'purchases', component: PurchasesComponent },
+    // localhost:4200/delivery
+    { path: 'delivery', component: DeliveryComponent },
     // localhost:4200/register
     { path: 'register', component: RegisterComponent },
     // localhost:4200/error

@@ -8,7 +8,8 @@
       "size": "44",
       "reference": "300826",
       "stock": 0,
-      "price": 139
+      "price": 139,
+      "quantity": 6
     },
     {
       "id": 1,
@@ -18,7 +19,8 @@
       "size": "42",
       "reference": "300962",
       "stock": 50,
-      "price": 89
+      "price": 89,
+      "quantity": 1
     },
     {
       "id": 2,
@@ -28,7 +30,8 @@
       "size": "43",
       "reference": "300394",
       "stock": 30,
-      "price": 99
+      "price": 99,
+      "quantity": 2
     }
   ],
   "comments": [
@@ -105,4 +108,3 @@
     }
   ]
 }
-

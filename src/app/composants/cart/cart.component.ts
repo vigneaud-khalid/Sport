@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/interfaces/products';
 import { ProductsService } from 'src/app/shared/products.service';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-cart',
@@ -10,8 +9,6 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class CartComponent implements OnInit {
 
-  size?: number;
-  qty: any[] = [];
   products: Product[]|null = null;
 
   constructor(private productsService: ProductsService) { }
@@ -24,10 +21,6 @@ export class CartComponent implements OnInit {
     this.productsService.getAllProducts().subscribe(data => {
       this.products = data;
       console.log(this.products);
-      this.size = data.length;
-      for (let i=0; i < this.size; i++) {
-        this.qty.push(1);
-      }
     });
   }
 
@@ -38,11 +31,21 @@ export class CartComponent implements OnInit {
     })
   }
 
-  qtyplus(i: any) {
-    return this.qty[i] = this.qty[i] + 1;
+  qtyplus(id: any, quantity: any) {
+    quantity = quantity + 1;
+    console.log(quantity);
+    this.productsService.updateQuantity(id, {"quantity": quantity}).subscribe(data => {
+      console.log(this.products);
+    });
+    this.loadProducts();
   }
 
-  qtyminus(i: any) {
-    return this.qty[i] > 1 ? this.qty[i] = this.qty[i] - 1 : this.qty[i]; 
+  qtyminus(id: any, quantity: any) {
+    if (quantity > 1) quantity = quantity - 1;
+    console.log(quantity);
+    this.productsService.updateQuantity(id, {"quantity": quantity}).subscribe(data => {
+      console.log(this.products);
+    });
+    this.loadProducts();
   }
 }

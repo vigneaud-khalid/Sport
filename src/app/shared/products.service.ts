@@ -19,4 +19,9 @@ export class ProductsService {
         let host = environment.host;
         return this.http.delete<Product[]>(host + "/products/" + id + "/");
     }
+
+    updateQuantity(id: number, data: any): Observable<Product[]>{
+        let host = environment.host;
+        return this.http.patch<Product[]>(host + "/products/" + id + "/", data);
+    }
 }

@@ -1,0 +1,52 @@
+<h1 class="text-light text-center my-5">Votre commande</h1>
+
+<h3 class="my-4 py-3 text-light text-center order-section-title-background">Votre adresse de livraison</h3>
+<form class="text-light">
+    <div class="form-group row mb-3">
+        <label for="lastName" class="col-2 col-form-label">Nom</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="firstName" class="col-2 col-form-label">Prénom</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="firstName" name="firstName" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="street" class="col-2 col-form-label">Rue</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="street" name="street" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="city" class="col-2 col-form-label">Ville</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="city" name="city" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="postalCode" class="col-2 col-form-label">Code Postal</label>
+        <div class="col-10">
+            <input type="number" class="form-control" id="postalCode" name="postalCode" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="phone" class="col-2 col-form-label">Téléphone</label>
+        <div class="col-10">
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+    </div>
+    <div class="form-group row mb-3">
+        <label for="remarks" class="col-12 mb-3">Vos remarques à notre attention</label>
+        <div class="col-12 text-center">
+            <textarea id="remarks" name="remarks" rows="5" cols="33"></textarea>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <a href="market" class="btn btn-success btn-lg my-5 me-5 text-light" role="button">Reprendre mes achats</a>
+        <a href="cart" class="btn btn-primary btn-lg my-5 me-5" role="button">Retour au panier</a>
+        <a href="delivery" class="btn btn-info btn-lg my-5 me-5 text-light" role="button">&#10003; Poursuivre la commande</a> 
+    </div>
+</form>

@@ -13,8 +13,8 @@ import { LoginComponent } from './composants/login/login.component';
 import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { ErrorComponent } from './composants/error/error.component';
-import { OrderComponent } from './composants/order/order.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PurchasesComponent } from './composants/purchases/purchases.component';
+import { DeliveryComponent } from './composants/delivery/delivery.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +28,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProductComponent,
     ReservationComponent,
     ErrorComponent,
-    OrderComponent
+    PurchasesComponent,
+    DeliveryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FontAwesomeModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

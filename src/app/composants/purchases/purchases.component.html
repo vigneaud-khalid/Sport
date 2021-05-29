@@ -1,0 +1,44 @@
+<h1 class="text-light text-center my-5">Votre commande</h1>
+
+<h3 class="my-4 py-3 text-light text-center order-section-title-background">Récapitulatif de vos achats</h3>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tbody>
+            <tr *ngFor="let product of products" class="text-light">
+                <th scope="row">{{product.title}}</th>
+                <td>{{product.price}}€</td>
+                <td>* {{product.quantity}}</td>
+                <td *ngIf="product.price && product.quantity" class="text-center">{{product.price * product.quantity}}€</td>
+            </tr>
+          <tr class="text-light">
+              <th scope="row" colspan="3" class="text-end">Total sans remise </th>
+              <td scope="row" colspan="2" class="text-center">{{totalPrice}}€</td>
+          </tr>
+          <tr *ngIf="totalPrice >= 1000" class="text-info">
+            <th scope="row" colspan="3" class="text-end">Frais de port </th>
+            <td scope="row" colspan="2" class="text-center">Offerts</td>
+          </tr>
+          <tr *ngIf="1000 > totalPrice" class="text-warning">
+            <th scope="row" colspan="3" class="text-end">Frais de port (offerts à partir de 1000€ d'achats)</th>
+            <td scope="row" colspan="2" class="text-center">6.99€</td>
+          </tr>
+          <tr class="text-info">
+              <th scope="row" colspan="3" class="text-end">Total avec remise et frais de port</th>
+              <td *ngIf="totalPrice >= 1000" scope="row" colspan="2" class="text-center">{{0.9 * totalPrice | number:'1.0-1'}}€</td>
+              <td *ngIf="1000 > totalPrice" scope="row" colspan="2" class="text-center">{{(0.9 * totalPrice) + 6.99 | number:'1.0-2'}}€</td>
+          </tr>
+          <tr class="text-info">
+            <th scope="row" colspan="3" class="text-end">Montant de la remise </th>
+            <td scope="row" colspan="2" class="text-center">{{0.1 * totalPrice | number:'1.0-1'}}€</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+
+<form>
+    <div class="form-group text-center">
+        <a href="market" class="btn btn-success btn-lg my-5 me-5 text-light" role="button">Reprendre mes achats</a>
+        <a href="cart" class="btn btn-primary btn-lg my-5 me-5" role="button">Retour au panier</a>
+        <a href="delivery" class="btn btn-info btn-lg my-5 me-5 text-light" role="button">&#10003; Poursuivre la commande</a> 
+    </div>
+</form>
