@@ -7,17 +7,14 @@ import { environment } from "src/environments/environment";
   providedIn: 'root'
 })
 
-export class CartService {
+export class DeliveriesService {
 
   constructor(private http:HttpClient) { }
 
-  getAllCartProducts():Observable<any> {
+  postDeliveryAddress(data: any):Observable<any> {
     let host = environment.host;
-    return this.http.get<any>(host + "/users/1");
-  }
-
-  updateCartQuantity(data: any): Observable<any>{
-      let host = environment.host;
-      return this.http.patch<any>(host + "/users/1", {"cart": data});
+    return this.http.patch<any>(host + "/users/1", {
+      "delivery": [data]
+    });
   }
 }

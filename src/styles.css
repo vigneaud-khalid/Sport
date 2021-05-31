@@ -15,13 +15,15 @@
 h1 {
     color: #fff;
 }
+.order-title {
+    margin-top: 5rem;
+}
 .titleAD {
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 4rem;
 
 }
-
 .order-section-title-background {
     background-color: #49155E;
 }

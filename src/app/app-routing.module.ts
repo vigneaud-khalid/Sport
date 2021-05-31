@@ -18,6 +18,7 @@ import { CartComponent } from './composants/cart/cart.component';
 import { ErrorComponent } from './composants/error/error.component';
 import { PurchasesComponent } from './composants/purchases/purchases.component';
 import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { PaymentComponent } from './composants/payment/payment.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,8 @@ const routes: Routes = [
     { path: 'purchases', component: PurchasesComponent },
     // localhost:4200/delivery
     { path: 'delivery', component: DeliveryComponent },
+    // localhost:4200/delivery
+    { path: 'payment', component: PaymentComponent },
   
     // localhost:4200/error
     { path: 'error', component: ErrorComponent },

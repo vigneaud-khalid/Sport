@@ -6,18 +6,14 @@ import { environment } from "src/environments/environment";
 @Injectable({
   providedIn: 'root'
 })
-
-export class CartService {
+export class PaymentService {
 
   constructor(private http:HttpClient) { }
 
-  getAllCartProducts():Observable<any> {
+  postPaymentData(data: any):Observable<any> {
     let host = environment.host;
-    return this.http.get<any>(host + "/users/1");
-  }
-
-  updateCartQuantity(data: any): Observable<any>{
-      let host = environment.host;
-      return this.http.patch<any>(host + "/users/1", {"cart": data});
+    return this.http.patch<any>(host + "/users/1", {
+      "payment": [data]
+    });
   }
 }
