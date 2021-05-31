@@ -38,7 +38,7 @@
       "description": "Chaussures basses running homme",
       "reference": "300826",
       "price": 54,
-      "quantity": 77,
+      "quantity": 80,
       "selected": true,
       "available": true,
       "image": "5.jpg",
@@ -303,6 +303,14 @@
       "firstname": "Tuitch ",
       "lastname": " Liimoin",
       "id": 32
+    },
+    {
+      "email": "John.doe@hotmail.fr",
+      "password": "$2a$10$TJDMhZWcrl8B9Gm84UBvMOKhW2cnLO8qX77Pe.bZd6yzK8eW8eEzy",
+      "firstname": "Emmanuel",
+      "lastname": "Doe",
+      "role": "user",
+      "id": 33
     }
   ]
 }
