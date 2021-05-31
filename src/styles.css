@@ -5,7 +5,7 @@
 .brand {
     text-align: center;
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 .logo {
     width: 2rem;
@@ -14,15 +14,19 @@
 }
 h1 {
     color: #fff;
+    font-variant: small-caps;
 }
 .order-title {
     margin-top: 5rem;
 }
 .titleAD {
     text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+.AD-controlFields{
+    color: red;
+    font-weight: bold;
 }
 .order-section-title-background {
     background-color: #49155E;

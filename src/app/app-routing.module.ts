@@ -16,8 +16,10 @@ import { CartComponent } from './composants/cart/cart.component';
 import { ErrorComponent } from './composants/error/error.component';
 import { PurchasesComponent } from './composants/purchases/purchases.component';
 import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { NewArticleComponent } from './composants/admi/new-article/new-article.component';
 import { PaymentComponent } from './composants/payment/payment.component';
-
+import { ContactUsComponent } from './composants/contact-us/contact-us.component';
+import { ProductDetailsComponent } from './composants/product-details/product-details.component';
 
 const routes: Routes = [
     // localhost:4200/
@@ -30,8 +32,14 @@ const routes: Routes = [
     { path: 'supp-comment', component: SuppCommentComponent, canActivate: [AdminGuard] },
     { path: 'modif-article', component: ModifArticleComponent, canActivate: [AdminGuard] },
     { path: 'edit-article', component: EditArticleComponent, canActivate: [AdminGuard] },
+    { path: 'edit-article/:id', component: EditArticleComponent, canActivate: [AdminGuard] },
+    { path: 'new-article', component: NewArticleComponent, canActivate: [AdminGuard] },
     // localhost:4200/product
     { path: 'product', component: ProductComponent },
+    // localhost:4200/product
+    { path: 'product-details', component: ProductDetailsComponent },
+    // localhost:4200/product
+    { path: 'contact-us', component: ContactUsComponent },
     // localhost:4200/reservation
     { path: 'reservation', component: ReservationComponent },
     // localhost:4200/contact

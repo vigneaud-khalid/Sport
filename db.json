@@ -1,59 +1,108 @@
 {
   "products": [
     {
+      "name": "Puma 3001",
+      "description": "Sport men running shoes",
+      "reference": "302952",
+      "category": "ride",
+      "price": "132",
+      "quantity": "46",
+      "selected": true,
+      "available": true,
+      "image": "1.jpg",
+      "id": 1
+    },
+    {
       "id": 2,
-      "name": "Puma 3000",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
+      "name": "Puma 3001",
+      "description": "Casual running shoes",
+      "reference": "300953",
+      "category": "cross",
       "price": 131,
-      "quantity": 38,
-      "selected": false,
+      "quantity": "37",
+      "selected": true,
       "available": true,
       "image": "2.jpg"
     },
     {
-      "name": "New Balance X6",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
+      "id": 3,
+      "name": "New Balance 4X",
+      "description": "Professional running shoes",
+      "reference": "300732",
+      "category": "multi",
       "price": 98,
-      "quantity": 47,
+      "quantity": 54,
+      "selected": true,
+      "available": true,
+      "image": "3.jpg"
+    },
+    {
+      "name": "New Balance 3X",
+      "description": "High quality sport running shoes",
+      "reference": "301546",
+      "category": "cross",
+      "quantity": 43,
       "selected": false,
       "available": true,
-      "image": "3.jpg",
-      "id": 3
+      "price": 139
     },
     {
-      "name": "New Balance X3",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 93,
-      "quantity": 43,
-      "selected": true,
+      "name": "New Balance 7X",
+      "description": "Sport men running shoes",
+      "reference": "31593",
+      "category": "ride",
+      "quantity": "78",
+      "selected": false,
       "available": true,
-      "image": "4.jpg",
-      "id": 4
+      "price": 89
     },
     {
-      "name": "New Balance X7",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 54,
-      "quantity": 77,
-      "selected": true,
-      "available": true,
-      "image": "5.jpg",
-      "id": 5
-    },
-    {
-      "name": "New Balance X3",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 83,
-      "quantity": 45,
-      "selected": true,
+      "name": "Nike Air Cold",
+      "description": "High quality sport running shoes",
+      "reference": "301576",
+      "category": "running",
+      "price": "135",
+      "quantity": "78",
+      "selected": false,
       "available": true,
       "image": "6.jpg",
       "id": 6
+    },
+    {
+      "name": "Puma 3HPI",
+      "description": "Professional running shoes",
+      "reference": "300952",
+      "category": "ride",
+      "price": "89",
+      "quantity": "34",
+      "selected": false,
+      "available": true,
+      "image": "7.jpg",
+      "id": 7
+    },
+    {
+      "name": "Puma 3002",
+      "description": "Professional running shoes",
+      "reference": "301546",
+      "category": "ride",
+      "price": "34",
+      "quantity": "56",
+      "selected": false,
+      "available": true,
+      "image": "8.jpg",
+      "id": 8
+    },
+    {
+      "name": "Asics High",
+      "description": "Sport men running shoes for mountains and trails",
+      "reference": "31544",
+      "category": "ride",
+      "price": 114,
+      "quantity": "7",
+      "selected": true,
+      "available": true,
+      "image": "13.jpg",
+      "id": 13
     }
   ],
   "comments": [
@@ -333,6 +382,38 @@
       "firstname": "Tuitch ",
       "lastname": " Liimoin",
       "id": 32
+    },
+    {
+      "email": "pierremou@qui.mousse",
+      "password": "$2a$10$/FsgqMRMVwxXZ5G7U1Z9uu9nIUb4blrz1Wbl7havjWIVlXSobezPO",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 33
+    },
+    {
+      "email": "pierremo@qui.mousse",
+      "password": "$2a$10$tE9P2DKrCKGbualgbmNtYeR0oXFYizqYduoRrXgBEckWs5LuxReM6",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 34
+    },
+    {
+      "email": "pierremoul@qui.mousse",
+      "password": "$2a$10$UCUG/0GTeb.Q.2N/fqbUwuZ8/4JfRK76uszp4OIrkW8ORUDgYhjzi",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 35
+    },
+    {
+      "email": "pierre8@gmail.com",
+      "password": "$2a$10$kXu7ayvOAFjysnyRsawnq.Otz9oSTu1gFMFFK5xSVkBPuf2um8yVq",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 36
     }
   ]
 }

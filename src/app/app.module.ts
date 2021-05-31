@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './composants/contact/contact.component';
 import { HomeComponent } from './composants/home/home.component';
 import { AuthInterceptor } from './helpers/auth.interceptor';
-import { ErrorComponent } from './composants/error/error.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdministrationComponent } from './composants/admi/administration/administration.component';
@@ -19,6 +18,7 @@ import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { PurchasesComponent } from './composants/purchases/purchases.component';
 import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { NewArticleComponent } from './composants/admi/new-article/new-article.component';
 import { PaymentComponent } from './composants/payment/payment.component';
 
 @NgModule({
@@ -35,9 +35,9 @@ import { PaymentComponent } from './composants/payment/payment.component';
     ModifArticleComponent,
     EditArticleComponent,
     ReservationComponent,
-    ErrorComponent,
     PurchasesComponent,
     DeliveryComponent,
+    NewArticleComponent,
     PaymentComponent
 
   ],

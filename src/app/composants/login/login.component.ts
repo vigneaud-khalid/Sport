@@ -11,8 +11,8 @@ import { TokenStorageService } from 'src/app/shared/token-storage.service';
 export class LoginComponent implements OnInit {
 
   form: any = {
-    username: null,
-    password: null
+    //username: null,
+    //password: null
   };
 
   isLoggedIn = false;
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
         
         this.isLoggedIn = true;
         this.isLoginFailed = false;
+        alert("You are successfully logged in !");
         this.router.navigateByUrl('/home');
       },
       err => {
