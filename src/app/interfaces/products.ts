@@ -5,9 +5,11 @@ export interface Products {
     name?: string;
     description?: string;
     reference?: string;
-    quantity?: number;
-    price?: number;
     category?: number;
-    selected?: boolean;
-    available?: boolean;
+    price?: number;
+    quantity?:number;
+    selected?:boolean;
+    available?:boolean;
+
+    
 }

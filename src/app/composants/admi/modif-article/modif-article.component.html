@@ -6,6 +6,8 @@
 
 <div class="titleAD">
     <h1>Administrateur</h1>
+    <h2>Product Management</h2>
+
 </div>
 
 <ul class="navbar navbar-nav ml-auto">
@@ -20,19 +22,16 @@
 </ul>
 
 
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
+<nav class="navbar navbar-expand-sm ">
     <ul class="navbar navbar-nav">
         <li>
-            <button (click)="onGetAllProducts()" class="btn-dark btn-outline-info m-2">All</button><br>
-        </li>
-        <li>
-            <button (click)="onGetSelectedProducts()" class="btn-dark btn-outline-info m-2">Selected</button><br>
-        </li>
-        <li>
-            <button (click)="onGetAvailableProducts()" class="btn-dark btn-outline-info m-2">Available</button>
-        </li>
-        <li>
-            <button (click)="onNewProduct()" class="btn-dark btn-outline-info m-2">New</button>
+            <button (click)="onGetAllProducts()" class="btn-dark btn-outline-info m-2">All<br>Products</button>
+        
+            <button (click)="onGetSelectedProducts()" class="btn-dark btn-outline-info m-1">Selected<br>Products</button>
+        
+            <button (click)="onGetAvailableProducts()" class="btn-dark btn-outline-info m-1">Available<br>Products</button>
+        
+            <button (click)="onNewProduct()" class="btn-dark btn-outline-info m-2">New<br>Product</button>
         </li>
     </ul>
     
@@ -47,38 +46,44 @@
         <ng-container *ngSwitchCase="DataStateEnum.LOADED">
             <table class="table">
                 <tr>
-                    <th>ID</th>
+                    <th>id</th>
+                    <th></th>
                     <th>Name</th>
                     <th>Price</th>
-                    <th>Qu_ity</th>
-                    <th>Available</th>
+                    <th>Qty</th>
+                    <th>Avai<br>lable</th>
+                    <th></th>
+                    <th></th>
                     <th>Selected</th>
 
-                    <th></th>
                 </tr>
                 <tr *ngFor="let p of result.data">
                     <td>{{p.id}}</td>
+                    <td><img src="../../../../assets/img/{{p.image}}" alt="photo"width="60px" height="45px"></td> 
+                    <!-- <td><img src="../../../../assets/img/{{p.id}}.jpg" alt="photo"width="37px" height="29px"></td>  -->
+                    <!-- 18X13 -->
                     <td>{{p.name}}</td>
-                    <td>{{p.price}}</td>
+                    <td>{{p.price}}$</td>
                     <td>{{p.quantity}}</td>
                     <td>{{p.available}}</td>
+                    <td>
+                        <button class="btn btn-dark" (click)="productEdit(p.id)">
+                            <!-- <span class="fas fa-arrow-alt-circle-up"></span> -->
+                            <span class="fas fa-save"></span>
+                            <!-- <i class="fas fa-save"></i> -->
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" (click)="productDelete(p)">
+                            <span class="fa fa-trash-o"></span>
+                        </button>
+                    </td>
                     <td>
                         <button (click)="onSelect(p)" [ngClass]="p.selected?'btn-success':'btn-danger'"
                             class="btn-modif btn-xm  ">
                             <!-- <button (click)="onSelect(p)"   [ngClass]="p.selected?'btn-success':'btn-danger'" > -->
-                            <span *ngIf="p.selected">Unselected</span>
-                            <span *ngIf="!p.selected">Selected</span>
-                        </button>
-                    </td>
-                    <td>
-                        <button class="btn btn-dark" (click)="onEdit(p)">
-                            <span class="fas fa-arrow-alt-circle-up"></span>
-                        </button>
-                    </td>
-                   
-                    <td>
-                        <button class="btn btn-primary" (click)="onDelete(p)">
-                            <span class="fa fa-trash-o"></span>
+                            <span *ngIf="p.selected">un<br>selected</span>
+                            <span *ngIf="!p.selected">selected</span>
                         </button>
                     </td>
                 </tr>

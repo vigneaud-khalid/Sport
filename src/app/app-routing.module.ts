@@ -16,9 +16,12 @@ import { ReservationComponent } from './composants/reservation/reservation.compo
 import { ContactComponent } from './composants/contact/contact.component';
 import { CartComponent } from './composants/cart/cart.component';
 import { ErrorComponent } from './composants/error/error.component';
-import { ProductDetailsComponent } from './composants/product-details/product-details.component';
+import { PurchasesComponent } from './composants/purchases/purchases.component';
+import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { NewArticleComponent } from './composants/admi/new-article/new-article.component';
+import { PaymentComponent } from './composants/payment/payment.component';
 import { ContactUsComponent } from './composants/contact-us/contact-us.component';
-
+import { ProductDetailsComponent } from './composants/product-details/product-details.component';
 
 const routes: Routes = [
     // localhost:4200/
@@ -29,7 +32,8 @@ const routes: Routes = [
     { path: 'administration', component: AdministrationComponent, canActivate: [AdminGuard] },
     { path: 'supp-comment', component: SuppCommentComponent, canActivate: [AdminGuard] },
     { path: 'modif-article', component: ModifArticleComponent, canActivate: [AdminGuard] },
-    { path: 'edit-article', component: EditArticleComponent, canActivate: [AdminGuard] },
+    { path: 'edit-article/:id', component: EditArticleComponent, canActivate: [AdminGuard] },
+    { path: 'new-article', component: NewArticleComponent, canActivate: [AdminGuard] },
    
 
   
@@ -48,7 +52,12 @@ const routes: Routes = [
     { path: 'contact', component: ContactComponent },
  // localhost:4200/cart
     { path: 'cart', component: CartComponent },
-    
+    // localhost:4200/purchases
+    { path: 'purchases', component: PurchasesComponent },
+    // localhost:4200/delivery
+    { path: 'delivery', component: DeliveryComponent },
+    // localhost:4200/delivery
+    { path: 'payment', component: PaymentComponent },
   
     // localhost:4200/error
     { path: 'error', component: ErrorComponent },

@@ -1,38 +1,36 @@
-<h1 class="text-light text-center my-5">Mon panier</h1>
+<h1 class="order-title text-light text-center mb-5">Mon panier</h1>
 
-<div class="card-group" *ngIf="products">
-    <div *ngFor="let product of products; let i = index" class="card bg-transparent" attr.id="{{product.id}}">
-        <img class="card-img-top" src="./../../../assets/img/{{product.image}}" alt="Card image cap">
+<div class="card-group" *ngIf="cartProducts">
+    <div *ngFor="let cartProduct of cartProducts; let i = index;" class="card bg-transparent" attr.id="{{cartProduct.id}}">
+        <img class="card-img-top" src="{{url + cartProduct.image}}" alt="Card image cap">
         <div class="card-body">
             <div class="card-title text-light">
-                <h5 class="d-inline">{{product.name}}</h5>
-                <button type="button" class="btn-close ms-4" aria-label="Close" (click)="onDeleteProduct(product.id)">
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                </button>
+                <h5 class="d-inline">{{cartProduct.name}}</h5>
+                <button type="button" class="btn ms-4" aria-label="Close" (click)="onDeleteCartProduct(cartProduct.id)"><i class="fa fa-trash"></i></button>
             </div>
-            <p class="card-text text-light">{{product.description}}</p>
-            <p class="card-text text-light">{{product.category}}</p>
-            <p class="card-text text-light">{{product.reference}}</p>
-            <p *ngIf="product.quantity" class="card-text text-info">En stock</p>
-            <p *ngIf="!product.quantity" class="card-text text-warning">Indisponible</p>
+            <p class="card-text text-light">{{cartProduct.description}}</p>
+            <p class="card-text text-light">{{cartProduct.size}}</p>
+            <p class="card-text text-light">{{cartProduct.reference}}</p>
+            <p *ngIf="cartProduct.quantity" class="card-text text-info">En stock</p>
+            <p *ngIf="!cartProduct.quantity" class="card-text text-warning">Indisponible</p>
             <p class="card-text text-light text-end">Prix unitaire</p>
-            <p class="card-text text-light text-end">{{product.price}}€</p>
+            <p class="card-text text-light text-end">{{cartProduct.price}}€</p>
             <p class="card-text text-light text-center">Quantité</p>
-            <form id='myform' class="text-center" method='POST' action='#'>
-                <input type='button' value='-' class='bg-info text-light' field='quantity' (click)="qtyminus(product.id, product.quantity)"/>
-                <input type='text' name='quantity' value='{{product.quantity}}' class='qty text-center w-25' />
-                <input type='button' value='+' class='bg-info text-light' field='quantity' (click)="qtyplus(product.id, product.quantity)"/>
+            <form id='myform' class="text-center">
+                <input type='button' value='-' class='bg-info text-light' field='quantity' (click)="qtyminus(i, cartProduct.cartQuantity)"/>
+                <input type='text' name='quantity' value='{{cartProduct.cartQuantity}}' class='qty text-center w-25' />
+                <input type='button' value='+' class='bg-info text-light' field='quantity' (click)="qtyplus(i, cartProduct.cartQuantity)"/>
             </form>            
             <p class="card-text text-light text-end mt-5">Total</p>
             <p class="card-text text-info text-end ">Avec notre remise immédiate de 10%</p>
-            <p *ngIf="product.price && product.quantity" class="card-text text-info text-end ">{{0.9 * (product.price * product.quantity) | number:'1.0-1'}}€</p>
+            <p *ngIf="cartProduct.price && cartProduct.cartQuantity" class="card-text text-info text-end ">{{0.9 * (cartProduct.price * cartProduct.cartQuantity) | number:'1.0-1'}}€</p>
             <p class="card-text text-light text-end ">Au lieu de</p>
-            <p *ngIf="product.price && product.quantity" class="card-text text-light text-end ">{{product.price * product.quantity}}€</p>
+            <p *ngIf="cartProduct.price && cartProduct.cartQuantity" class="card-text text-light text-end ">{{cartProduct.price * cartProduct.cartQuantity}}€</p>
         </div>
     </div> 
 </div>
 
-<div class="form-group text-end">
-    <a href="market" class="btn btn-success btn-lg my-5 me-5 text-light" role="button">Reprendre mes achats</a>
-    <a href="purchases" class="btn btn-info btn-lg my-5 me-5" role="button">Commander ></a>
+<div class="text-end">
+    <a href="market" class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light" role="button">Reprendre mes achats</a>
+    <a href="purchases" class="btn btn-info btn-lg my-3 my-md-5 me-5" role="button">Commander ></a>
 </div>

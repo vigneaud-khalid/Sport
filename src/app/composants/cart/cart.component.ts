@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from 'src/app/interfaces/products';
-import { ProductsService } from 'src/app/shared/products.service';
+import { cartProducts } from 'src/app/interfaces/cartProducts';
+import { CartService } from 'src/app/shared/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,43 +9,39 @@ import { ProductsService } from 'src/app/shared/products.service';
 })
 export class CartComponent implements OnInit {
 
-  products: Products[]|null = null;
+  cartProducts: cartProducts[]|null = null;
+  url="../../../assets/img/";
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.loadProducts();
+    this.loadCartProducts();
   }
 
-  loadProducts() {
-    this.productsService.getAllProducts().subscribe(data => {
-      this.products = data;
-      console.log(this.products);
+  loadCartProducts() {
+    this.cartService.getAllCartProducts().subscribe(data => {
+      this.cartProducts = data.cart;
     });
   }
 
-  onDeleteProduct(id: any) {
-    this.productsService.deleteProduct(id).subscribe(data => {
-      console.log(this.products);
-      this.loadProducts();
-    })
+  onDeleteCartProduct(id: any) {
+    this.cartService.getAllCartProducts().subscribe(data => {
+      if(this.cartProducts != null) 
+        this.cartProducts = this.cartProducts.filter((item: any) => item.id !== id); 
+    });
   }
 
-  qtyplus(id: any, quantity: any) {
-    quantity = quantity + 1;
-    console.log(quantity);
-    this.productsService.updateQuantity(id, {"quantity": quantity}).subscribe(data => {
-      console.log(this.products);
-    });
-    this.loadProducts();
+  qtyplus(i: any, cartQuantity: any) {
+    cartQuantity = cartQuantity + 1;
+    if(this.cartProducts != null) 
+      this.cartProducts[i].cartQuantity = cartQuantity;
+    this.cartService.updateCartQuantity(this.cartProducts).subscribe();
   }
 
-  qtyminus(id: any, quantity: any) {
-    if (quantity > 1) quantity = quantity - 1;
-    console.log(quantity);
-    this.productsService.updateQuantity(id, {"quantity": quantity}).subscribe(data => {
-      console.log(this.products);
-    });
-    this.loadProducts();
+  qtyminus(i: any, cartQuantity: any) {
+    if (cartQuantity > 1) cartQuantity = cartQuantity - 1;
+    if(this.cartProducts != null) 
+      this.cartProducts[i].cartQuantity = cartQuantity;
+    this.cartService.updateCartQuantity(this.cartProducts).subscribe();
   }
 }

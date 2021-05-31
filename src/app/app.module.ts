@@ -18,10 +18,10 @@ import { ReservationComponent } from './composants/reservation/reservation.compo
 import { LoginComponent } from './composants/login/login.component';
 import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
-import { ErrorComponent } from './composants/error/error.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ProductDetailsComponent } from './composants/product-details/product-details.component';
-import { ContactUsComponent } from './composants/contact-us/contact-us.component';
+import { PurchasesComponent } from './composants/purchases/purchases.component';
+import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { NewArticleComponent } from './composants/admi/new-article/new-article.component';
+import { PaymentComponent } from './composants/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -38,9 +38,11 @@ import { ContactUsComponent } from './composants/contact-us/contact-us.component
     ModifArticleComponent,
     EditArticleComponent,
     ReservationComponent,
-    ErrorComponent,
-    ProductDetailsComponent,
-    ContactUsComponent
+    PurchasesComponent,
+    DeliveryComponent,
+    NewArticleComponent,
+    PaymentComponent
+
   ],
   imports: [
     BrowserModule,
