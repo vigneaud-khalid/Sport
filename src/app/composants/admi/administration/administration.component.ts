@@ -15,5 +15,8 @@ ngOnInit(): void {
 
 onSuppComment(){ this.router.navigateByUrl('/supp-comment'); }
 
-onModifArticle(){ this.router.navigateByUrl('/modif-article'); }
+onModifArticle(){ this.router.navigateByUrl('modif-article'); }
+
+onModifUser(){ this.router.navigateByUrl('modif-profil'); }
+
 }

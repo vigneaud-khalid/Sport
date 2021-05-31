@@ -21,6 +21,7 @@ import { CartComponent } from './composants/cart/cart.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { PurchasesComponent } from './composants/purchases/purchases.component';
 import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { NewArticleComponent } from './composants/admi/new-article/new-article.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DeliveryComponent } from './composants/delivery/delivery.component';
     ReservationComponent,
     ErrorComponent,
     PurchasesComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    NewArticleComponent
 
   ],
   imports: [

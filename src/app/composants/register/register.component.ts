@@ -33,6 +33,7 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessfull = true;
         this.isSignUpFailed = false;
+        alert("You are successfully registered. You need now to log in !");
         this.router.navigateByUrl('/login');
       },
       err => {

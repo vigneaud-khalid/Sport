@@ -3,11 +3,11 @@ export interface Products {
     id?: number;
     name?: string;
     description?: string;
-    price?: number;
+    reference?: string;
     category?: number;
-    reference: string;
-    quantity:number;
+    price?: number;
+    quantity?:number;
+    selected?:boolean;
+    available?:boolean;
     image?: string;
-    selected:boolean;
-    available:boolean;
 }

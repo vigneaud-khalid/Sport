@@ -6,16 +6,27 @@
 
 <div class="titleAD">
     <h1>Administrateur</h1>
+    <h2>Comments Management</h2>
 </div>
 
 
-<div id="carouselComments" class="carousel slide" data-bs-ride="carousel">
+
+<div class="container">
+    <ng-container *ngIf="products$ | async as result" [ngSwitch]="result.dataState">
+        <ng-container *ngSwitchCase="DataStateEnum.LOADING">Loading...</ng-container>
+        <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+            <div class="alert alert-danger">{{result.errorMessage}}</div>
+        </ng-container>
+        <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+
+
+<div  *ngFor="let p of result.data" >
+<div id="carouselComments" class="carousel slide" data-bs-ride="carousel" >
     <div class="carousel-inner ml-auto mr-auto" >
-        <div class="carousel-item active">
-            <img src="../../../../assets/img/AAistockph.jpg" class="d-block w-100" alt="flying shoe">
-        </div>
-        <div class="carousel-item">
-            <img src="../../assets/img/carousel-img1.png" class="d-block w-100" alt="flying shoe">
+
+        <div class="carousel-item active" >
+            <h1>id = {{p.id}}</h1>
+            <img src="../../../../assets/img/{{p.image}}" class="d-block w-100" alt="flying shoe">
         </div>
        
     </div>
@@ -26,5 +37,18 @@
     <button class="carousel-control-next" type="button" data-bs-target="#carouselShoesControls" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+
+
+</ng-container>
+</ng-container>
+</div>
+
+
+<div>
+    <button class="btn btn-primary  m-4 " (click)="ngOnInit()">
+        Reload Page
     </button>
 </div>

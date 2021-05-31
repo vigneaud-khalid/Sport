@@ -1,0 +1,112 @@
+<div class="brand">
+    <img src="../../assets/img/logo.svg" class="logo" alt="timer">
+    <h1>Sport Market</h1>
+</div>
+
+<div class="titleAD">
+    <h1>Administrateur</h1>
+    <h2>New Product Edition</h2>
+</div>
+
+<form *ngIf="!isSuccessfull" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <div class="form-group mx-5 mb-3">
+        <label for="name">Name :</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="form.name" required minlength="3"
+            maxlength="20" #name="ngModel" placeholder="name" />
+        <div class="alert-danger" *ngIf="name.errors && f.submitted">
+            <div *ngIf="name.errors.required">Product name is required</div>
+            <div *ngIf="name.errors.minlength">
+                Product name length must be at least 3 characters
+            </div>
+            <div *ngIf="name.errors.maxlength">
+                Product name length must be at most 20 characters
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mx-5 mb-3">
+        <label for="description">Description :</label>
+        <input type="text" class="form-control" name="description" [(ngModel)]="form.description" required minlength="3"
+            maxlength="40" #description="ngModel" placeholder="description" defa />
+        <div class="alert-danger" *ngIf="description.errors && f.submitted">
+            <div *ngIf="description.errors.required">Product description is required</div>
+            <div *ngIf="description.errors.minlength">
+                Product description length must be at least 3 characters
+            </div>
+            <div *ngIf="description.errors.maxlength">
+                Product description length must be at most 40 characters
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mx-5 mb-3">
+        <label for="reference">Reference :</label>
+        <input type="text" class="form-control" name="reference" [(ngModel)]="form.reference" minlength="3"
+            maxlength="20" #reference="ngModel" placeholder="reference" />
+        <div class="alert-danger" *ngIf="reference.errors && f.submitted">
+            <div *ngIf="reference.errors.required">Product reference is required</div>
+            <div *ngIf="reference.errors.minlength">
+                Product reference length must be at least 3 characters
+            </div>
+            <div *ngIf="reference.errors.maxlength">
+                Product reference length must be at most 20 characters
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group mx-5 mb-3">
+        <label for="category">Category :</label>
+        <input type="text" class="form-control" name="category" [(ngModel)]="form.category" minlength="3" maxlength="20"
+            #category="ngModel" placeholder="category" />
+        <div class="alert-danger" *ngIf="category.errors && f.submitted">
+            <div *ngIf="category.errors.required">Product category is required</div>
+            <div *ngIf="category.errors.minlength">
+                Product category length must be at least 3 characters
+            </div>
+            <div *ngIf="category.errors.maxlength">
+                Product category length must be at most 20 characters
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mx-5 mb-3">
+        <label for="price">Price :</label>
+        <input type="text" class="form-control" name="price" [(ngModel)]="form.price" required minlength="1"
+            maxlength="6" #price="ngModel" placeholder="price" />
+        <div class="alert-danger" *ngIf="price.errors && f.submitted">
+            <div *ngIf="price.errors.required">Product price is required</div>
+            <div *ngIf="price.errors.minlength">
+                Product price length must be at least 1 character
+            </div>
+            <div *ngIf="price.errors.maxlength">
+                Product price length must be at most 6 characters
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mx-5 mb-3">
+        <label for="quantity">Quantity :</label>
+        <input type="text" class="form-control" name="quantity" [(ngModel)]="form.quantity" minlength="1" maxlength="6"
+            #quantity="ngModel" placeholder="quantity" />
+        <div class="alert-danger" *ngIf="quantity.errors && f.submitted">
+            <div *ngIf="quantity.errors.required">Product quantity is required</div>
+            <div *ngIf="quantity.errors.minlength">
+                Product quantity length must be at least 1 characters
+            </div>
+            <div *ngIf="quantity.errors.maxlength">
+                Product quantity length must be at most 6 characters
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mx-5">
+        <button class="btn btn-primary btn-block">Edition</button>
+    </div>
+    <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+        Edition failed!<br />{{ errorMessage }}
+    </div>
+</form>
+<div class="alert alert-success" *ngIf="isSuccessfull">
+    Your Product Edition is successful !
+</div>

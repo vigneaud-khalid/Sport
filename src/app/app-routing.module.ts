@@ -18,6 +18,7 @@ import { CartComponent } from './composants/cart/cart.component';
 import { ErrorComponent } from './composants/error/error.component';
 import { PurchasesComponent } from './composants/purchases/purchases.component';
 import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { NewArticleComponent } from './composants/admi/new-article/new-article.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
     { path: 'administration', component: AdministrationComponent, canActivate: [AdminGuard] },
     { path: 'supp-comment', component: SuppCommentComponent, canActivate: [AdminGuard] },
     { path: 'modif-article', component: ModifArticleComponent, canActivate: [AdminGuard] },
-    { path: 'edit-article', component: EditArticleComponent, canActivate: [AdminGuard] },
+    { path: 'edit-article/:id', component: EditArticleComponent, canActivate: [AdminGuard] },
+    { path: 'new-article', component: NewArticleComponent, canActivate: [AdminGuard] },
    
 
   
