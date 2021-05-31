@@ -16,8 +16,8 @@ import { ReservationComponent } from './composants/reservation/reservation.compo
 import { ContactComponent } from './composants/contact/contact.component';
 import { CartComponent } from './composants/cart/cart.component';
 import { ErrorComponent } from './composants/error/error.component';
-import { PurchasesComponent } from './composants/purchases/purchases.component';
-import { DeliveryComponent } from './composants/delivery/delivery.component';
+import { ProductDetailsComponent } from './composants/product-details/product-details.component';
+import { ContactUsComponent } from './composants/contact-us/contact-us.component';
 
 
 const routes: Routes = [
@@ -38,16 +38,17 @@ const routes: Routes = [
     { path: 'market', component: MarketComponent },
     // localhost:4200/product
     { path: 'product', component: ProductComponent },
+    // localhost:4200/product
+    { path: 'product-details', component: ProductDetailsComponent },
+    // localhost:4200/product
+    { path: 'contact-us', component: ContactUsComponent },
     // localhost:4200/reservation
     { path: 'reservation', component: ReservationComponent },
     // localhost:4200/contact
     { path: 'contact', component: ContactComponent },
  // localhost:4200/cart
     { path: 'cart', component: CartComponent },
-    // localhost:4200/purchases
-    { path: 'purchases', component: PurchasesComponent },
-    // localhost:4200/delivery
-    { path: 'delivery', component: DeliveryComponent },
+    
   
     // localhost:4200/error
     { path: 'error', component: ErrorComponent },

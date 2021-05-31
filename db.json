@@ -1,61 +1,43 @@
 {
   "products": [
     {
-      "id": 2,
+      "id": 0,
+      "image": "../../../assets/img/asics.png",
+      "name": "ASICS GEL-NOOSA TRI 13 M",
+      "description": "Chaussures basses running homme",
+      "reference": "300826",
+      "quantity": 0,
+      "category": "ride",
+      "selected": true,
+      "available": true,
+      "price": 139
+    },
+    {
+      "id": 1,
+      "image": "../../../assets/img/puma3000.jpg",
       "name": "Puma 3000",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 131,
-      "quantity": 38,
-      "selected": false,
-      "available": true,
-      "image": "2.jpg"
-    },
-    {
-      "name": "New Balance X6",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 98,
-      "quantity": 47,
-      "selected": false,
-      "available": true,
-      "image": "3.jpg",
-      "id": 3
-    },
-    {
-      "name": "New Balance X3",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 93,
-      "quantity": 43,
+      "description": "Baskets homme",
+      "reference": "300962",
+      "quantity": 50,
+      "category": "ride",
       "selected": true,
       "available": true,
-      "image": "4.jpg",
-      "id": 4
+      "price": 89
     },
     {
-      "name": "New Balance X7",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 54,
-      "quantity": 80,
+      "id": 2,
+      "image": "../../../assets/img/newbalance.jpg",
+      "title": "New Balance 4X",
+      "description": "Baskets homme",
+      "reference": "300394",
+      "quantity": 30,
+      "category": "ride",
       "selected": true,
       "available": true,
-      "image": "5.jpg",
-      "id": 5
-    },
-    {
-      "name": "New Balance X3",
-      "description": "Chaussures basses running homme",
-      "reference": "300826",
-      "price": 83,
-      "quantity": 45,
-      "selected": true,
-      "available": true,
-      "image": "6.jpg",
-      "id": 6
+      "price": 99
     }
   ],
+  
   "comments": [
     {
       "id": 1,

@@ -1,15 +1,17 @@
 <h1 class="text-light text-center my-5">Mon panier</h1>
 
 <div class="card-group" *ngIf="products">
-    <div *ngFor="let product of products" class="card bg-transparent" attr.id="{{product.id}}">
-        <!-- <img class="card-img-top" src="{{product.url}}" alt="Card image cap"> -->
+    <div *ngFor="let product of products; let i = index" class="card bg-transparent" attr.id="{{product.id}}">
+        <img class="card-img-top" src="./../../../assets/img/{{product.image}}" alt="Card image cap">
         <div class="card-body">
             <div class="card-title text-light">
                 <h5 class="d-inline">{{product.name}}</h5>
-                <button type="button" class="btn ms-4" aria-label="Close" (click)="onDeleteProduct(product.id)"><i class="fa fa-trash"></i></button>
+                <button type="button" class="btn-close ms-4" aria-label="Close" (click)="onDeleteProduct(product.id)">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </button>
             </div>
             <p class="card-text text-light">{{product.description}}</p>
-            <!-- <p class="card-text text-light">{{product.size}}</p> -->
+            <p class="card-text text-light">{{product.category}}</p>
             <p class="card-text text-light">{{product.reference}}</p>
             <p *ngIf="product.quantity" class="card-text text-info">En stock</p>
             <p *ngIf="!product.quantity" class="card-text text-warning">Indisponible</p>

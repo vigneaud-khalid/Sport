@@ -1,1 +1,94 @@
-<p>product works!</p>
+<div class="navbar-header">
+        <a class="navbar-brand" href="http://localhost:4200/product"><img src="./../../../../assets/img/logo/Groupe 25.png"
+            alt=""></a>
+</div>
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+               
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-3 fw-bolder">Market Sport in style</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Exclusive new Styles American Sportswear</p>
+        </div>
+    </div>
+</header>
+<!-- Section-->
+<div class="container">
+    <div class="row">
+        <div *ngFor="let product of products" class="col-4 card">
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
+                    </div>
+                    <!-- Product image-->
+                    <a [routerLink]="['/product-details', product.id]"><img class="card-img-top" src="./../../../assets/img/{{product.image}}"
+                            alt="Card image cap"></a>
+                    <div class="card-block">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.name}}</h5>
+                            <p class="card-text">The Pegasus 38 is built on a fresh last to provide more room in the toe
+                                box; runners might notice it feels similar to models prior to the Pegasus 36.
+                                • A new individual midfoot webbing system allows every runner to lace up to a
+                                personalized fit.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Description: {{product.description}}</li>
+                            <li class="list-group-item">Quantité: {{product.quantity}}</li>
+                            <li class="list-group-item">Référence: {{product.reference}}</li>
+                            <li class="list-group-item">Category: {{product.category}}</li>
+                            <p *ngIf="product.quantity" class="card-text text-info">En stock</p>
+                            <p *ngIf="!product.quantity" class="card-text text-warning">Indisponible</p>
+                        </ul>
+                        <h5 class="list-group-item">Prix: {{product.price}}€</h5>
+                        <h5 class="fw-bolder">Popular Item</h5>
+                        <!-- Product reviews-->
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                                <!-- Product price-->
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
+                                    cart</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <mat-toolbar color="primary"> -->
+<h1>
+    Sport Market
+</h1>
+<button mat-button routerLink="/">Home</button>
+
+

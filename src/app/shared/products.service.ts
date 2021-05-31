@@ -59,4 +59,14 @@ unreachableHost:string= "http://localhost:9000";
         let host = environment.host;
         return this.http.patch<Products[]>(host + "/products/" + id + "/", data);
     }
+
+    getAllProducts2():Observable<Products[]> {
+        let host = environment.host;
+        return this.http.get<Products[]>(host + "/products");
+    }
+
+    deleteProduct2(id: any): Observable<Products[]> {
+        let host = environment.host;
+        return this.http.delete<Products[]>(host + "/products/" + id + "/");
+    }
 }
