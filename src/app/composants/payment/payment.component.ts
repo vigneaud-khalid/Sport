@@ -43,6 +43,6 @@ export class PaymentComponent implements OnInit {
   onSubmit() {
     this.paymentService.postPaymentData(this.form.value).subscribe();
     alert('Nous vous remercions pour votre commande qui est en cours de traitement');
-    location.href='market';
+    location.href='product';
   }
 }

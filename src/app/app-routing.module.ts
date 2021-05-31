@@ -8,9 +8,7 @@ import { SuppCommentComponent } from './composants/admi/supp-comment/supp-commen
 import { LoginComponent } from './composants/login/login.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { AdminGuard } from './guards/admin.guard';
-
 import { HomeComponent } from './composants/home/home.component';
-import { MarketComponent } from './composants/market/market.component';
 import { ProductComponent } from './composants/product/product.component';
 import { ReservationComponent } from './composants/reservation/reservation.component';
 import { ContactComponent } from './composants/contact/contact.component';
@@ -24,19 +22,14 @@ import { PaymentComponent } from './composants/payment/payment.component';
 const routes: Routes = [
     // localhost:4200/
     { path: 'home', component: HomeComponent },
-
-    { path: 'register', component: RegisterComponent },    // localhost:4200/register
-    { path: 'login', component: LoginComponent },            // localhost:4200/login
+    // localhost:4200/register
+    { path: 'register', component: RegisterComponent },   
+    // localhost:4200/login 
+    { path: 'login', component: LoginComponent },            
     { path: 'administration', component: AdministrationComponent, canActivate: [AdminGuard] },
     { path: 'supp-comment', component: SuppCommentComponent, canActivate: [AdminGuard] },
     { path: 'modif-article', component: ModifArticleComponent, canActivate: [AdminGuard] },
     { path: 'edit-article', component: EditArticleComponent, canActivate: [AdminGuard] },
-   
-
-  
-
-    // localhost:4200/market
-    { path: 'market', component: MarketComponent },
     // localhost:4200/product
     { path: 'product', component: ProductComponent },
     // localhost:4200/reservation
@@ -51,7 +44,6 @@ const routes: Routes = [
     { path: 'delivery', component: DeliveryComponent },
     // localhost:4200/delivery
     { path: 'payment', component: PaymentComponent },
-  
     // localhost:4200/error
     { path: 'error', component: ErrorComponent },
 
