@@ -12,7 +12,7 @@ export class ProductComponent implements OnInit {
 
   size?: number;
   qty: any[] = [];
-  products2: Product[]|null = null;
+  products: Product[]|null = null;
   currentPage = 0;
   pages = [0,1,2,3,4,5,6];
 
@@ -23,9 +23,9 @@ export class ProductComponent implements OnInit {
   }
 
   loadProducts() {
-    this.productsService.getAllProducts2().subscribe(data => {
-      this.products2 = data;
-      console.log(this.products2);
+    this.productsService.getAllProducts().subscribe(data => {
+      this.products = data;
+      console.log(this.products);
       this.size = data.length;
       for (let i=0; i < this.size; i++) {
         this.qty.push(1);
@@ -34,8 +34,8 @@ export class ProductComponent implements OnInit {
   }
 
   onDeleteProduct(id: any) {
-    this.productsService.deleteProduct2(id).subscribe(data => {
-      console.log(this.products2);
+    this.productsService.deleteProduct(id).subscribe(data => {
+      console.log(this.products);
       this.loadProducts();
     })
   }
