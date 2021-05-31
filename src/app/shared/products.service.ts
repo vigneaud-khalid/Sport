@@ -19,4 +19,14 @@ export class ProductsService {
         let host = environment.host;
         return this.http.delete<Product[]>(host + "/products/" + id + "/");
     }
+
+    getAllProducts2():Observable<Product[]> {
+        let host = environment.host;
+        return this.http.get<Product[]>(host + "/products2");
+    }
+
+    deleteProduct2(id: any): Observable<Product[]> {
+        let host = environment.host;
+        return this.http.delete<Product[]>(host + "/products2/" + id + "/");
+    }
 }
