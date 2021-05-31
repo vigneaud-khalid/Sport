@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Products } from 'src/app/interfaces/products';
-import { ProductsService } from 'src/app/shared/products.service';
+// import { Products } from 'src/app/interfaces/products';
+import { Products } from './../../../interfaces/products';
+import { ProductsService } from './../../../shared/products.service';
 
 @Component({
   selector: 'app-new-article',
@@ -10,11 +11,12 @@ import { ProductsService } from 'src/app/shared/products.service';
 })
 export class NewArticleComponent implements OnInit {
 
-  product: Products = {};
+  product: Products= {};
   form: any = {
     
   };
 
+  
   isSuccessfull = false;
   isSignUpFailed = false;
 

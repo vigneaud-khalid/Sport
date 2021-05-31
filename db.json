@@ -55,7 +55,7 @@
       "category": "ride",
       "price": 54,
       "quantity": "78",
-      "selected": true,
+      "selected": false,
       "available": true,
       "image": "5.jpg",
       "id": 5
@@ -99,10 +99,10 @@
     {
       "name": "Asics High",
       "description": "Sport men running shoes for mountains and trails",
-      "reference": "31543",
+      "reference": "31544",
       "category": "ride",
       "price": 114,
-      "quantity": "72",
+      "quantity": "7",
       "selected": true,
       "available": true,
       "image": "13.jpg",

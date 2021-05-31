@@ -10,4 +10,5 @@ export interface Products {
     selected?:boolean;
     available?:boolean;
     image?: string;
+    
 }
