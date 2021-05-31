@@ -22,6 +22,7 @@ import { RegisterComponent } from './composants/register/register.component';
 import { PurchasesComponent } from './composants/purchases/purchases.component';
 import { DeliveryComponent } from './composants/delivery/delivery.component';
 import { NewArticleComponent } from './composants/admi/new-article/new-article.component';
+import { PaymentComponent } from './composants/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NewArticleComponent } from './composants/admi/new-article/new-article.c
     ErrorComponent,
     PurchasesComponent,
     DeliveryComponent,
-    NewArticleComponent
+    NewArticleComponent,
+    PaymentComponent
 
   ],
   imports: [

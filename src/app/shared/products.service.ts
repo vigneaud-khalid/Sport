@@ -69,7 +69,6 @@ unreachableHost:string= "http://localhost:9000";
         return this.http.post<Products>(host+"/products/",product);
     }
 
-
     save(name: string, description: string,  reference: string, category: number, price: number,
         quantity:number, selected: boolean, available: boolean):Observable<any>{
         let host= this.reachableHost;
@@ -78,21 +77,5 @@ unreachableHost:string= "http://localhost:9000";
         return this.http.post(host+"/products/",{
             name, description, reference, category, price, quantity, selected, available  
         }, httpOptions);
-    }
-
-
-    getAllCartProducts():Observable<Products[]> {
-        let host = environment.host;
-        return this.http.get<Products[]>(host + "/products");
-    }
-
-    deleteCartProduct(id: any): Observable<Products[]> {
-        let host = environment.host;
-        return this.http.delete<Products[]>(host + "/products/" + id + "/");
-    }
-
-    updateQuantity(id: number, data: any): Observable<Products[]>{
-        let host = environment.host;
-        return this.http.patch<Products[]>(host + "/products/" + id + "/", data);
     }
 }

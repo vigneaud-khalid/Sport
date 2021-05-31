@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from 'src/app/interfaces/products';
-import { ProductsService } from 'src/app/shared/products.service';
+import { cartProducts } from 'src/app/interfaces/cartProducts';
+import { CartService } from 'src/app/shared/cart.service';
 
 @Component({
   selector: 'app-purchases',
@@ -9,21 +9,23 @@ import { ProductsService } from 'src/app/shared/products.service';
 })
 export class PurchasesComponent implements OnInit {
 
-  products: Products[]|null = null;
+  cartProducts: cartProducts[]|null = null;
   totalPrice = 0;
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private cartService: CartService) { }
   
   ngOnInit(): void {
-    this.loadProducts();
+    this.loadCartProducts();
   }
 
-  loadProducts() {
-    this.productsService.getAllProducts().subscribe(data => {
-      this.products = data;
-      for(let product of this.products) {
-        if (product.price != undefined && product.quantity != undefined) 
-          this.totalPrice = this.totalPrice + (product.price * product.quantity); 
+  loadCartProducts() {
+    this.cartService.getAllCartProducts().subscribe(data => {
+      this.cartProducts = data.cart;
+      if (this.cartProducts != null) {
+        for(let cartProduct of this.cartProducts) {
+          if (cartProduct.price != undefined && cartProduct.cartQuantity != undefined) 
+            this.totalPrice = this.totalPrice + (cartProduct.price * cartProduct.cartQuantity); 
+        }
       }
     });
   }
