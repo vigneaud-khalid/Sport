@@ -5,9 +5,9 @@
       "description": "Sport men running shoes",
       "reference": "302952",
       "category": "ride",
-      "price": "132",
+      "price": "133",
       "quantity": "46",
-      "selected": true,
+      "selected": false,
       "available": true,
       "image": "1.jpg",
       "id": 1
@@ -32,11 +32,12 @@
       "category": "multi",
       "price": 98,
       "quantity": 54,
-      "selected": true,
+      "selected": false,
       "available": true,
       "image": "3.jpg"
     },
     {
+      "id": 4,
       "name": "New Balance 3X",
       "description": "High quality sport running shoes",
       "reference": "301546",
@@ -44,9 +45,11 @@
       "quantity": 43,
       "selected": false,
       "available": true,
-      "price": 139
+      "price": 139,
+      "image": "4.jpg"
     },
     {
+      "id": 5,
       "name": "New Balance 7X",
       "description": "Sport men running shoes",
       "reference": "31593",
@@ -54,7 +57,8 @@
       "quantity": "78",
       "selected": false,
       "available": true,
-      "price": 89
+      "price": 89,
+      "image": "5.jpg"
     },
     {
       "name": "Nike Air Cold",
@@ -62,7 +66,7 @@
       "reference": "301576",
       "category": "running",
       "price": "135",
-      "quantity": "78",
+      "quantity": "79",
       "selected": false,
       "available": true,
       "image": "6.jpg",
@@ -103,6 +107,17 @@
       "available": true,
       "image": "13.jpg",
       "id": 13
+    },
+    {
+      "name": "Puma XSS",
+      "description": "Casual running shoes",
+      "reference": "302546",
+      "category": "ride",
+      "price": "96",
+      "quantity": "42",
+      "selected": false,
+      "available": true,
+      "id": 14
     }
   ],
   "comments": [
@@ -138,7 +153,7 @@
           "reference": "300826",
           "price": 139,
           "quantity": 0,
-          "cartQuantity": 5,
+          "cartQuantity": 8,
           "image": "7.png"
         },
         {
@@ -381,7 +396,7 @@
       "password": "$2a$10$pjE2BYvKmr8rBuSFKogOMOrqhKPXb0dErzL9H7rB6mjAinbZ0e.q.",
       "firstname": "Khalidu",
       "lastname": "khalid",
-      "role": "ADMIN",
+      "role": "admin",
       "id": 29
     },
     {
@@ -389,7 +404,7 @@
       "password": "$2a$10$elAGz.ZV1e3WfXyq2AS.i.5xfPS8WjnBwo/MBWa5XyMF6AhnM9h8i",
       "firstname": "Khalidou",
       "lastname": "khalid",
-      "role": "ADMIN",
+      "role": "admin",
       "id": 30
     },
     {
@@ -438,6 +453,14 @@
       "lastname": "Moulins",
       "role": "user",
       "id": 36
+    },
+    {
+      "email": "amadou@gmail.com",
+      "password": "$2a$10$/PAvEcp7LIrW3duCSCiUFuZrAhrHMygIGU//3zry0VTnCU/WMWaBy",
+      "firstname": "Amadou",
+      "lastname": "Diallo",
+      "role": "user",
+      "id": 37
     }
   ]
 }

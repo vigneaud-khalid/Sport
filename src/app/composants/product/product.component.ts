@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/interfaces/products';
 import { ProductsService } from 'src/app/shared/products.service';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-product',

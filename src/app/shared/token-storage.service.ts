@@ -4,12 +4,13 @@ import { User } from '../interfaces/user';
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'auth-user';
 const ROLE_KEY = 'auth-role';
+let rolekey = 'auth-roleee';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenStorageService {
-
+  //rolekey = "admin";
   constructor() { }
 
   signOut(): void {
@@ -24,15 +25,18 @@ export class TokenStorageService {
   saveUser(user: User): void {
     sessionStorage.removeItem(USER_KEY);
     sessionStorage.setItem(USER_KEY, JSON.stringify(user));
-    sessionStorage.setItem(ROLE_KEY, JSON.stringify(user.idUser));
+    //sessionStorage.setItem(ROLE_KEY, JSON.stringify(user.idUser));
   }
 
   saveRole(role: any): void {
+    console.log("roleeee!!!! = " +role);
     console.log('TOKENSTORAGE_saveRole_0');
-    sessionStorage.setItem(ROLE_KEY, JSON.stringify(role));
-    console.log('TOKENSTORAGE_saveRole_1');
-    console.log('Role = '+JSON.stringify(role));
-    console.log('Role = '+ROLE_KEY);
+    sessionStorage.removeItem('rolekey');
+    sessionStorage.setItem('rolekey', role);
+    let nomRole = sessionStorage.getItem('rolekey');
+    console.log('Role(role) = '+nomRole);
+    console.log('Role(ROLE_KEY) = '+rolekey);
+    this.checkAdmin();
   }
   getUser(): any {
     const user = sessionStorage.getItem(USER_KEY);
@@ -44,12 +48,14 @@ export class TokenStorageService {
   getToken(): string | null {
     return sessionStorage.getItem(TOKEN_KEY);
   }
+  getRole(): string | null {
+    return sessionStorage.getItem(ROLE_KEY);
+  }
   checkAdmin(): any {
-    console.log('TOKENSTORAGE_checkAdmin_0');
-    const role = sessionStorage.getItem(ROLE_KEY);
-    console.log('checkAdmin_1');
-    if (role=="ADMIN") {
+    let nomRole = sessionStorage.getItem('rolekey');
+    if (nomRole=="admin") {
       console.log('checkAdmin_2');
+      console.log('Role(role) = '+nomRole);
       return true
     }
     console.log('checkAdmin_3 false');

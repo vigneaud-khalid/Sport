@@ -22,6 +22,7 @@ import { NewArticleComponent } from './composants/admi/new-article/new-article.c
 import { PaymentComponent } from './composants/payment/payment.component';
 import { ContactUsComponent } from './composants/contact-us/contact-us.component';
 import { ProductDetailsComponent } from './composants/product-details/product-details.component';
+import { PagesadminGuard } from './guards/pagesadmin.guard';
 
 const routes: Routes = [
     // localhost:4200/
@@ -30,10 +31,10 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent },    // localhost:4200/register
     { path: 'login', component: LoginComponent },            // localhost:4200/login
     { path: 'administration', component: AdministrationComponent, canActivate: [AdminGuard] },
-    { path: 'supp-comment', component: SuppCommentComponent, canActivate: [AdminGuard] },
-    { path: 'modif-article', component: ModifArticleComponent, canActivate: [AdminGuard] },
-    { path: 'edit-article/:id', component: EditArticleComponent, canActivate: [AdminGuard] },
-    { path: 'new-article', component: NewArticleComponent, canActivate: [AdminGuard] },
+    { path: 'supp-comment', component: SuppCommentComponent, canActivate: [PagesadminGuard] },
+    { path: 'modif-article', component: ModifArticleComponent, canActivate: [PagesadminGuard] },
+    { path: 'edit-article/:id', component: EditArticleComponent, canActivate: [PagesadminGuard] },
+    { path: 'new-article', component: NewArticleComponent, canActivate: [PagesadminGuard] },
    
 
   
