@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/interfaces/products';
+import { CartService } from 'src/app/shared/cart.service';
 import { ProductsService } from 'src/app/shared/products.service';
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac116b0f7b8b1af7a4607fc362333897daf0d28b
 
 @Component({
   selector: 'app-product',
@@ -9,14 +13,12 @@ import { ProductsService } from 'src/app/shared/products.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
-  size?: number;
-  qty: any[] = [];
+  url="../../../assets/img/";
   products: Products[]|null = null;
-  currentPage = 0;
-  pages = [0,1,2,3,4,5,6];
+  productToAdd?: any;
+  cartProducts?: any;
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.loadProducts();
@@ -26,18 +28,16 @@ export class ProductComponent implements OnInit {
     this.productsService.getAllProducts().subscribe(data => {
       this.products = data;
       console.log(this.products);
-      this.size = data.length;
-      for (let i=0; i < this.size; i++) {
-        this.qty.push(1);
-      }
     });
   }
 
-  onDeleteProduct(id: any) {
-    this.productsService.deleteProduct(id).subscribe(data => {
-      console.log(this.products);
-      this.loadProducts();
-    })
+  addProductToCart(id: any) {
+    if(this.products != null) {
+      this.productToAdd = this.products.filter((item: any) => item.id === id)[0];
+      this.cartProducts.push(this.productToAdd); 
+    }
+    console.log(this.cartProducts);
+    this.cartService.addCartProduct(this.cartProducts).subscribe();
   }
  
 }

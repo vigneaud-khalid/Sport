@@ -11,8 +11,6 @@ import { AdministrationComponent } from './composants/admi/administration/admini
 import { SuppCommentComponent } from './composants/admi/supp-comment/supp-comment.component';
 import { ModifArticleComponent } from './composants/admi/modif-article/modif-article.component';
 import { EditArticleComponent } from './composants/admi/edit-article/edit-article.component';
-
-import { MarketComponent } from './composants/market/market.component';
 import { ProductComponent } from './composants/product/product.component';
 import { ReservationComponent } from './composants/reservation/reservation.component';
 import { LoginComponent } from './composants/login/login.component';
@@ -31,7 +29,6 @@ import { PaymentComponent } from './composants/payment/payment.component';
     LoginComponent,
     RegisterComponent,
     CartComponent,
-    MarketComponent,
     ProductComponent,
     AdministrationComponent,
     SuppCommentComponent,

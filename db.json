@@ -144,41 +144,17 @@
       "firstname": "Romain ",
       "lastname": " Pierlot",
       "id": 1,
-      "cart": [
-        {
-          "id": 7,
-          "name": "ASICS GEL-NOOSA TRI 13 M",
-          "description": "Chaussures basses running homme",
-          "size": "44",
-          "reference": "300826",
-          "price": 139,
-          "quantity": 0,
-          "cartQuantity": 8,
-          "image": "7.png"
-        },
-        {
-          "id": 8,
-          "name": "Puma 3000",
-          "description": "Baskets homme",
-          "size": "42",
-          "reference": "300962",
-          "price": 89,
-          "quantity": 50,
-          "cartQuantity": 2,
-          "image": "8.jpg"
-        },
-        {
-          "id": 9,
-          "name": "New Balance 4X",
-          "description": "Baskets homme",
-          "size": "43",
-          "reference": "300394",
-          "price": 99,
-          "quantity": 30,
-          "cartQuantity": 1,
-          "image": "9.jpg"
-        }
-      ],
+      "cart": {
+        "name": "New Balance X7",
+        "description": "Chaussures basses running homme",
+        "reference": "300826",
+        "price": 54,
+        "quantity": 77,
+        "selected": true,
+        "available": true,
+        "image": "5.jpg",
+        "id": 5
+      },
       "delivery": [
         {
           "lastName": "",
@@ -192,10 +168,10 @@
       ],
       "payment": [
         {
-          "cardHolder": "Amadou",
-          "cardNumber": 103,
-          "cardExpirationDate": "12/91",
-          "cryptogram": 736
+          "cardHolder": "",
+          "cardNumber": "",
+          "cardExpirationDate": "",
+          "cryptogram": ""
         }
       ]
     },
