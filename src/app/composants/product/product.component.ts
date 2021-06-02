@@ -12,7 +12,7 @@ export class ProductComponent implements OnInit {
   url="../../../assets/img/";
   products: Products[]|null = null;
   productToAdd?: any;
-  cartProducts?: any;
+  cartProducts: any[] = [];
 
   constructor(private productsService: ProductsService, private cartService: CartService) { }
 
@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
   }
 
   addProductToCart(id: any) {
-    if(this.products != null) {
+    if(this.products != null && this.cartProducts != undefined) {
       this.productToAdd = this.products.filter((item: any) => item.id === id)[0];
       this.cartProducts.push(this.productToAdd); 
     }

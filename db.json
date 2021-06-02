@@ -129,17 +129,44 @@
       "firstname": "Romain ",
       "lastname": " Pierlot",
       "id": 1,
-      "cart": {
-        "name": "New Balance X7",
-        "description": "Chaussures basses running homme",
-        "reference": "300826",
-        "price": 54,
-        "quantity": 77,
-        "selected": true,
-        "available": true,
-        "image": "5.jpg",
-        "id": 5
-      },
+      "cart": [
+        {
+          "id": 2,
+          "name": "Puma 3001",
+          "description": "Casual running shoes",
+          "reference": "300953",
+          "category": "cross",
+          "price": 131,
+          "quantity": "37",
+          "selected": true,
+          "available": true,
+          "image": "2.jpg"
+        },
+        {
+          "id": 3,
+          "name": "New Balance 4X",
+          "description": "Professional running shoes",
+          "reference": "300732",
+          "category": "multi",
+          "price": 98,
+          "quantity": 54,
+          "selected": true,
+          "available": true,
+          "image": "3.jpg"
+        },
+        {
+          "id": 3,
+          "name": "New Balance 4X",
+          "description": "Professional running shoes",
+          "reference": "300732",
+          "category": "multi",
+          "price": 98,
+          "quantity": 54,
+          "selected": true,
+          "available": true,
+          "image": "3.jpg"
+        }
+      ],
       "delivery": [
         {
           "lastName": "",

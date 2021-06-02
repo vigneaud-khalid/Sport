@@ -18,7 +18,7 @@ export class CartService {
 
   addCartProduct(data: any):Observable<any> {
     let host = environment.host;
-    return this.http.post<any>(host + "/users/1", { "cart": [data] });
+    return this.http.patch<any>(host + "/users/1", { "cart": data });
   }
 
   updateCartQuantity(data: any): Observable<any>{
