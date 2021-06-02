@@ -20,6 +20,7 @@ import { NewArticleComponent } from './composants/admi/new-article/new-article.c
 import { PaymentComponent } from './composants/payment/payment.component';
 import { ContactUsComponent } from './composants/contact-us/contact-us.component';
 import { ProductDetailsComponent } from './composants/product-details/product-details.component';
+import { PagesadminGuard } from './guards/pagesadmin.guard';
 
 const routes: Routes = [
     // localhost:4200/
@@ -29,11 +30,15 @@ const routes: Routes = [
     // localhost:4200/login 
     { path: 'login', component: LoginComponent },            
     { path: 'administration', component: AdministrationComponent, canActivate: [AdminGuard] },
-    { path: 'supp-comment', component: SuppCommentComponent, canActivate: [AdminGuard] },
-    { path: 'modif-article', component: ModifArticleComponent, canActivate: [AdminGuard] },
-    { path: 'edit-article', component: EditArticleComponent, canActivate: [AdminGuard] },
-    { path: 'edit-article/:id', component: EditArticleComponent, canActivate: [AdminGuard] },
-    { path: 'new-article', component: NewArticleComponent, canActivate: [AdminGuard] },
+
+    { path: 'supp-comment', component: SuppCommentComponent, canActivate: [PagesadminGuard] },
+    { path: 'modif-article', component: ModifArticleComponent, canActivate: [PagesadminGuard] },
+    { path: 'edit-article/:id', component: EditArticleComponent, canActivate: [PagesadminGuard] },
+    { path: 'new-article', component: NewArticleComponent, canActivate: [PagesadminGuard] },
+   
+    // localhost:4200/market
+   // { path: 'market', component: MarketComponent },
+
     // localhost:4200/product
     { path: 'product', component: ProductComponent },
     // localhost:4200/product

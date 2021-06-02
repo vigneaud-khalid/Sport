@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/interfaces/products';
 import { CartService } from 'src/app/shared/cart.service';
 import { ProductsService } from 'src/app/shared/products.service';
+<<<<<<< HEAD
+
+=======
+>>>>>>> ac116b0f7b8b1af7a4607fc362333897daf0d28b
 
 @Component({
   selector: 'app-product',
