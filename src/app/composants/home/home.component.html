@@ -1,23 +1,22 @@
 <div class="text-center">
-    <img src="../../assets/img/home.png" class="img-fluid" alt="rear view on feet from someone walking">
+    <img src="{{url+'home.png'}}" class="img-fluid" alt="rear view on feet from someone walking">
 </div>
 
 <div class="brand">
-    <img src="../../assets/img/logo.svg" class="logo" alt="timer">
+    <img src="{{url+'logo.svg'}}" class="logo" alt="timer">
     <h1>Sport Market</h1>
 </div>
 
-<div id="carouselShoesControls" class="carousel slide" data-bs-ride="carousel">
+<div *ngIf="products" id="carouselShoesControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner ml-auto mr-auto">
         <div class="carousel-item active">
-            <img src="../../assets/img/carousel-img1.png" class="d-block w-100" alt="flying shoe">
+            <img src="{{url+'1.jpg'}}" class="d-block w-100" alt="flying shoe">
         </div>
-        <div class="carousel-item">
-            <img src="../../assets/img/carousel-img1.png" class="d-block w-100" alt="flying shoe">
-        </div>
-        <div class="carousel-item">
-            <img src="../../assets/img/carousel-img1.png" class="d-block w-100" alt="flying shoe">
-        </div>
+        <ng-container *ngFor="let product of products | slice:1">
+            <div class="carousel-item">
+                <img src="{{url+product.image}}" class="d-block w-100" alt="flying shoe">
+            </div>
+        </ng-container>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselShoesControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

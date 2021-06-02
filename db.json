@@ -117,6 +117,7 @@
       "quantity": "42",
       "selected": false,
       "available": true,
+      "image": "14.jpg",
       "id": 14
     }
   ],
@@ -145,46 +146,10 @@
       "lastname": " Pierlot",
       "id": 1,
       "cart": [
-        {
-          "id": 2,
-          "name": "Puma 3001",
-          "description": "Casual running shoes",
-          "reference": "300953",
-          "category": "cross",
-          "price": 131,
-          "quantity": "37",
-          "selected": true,
-          "available": true,
-          "image": "2.jpg"
-        },
-        {
-          "id": 3,
-          "name": "New Balance 4X",
-          "description": "Professional running shoes",
-          "reference": "300732",
-          "category": "multi",
-          "price": 98,
-          "quantity": 54,
-          "selected": true,
-          "available": true,
-          "image": "3.jpg"
-        },
-        {
-          "id": 3,
-          "name": "New Balance 4X",
-          "description": "Professional running shoes",
-          "reference": "300732",
-          "category": "multi",
-          "price": 98,
-          "quantity": 54,
-          "selected": true,
-          "available": true,
-          "image": "3.jpg"
-        }
       ],
       "delivery": [
         {
-          "lastName": "",
+          "lastName": "Barb",
           "firstName": "",
           "street": "",
           "city": "",

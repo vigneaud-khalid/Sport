@@ -31,6 +31,6 @@ a:hover {
 }
 @media (min-width: 577px) {
     .card-responsiveness {
-        width: 33.333%;
+        width: 33%;
     }
 }
