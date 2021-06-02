@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "name": "Puma 3001",
+      "name": "Puma 301",
       "description": "Casual running shoes",
       "reference": "300953",
       "category": "cross",
@@ -97,6 +97,54 @@
       "id": 8
     },
     {
+      "id": 9,
+      "name": "RunShoes 4X",
+      "description": "Professional running shoes",
+      "reference": "300732",
+      "category": "multi",
+      "price": 98,
+      "quantity": 54,
+      "selected": false,
+      "available": true,
+      "image": "9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "New Balance VX",
+      "description": "High quality sport running shoes",
+      "reference": "301646",
+      "category": "cross",
+      "quantity": 143,
+      "selected": false,
+      "available": true,
+      "price": 159,
+      "image": "10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Adidas Run",
+      "description": "Professional running shoes",
+      "reference": "300732",
+      "category": "multi",
+      "price": 98,
+      "quantity": 154,
+      "selected": false,
+      "available": true,
+      "image": "11.jpg"
+    },
+    {
+      "id": 12,
+      "name": "New Balance 3X",
+      "description": "High quality sport running shoes",
+      "reference": "301546",
+      "category": "cross",
+      "quantity": 43,
+      "selected": false,
+      "available": true,
+      "price": 139,
+      "image": "12.jpg"
+    },
+    {
       "name": "Asics High",
       "description": "Sport men running shoes for mountains and trails",
       "reference": "31544",
@@ -118,6 +166,17 @@
       "selected": false,
       "available": true,
       "id": 14
+    },
+    {
+      "name": "Puma 31",
+      "description": "Sport men running shoes",
+      "reference": "302952",
+      "category": "ride",
+      "price": "96",
+      "quantity": "78",
+      "selected": false,
+      "available": true,
+      "id": 15
     }
   ],
   "comments": [
@@ -437,6 +496,14 @@
       "lastname": "Diallo",
       "role": "user",
       "id": 37
+    },
+    {
+      "email": "pierre12@gmail.com",
+      "password": "$2a$10$N9cwVvUdwNYwwb/Kq2HniOr6WXwkCeUroXhaRGoNwpRL6wt.6upEC",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 38
     }
   ]
 }
