@@ -165,6 +165,7 @@
       "quantity": "42",
       "selected": false,
       "available": true,
+      "image": "14.jpg",
       "id": 14
     },
     {
@@ -203,20 +204,11 @@
       "firstname": "Romain ",
       "lastname": " Pierlot",
       "id": 1,
-      "cart": {
-        "name": "New Balance X7",
-        "description": "Chaussures basses running homme",
-        "reference": "300826",
-        "price": 54,
-        "quantity": 77,
-        "selected": true,
-        "available": true,
-        "image": "5.jpg",
-        "id": 5
-      },
+      "cart": [
+      ],
       "delivery": [
         {
-          "lastName": "",
+          "lastName": "Barb",
           "firstName": "",
           "street": "",
           "city": "",

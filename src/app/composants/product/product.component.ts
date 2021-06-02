@@ -12,12 +12,15 @@ export class ProductComponent implements OnInit {
   url="../../../assets/img/";
   products: Products[]|null = null;
   productToAdd?: any;
-  cartProducts?: any;
+  cartProducts: any[] = [];
 
   constructor(private productsService: ProductsService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.loadProducts();
+    this.cartService.getAllCartProducts().subscribe(data => {
+      this.cartProducts = data.cart;
+    });
   }
 
   loadProducts() {
@@ -28,9 +31,12 @@ export class ProductComponent implements OnInit {
   }
 
   addProductToCart(id: any) {
-    if(this.products != null) {
+    if (this.cartProducts.some(item => item.id === id)) {
+      alert("Ce produit a déjà été ajouté au panier");
+    }
+    else if(this.products != null && this.cartProducts != undefined) {
       this.productToAdd = this.products.filter((item: any) => item.id === id)[0];
-      this.cartProducts.push(this.productToAdd); 
+      this.cartProducts.push(Object.assign(this.productToAdd, {cartQuantity: 1})); 
     }
     console.log(this.cartProducts);
     this.cartService.addCartProduct(this.cartProducts).subscribe();
