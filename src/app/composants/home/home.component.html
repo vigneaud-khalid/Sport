@@ -7,6 +7,7 @@
     <h1>Sport Market</h1>
 </div>
 
+
 <div *ngIf="products" id="carouselShoesControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner ml-auto mr-auto">
         <div class="carousel-item active">
@@ -17,6 +18,7 @@
                 <img src="{{url+product.image}}" class="d-block w-100" alt="flying shoe">
             </div>
         </ng-container>
+        
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselShoesControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

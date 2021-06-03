@@ -42,7 +42,7 @@
       "description": "High quality sport running shoes",
       "reference": "301546",
       "category": "cross",
-      "quantity": 43,
+      "quantity": "3",
       "selected": false,
       "available": true,
       "price": 139,
@@ -66,7 +66,7 @@
       "reference": "301576",
       "category": "running",
       "price": "135",
-      "quantity": "79",
+      "quantity": "4",
       "selected": false,
       "available": true,
       "image": "6.jpg",
@@ -162,19 +162,19 @@
       "reference": "302546",
       "category": "ride",
       "price": "96",
-      "quantity": "42",
+      "quantity": "82",
       "selected": false,
       "available": true,
       "image": "14.jpg",
       "id": 14
     },
     {
-      "name": "Puma 31",
+      "name": "Puma Rout",
       "description": "Sport men running shoes",
-      "reference": "302952",
+      "reference": "312952",
       "category": "ride",
-      "price": "96",
-      "quantity": "78",
+      "price": "101",
+      "quantity": "98",
       "selected": false,
       "available": true,
       "id": 15
@@ -205,6 +205,45 @@
       "lastname": " Pierlot",
       "id": 1,
       "cart": [
+        {
+          "name": "Puma XSS",
+          "description": "Casual running shoes",
+          "reference": "302546",
+          "category": "ride",
+          "price": "96",
+          "quantity": "82",
+          "selected": false,
+          "available": true,
+          "image": "14.jpg",
+          "id": 14,
+          "cartQuantity": 2
+        },
+        {
+          "id": 3,
+          "name": "New Balance 4X",
+          "description": "Professional running shoes",
+          "reference": "300732",
+          "category": "multi",
+          "price": 98,
+          "quantity": 54,
+          "selected": false,
+          "available": true,
+          "image": "3.jpg",
+          "cartQuantity": 1
+        },
+        {
+          "id": 2,
+          "name": "Puma 301",
+          "description": "Casual running shoes",
+          "reference": "300953",
+          "category": "cross",
+          "price": 131,
+          "quantity": "37",
+          "selected": true,
+          "available": true,
+          "image": "2.jpg",
+          "cartQuantity": 1
+        }
       ],
       "delivery": [
         {
@@ -496,6 +535,14 @@
       "lastname": "Moulins",
       "role": "user",
       "id": 38
+    },
+    {
+      "email": "pierre13@gmail.com",
+      "password": "$2a$10$WfxS0F2Y2k29PIeeqFZ9Se9tK8Ob/wkoBTKTZAjFzUYiYm35JhRku",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 39
     }
   ]
 }

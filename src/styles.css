@@ -31,3 +31,13 @@ h1 {
 .order-section-title-background {
     background-color: #49155E;
 }
+.carousel-caption>h4{
+    color: black;
+    font-weight: bold;
+    font-size:xx-large;
+}
+.carousel-caption>h2{
+    color: black;
+    font-weight: bold;
+    font-size:x-large;
+}

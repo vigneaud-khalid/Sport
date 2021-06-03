@@ -13,35 +13,50 @@ import { AppDataState, DataStateEnum } from 'src/app/state/product.state';
 })
 export class SuppCommentComponent implements OnInit {
   products$!: Observable<AppDataState<Products[]>>;
-  readonly DataStateEnum=DataStateEnum;
+  readonly DataStateEnum = DataStateEnum;
   constructor(private productsService: ProductsService, private router: Router, private route: ActivatedRoute) { }
   ngOnInit(): void {
     this.onGetAllProducts();
   }
-  
-  onGetAllProducts(){
+
+  onGetAllProducts() {
     this.products$ = this.productsService.getAllProducts().pipe(
-      map((data)=>({dataState: DataStateEnum.LOADED, data:data})),
-      startWith({dataState: DataStateEnum.LOADING}),
-      catchError(err=>of({dataState: DataStateEnum.ERROR, errorMessage: err.message}))
+      map((data) => ({ dataState: DataStateEnum.LOADED, data: data })),
+      startWith({ dataState: DataStateEnum.LOADING }),
+      catchError(err => of({ dataState: DataStateEnum.ERROR, errorMessage: err.message }))
     );
   }
-  
-  
-  onSearch(value:any){
+  availibility(p: Products) {
+    let q = p.quantity;
+    if (q != undefined) {
+      if (q > 5) return true;
+      else return false;
+    }
+    else return false;
+  }
+  availibility2(p: Products) {
+    let q = p.quantity;
+    if (q != undefined) {
+      if (q > 0) return true;
+      else return false;
+    }
+    else return false;
+  }
+
+  onSearch(value: any) {
     this.products$ = this.productsService.searchProducts(value.keyword).pipe(
-      map((data)=>({dataState: DataStateEnum.LOADED, data:data})),
-      startWith({dataState: DataStateEnum.LOADING}),
-      catchError(err=>of({dataState: DataStateEnum.ERROR, errorMessage: err.message}))
+      map((data) => ({ dataState: DataStateEnum.LOADED, data: data })),
+      startWith({ dataState: DataStateEnum.LOADING }),
+      catchError(err => of({ dataState: DataStateEnum.ERROR, errorMessage: err.message }))
     );
   }
-  onSelect(p: Products){
-    this.productsService.select(p).subscribe(data=>{
-      p.selected=data.selected;
+  onSelect(p: Products) {
+    this.productsService.select(p).subscribe(data => {
+      p.selected = data.selected;
     })
   }
- 
-  
-  
+
+
+
 
 }
