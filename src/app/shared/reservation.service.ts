@@ -6,23 +6,17 @@ import { environment } from "src/environments/environment";
 @Injectable({
   providedIn: 'root'
 })
-
-export class CartService {
+export class ReservationService {
 
   constructor(private http:HttpClient) { }
 
-  getAllCartProducts():Observable<any> {
+  getAllReservedProducts():Observable<any> {
     let host = environment.host;
     return this.http.get<any>(host + "/users/1");
   }
 
-  addCartProduct(data: any):Observable<any> {
+  reserveProduct(data: any):Observable<any> {
     let host = environment.host;
-    return this.http.patch<any>(host + "/users/1", { "cart": data });
-  }
-
-  updateCart(data: any): Observable<any>{
-      let host = environment.host;
-      return this.http.patch<any>(host + "/users/1", {"cart": data});
+    return this.http.patch<any>(host + "/users/1", { "reservations": data });
   }
 }

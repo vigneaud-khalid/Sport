@@ -12,7 +12,12 @@ export class UsersService {
 
   reachableHost:string= "http://localhost:3000";
 
-  getUserByEmail(email :string): Observable<User[]>{
+  getUserById(id: any): Observable<any>{
+    let host= this.reachableHost;
+    return this.http.get<any>(host+"/users/"+id);
+   }
+
+   getUserByEmail(email :string): Observable<User[]>{
     let host= this.reachableHost;
     console.log("email !!!!=" + email);
     console.log(this.http.get<any>(host+"/users?email_like="+email));

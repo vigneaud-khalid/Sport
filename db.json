@@ -10,7 +10,10 @@
       "selected": false,
       "available": true,
       "image": "1.jpg",
-      "id": 1
+      "id": 1,
+      "reservedBy": [
+        "romain@mail.com"
+      ]
     },
     {
       "id": 2,
@@ -22,7 +25,9 @@
       "quantity": "37",
       "selected": true,
       "available": true,
-      "image": "2.jpg"
+      "image": "2.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "id": 3,
@@ -34,7 +39,9 @@
       "quantity": 54,
       "selected": false,
       "available": true,
-      "image": "3.jpg"
+      "image": "3.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "id": 4,
@@ -46,7 +53,9 @@
       "selected": false,
       "available": true,
       "price": 139,
-      "image": "4.jpg"
+      "image": "4.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "id": 5,
@@ -58,7 +67,9 @@
       "selected": false,
       "available": true,
       "price": 89,
-      "image": "5.jpg"
+      "image": "5.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "name": "Nike Air Cold",
@@ -70,7 +81,9 @@
       "selected": false,
       "available": true,
       "image": "6.jpg",
-      "id": 6
+      "id": 6,
+      "reservedBy": [
+      ]
     },
     {
       "name": "Puma 3HPI",
@@ -82,7 +95,9 @@
       "selected": false,
       "available": true,
       "image": "7.jpg",
-      "id": 7
+      "id": 7,
+      "reservedBy": [
+      ]
     },
     {
       "name": "Puma 3002",
@@ -94,7 +109,9 @@
       "selected": false,
       "available": true,
       "image": "8.jpg",
-      "id": 8
+      "id": 8,
+      "reservedBy": [
+      ]
     },
     {
       "id": 9,
@@ -106,7 +123,9 @@
       "quantity": 54,
       "selected": false,
       "available": true,
-      "image": "9.jpg"
+      "image": "9.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "id": 10,
@@ -118,7 +137,9 @@
       "selected": false,
       "available": true,
       "price": 159,
-      "image": "10.jpg"
+      "image": "10.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "id": 11,
@@ -130,7 +151,9 @@
       "quantity": 154,
       "selected": false,
       "available": true,
-      "image": "11.jpg"
+      "image": "11.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "id": 12,
@@ -142,7 +165,9 @@
       "selected": false,
       "available": true,
       "price": 139,
-      "image": "12.jpg"
+      "image": "12.jpg",
+      "reservedBy": [
+      ]
     },
     {
       "name": "Asics High",
@@ -154,7 +179,9 @@
       "selected": true,
       "available": true,
       "image": "13.jpg",
-      "id": 13
+      "id": 13,
+      "reservedBy": [
+      ]
     },
     {
       "name": "Puma XSS",
@@ -166,7 +193,9 @@
       "selected": false,
       "available": true,
       "image": "14.jpg",
-      "id": 14
+      "id": 14,
+      "reservedBy": [
+      ]
     },
     {
       "name": "Puma Rout",
@@ -177,7 +206,10 @@
       "quantity": "98",
       "selected": false,
       "available": true,
-      "id": 15
+      "image": "15.jpg",
+      "id": 15,
+      "reservedBy": [
+      ]
     }
   ],
   "comments": [
@@ -206,19 +238,6 @@
       "id": 1,
       "cart": [
         {
-          "name": "Puma XSS",
-          "description": "Casual running shoes",
-          "reference": "302546",
-          "category": "ride",
-          "price": "96",
-          "quantity": "82",
-          "selected": false,
-          "available": true,
-          "image": "14.jpg",
-          "id": 14,
-          "cartQuantity": 2
-        },
-        {
           "id": 3,
           "name": "New Balance 4X",
           "description": "Professional running shoes",
@@ -232,16 +251,16 @@
           "cartQuantity": 1
         },
         {
-          "id": 2,
-          "name": "Puma 301",
-          "description": "Casual running shoes",
-          "reference": "300953",
-          "category": "cross",
-          "price": 131,
-          "quantity": "37",
-          "selected": true,
+          "name": "Puma 3001",
+          "description": "Sport men running shoes",
+          "reference": "302952",
+          "category": "ride",
+          "price": "133",
+          "quantity": "46",
+          "selected": false,
           "available": true,
-          "image": "2.jpg",
+          "image": "1.jpg",
+          "id": 1,
           "cartQuantity": 1
         }
       ],
@@ -263,6 +282,9 @@
           "cardExpirationDate": "",
           "cryptogram": ""
         }
+      ],
+      "reservations": [
+
       ]
     },
     {

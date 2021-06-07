@@ -10,6 +10,4 @@ export interface Products {
     quantity?:number;
     selected?:boolean;
     available?:boolean;
-
-    
 }

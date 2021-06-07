@@ -26,8 +26,10 @@ export class CartComponent implements OnInit {
 
   onDeleteCartProduct(id: any) {
     this.cartService.getAllCartProducts().subscribe(data => {
-      if(this.cartProducts != null) 
+      if(this.cartProducts != null) {
         this.cartProducts = this.cartProducts.filter((item: any) => item.id !== id); 
+        this.cartService.updateCart(this.cartProducts).subscribe();
+      }
     });
   }
 
@@ -35,13 +37,13 @@ export class CartComponent implements OnInit {
     cartQuantity = cartQuantity + 1;
     if(this.cartProducts != null) 
       this.cartProducts[i].cartQuantity = cartQuantity;
-    this.cartService.updateCartQuantity(this.cartProducts).subscribe();
+    this.cartService.updateCart(this.cartProducts).subscribe();
   }
 
   qtyminus(i: any, cartQuantity: any) {
     if (cartQuantity > 1) cartQuantity = cartQuantity - 1;
     if(this.cartProducts != null) 
       this.cartProducts[i].cartQuantity = cartQuantity;
-    this.cartService.updateCartQuantity(this.cartProducts).subscribe();
+    this.cartService.updateCart(this.cartProducts).subscribe();
   }
 }
