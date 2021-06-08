@@ -39,7 +39,8 @@
                 </div>
             </div>
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-                <button class="btn btn-outline-info mt-3 me-3" data-bs-target="#reservationModal" data-bs-toggle="modal" (click)="loadModalData(product.id)">Reserve it</button>
+                <button class="btn btn-outline-info mt-3 me-3" data-bs-target="#reservationModal" data-bs-toggle="modal"
+                    (click)="loadModalData(product.id)">Reserve it</button>
                 <button class="btn btn-outline-primary mt-3" (click)="addProductToCart(product.id)">Add to cart</button>
             </div>
         </div>
@@ -48,20 +49,21 @@
 
 <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-info" id="reservationModalLabel">Product reservation</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="reservationModalLabel">Product reservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div *ngIf="productToReserve && user" class="modal-body">
+                <p>Do you confirm the reservation of <span class="text-info">{{productToReserve.name}}</span>?</p>
+                <p>We will keep you informed on our progress with your email:</p>
+                <p class="text-info">{{user.email}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
+                    (click)="addReservation()">Confirm reservation</button>
+            </div>
         </div>
-        <div *ngIf="productToReserve && user" class="modal-body">
-          <p>Do you confirm the reservation of <span class="text-info">{{productToReserve.name}}</span>?</p>
-          <p>We will keep you informed on our progress with your email:</p>
-          <p class="text-info">{{user.email}}</p> 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" (click)="addReservation()">Confirm reservation</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>

@@ -15,12 +15,17 @@
             <p *ngIf="!cartProduct.quantity" class="card-text text-warning">Indisponible</p>
             <p class="card-text text-light text-end">Prix unitaire</p>
             <p class="card-text text-light text-end">{{cartProduct.price}}€</p>
-            <p class="card-text text-light text-center">Quantité</p>
-            <form id='myform' class="text-center">
-                <input type='button' value='-' class='bg-info text-light' field='quantity' (click)="qtyminus(i, cartProduct.cartQuantity)"/>
-                <input type='text' name='quantity' value='{{cartProduct.cartQuantity}}' class='qty text-center w-25' />
-                <input type='button' value='+' class='bg-info text-light' field='quantity' (click)="qtyplus(i, cartProduct.cartQuantity)"/>
-            </form>            
+            <div *ngIf="!cartProduct.quantity" class="text-center" style="height: 70px;">
+                <button class="btn btn-outline-info mt-3 me-3" data-bs-target="#reservationModal" data-bs-toggle="modal" (click)="loadModalData(cartProduct.id)">Reserve it</button>
+            </div>
+            <div *ngIf="cartProduct.quantity">
+                <p class="card-text text-light text-center">Quantité</p>
+                <form id='myform' class="text-center">
+                    <input type='button' value='-' class='bg-info text-light' field='quantity' (click)="qtyminus(i, cartProduct.cartQuantity)"/>
+                    <input type='text' name='quantity' value='{{cartProduct.cartQuantity}}' class='qty text-center w-25' />
+                    <input type='button' value='+' class='bg-info text-light' field='quantity' (click)="qtyplus(i, cartProduct.cartQuantity)"/>
+                </form>            
+            </div>
             <p class="card-text text-light text-end mt-5">Total</p>
             <p class="card-text text-info text-end ">Avec notre remise immédiate de 10%</p>
             <p *ngIf="cartProduct.price && cartProduct.cartQuantity" class="card-text text-info text-end ">{{0.9 * (cartProduct.price * cartProduct.cartQuantity) | number:'1.0-1'}}€</p>
@@ -33,4 +38,25 @@
 <div class="text-end">
     <a href="product" class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light" role="button">Reprendre mes achats</a>
     <a href="purchases" class="btn btn-info btn-lg my-3 my-md-5 me-5" role="button">Commander ></a>
+</div>
+
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="reservationModalLabel">Product reservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div *ngIf="productToReserve && user" class="modal-body">
+                <p>Do you confirm the reservation of <span class="text-info">{{productToReserve.name}}</span>?</p>
+                <p>We will keep you informed on our progress with your email:</p>
+                <p class="text-info">{{user.email}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
+                    (click)="addReservation()">Confirm reservation</button>
+            </div>
+        </div>
+    </div>
 </div>

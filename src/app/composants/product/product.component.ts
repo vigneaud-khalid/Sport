@@ -15,7 +15,7 @@ export class ProductComponent implements OnInit {
   products: Products[]|null = null;
   productToAdd?: any;
   productToReserve?: any;
-  user?: any
+  user?: any;
   cartProducts: any[] = [];
   reservedProducts: any[] = [];
 

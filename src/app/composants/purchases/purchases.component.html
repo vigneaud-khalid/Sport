@@ -5,27 +5,29 @@
     <table class="table table-hover">
         <tbody>
             <tr *ngFor="let cartProduct of cartProducts" class="text-light">
+              <ng-container *ngIf="cartProduct.quantity > 0">
                 <th scope="row">{{cartProduct.name}}</th>
                 <td>{{cartProduct.price}}€</td>
                 <td>* {{cartProduct.cartQuantity}}</td>
                 <td *ngIf="cartProduct.price && cartProduct.cartQuantity" class="text-center">{{cartProduct.price * cartProduct.cartQuantity}}€</td>
+              </ng-container>
             </tr>
           <tr class="text-light">
               <th scope="row" colspan="3" class="text-end">Total sans remise </th>
               <td scope="row" colspan="2" class="text-center">{{totalPrice}}€</td>
           </tr>
-          <tr *ngIf="totalPrice >= 1000" class="text-info">
+          <tr *ngIf="totalPrice >= 150" class="text-info">
             <th scope="row" colspan="3" class="text-end">Frais de port </th>
             <td scope="row" colspan="2" class="text-center">Offerts</td>
           </tr>
-          <tr *ngIf="1000 > totalPrice" class="text-warning">
-            <th scope="row" colspan="3" class="text-end">Frais de port (offerts à partir de 1000€ d'achats)</th>
+          <tr *ngIf="150 > totalPrice" class="text-warning">
+            <th scope="row" colspan="3" class="text-end">Frais de port (offerts à partir de 150€ d'achats)</th>
             <td scope="row" colspan="2" class="text-center">6.99€</td>
           </tr>
           <tr class="text-info">
               <th scope="row" colspan="3" class="text-end">Total avec remise et frais de port</th>
-              <td *ngIf="totalPrice >= 1000" scope="row" colspan="2" class="text-center">{{0.9 * totalPrice | number:'1.0-1'}}€</td>
-              <td *ngIf="1000 > totalPrice" scope="row" colspan="2" class="text-center">{{(0.9 * totalPrice) + 6.99 | number:'1.0-2'}}€</td>
+              <td *ngIf="totalPrice >= 150" scope="row" colspan="2" class="text-center">{{0.9 * totalPrice | number:'1.0-1'}}€</td>
+              <td *ngIf="150 > totalPrice" scope="row" colspan="2" class="text-center">{{(0.9 * totalPrice) + 6.99 | number:'1.0-2'}}€</td>
           </tr>
           <tr class="text-info">
             <th scope="row" colspan="3" class="text-end">Montant de la remise </th>

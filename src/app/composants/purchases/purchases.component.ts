@@ -23,7 +23,7 @@ export class PurchasesComponent implements OnInit {
       this.cartProducts = data.cart;
       if (this.cartProducts != null) {
         for(let cartProduct of this.cartProducts) {
-          if (cartProduct.price != undefined && cartProduct.cartQuantity != undefined) 
+          if (cartProduct.price != undefined && cartProduct.cartQuantity != undefined && cartProduct.quantity != 0) 
             this.totalPrice = this.totalPrice + (cartProduct.price * cartProduct.cartQuantity); 
         }
       }

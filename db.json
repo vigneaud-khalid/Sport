@@ -12,7 +12,7 @@
       "image": "1.jpg",
       "id": 1,
       "reservedBy": [
-        "romain@mail.com"
+
       ]
     },
     {
@@ -26,8 +26,7 @@
       "selected": true,
       "available": true,
       "image": "2.jpg",
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "id": 3,
@@ -41,6 +40,7 @@
       "available": true,
       "image": "3.jpg",
       "reservedBy": [
+
       ]
     },
     {
@@ -54,8 +54,7 @@
       "available": true,
       "price": 139,
       "image": "4.jpg",
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "id": 5,
@@ -68,8 +67,7 @@
       "available": true,
       "price": 89,
       "image": "5.jpg",
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "name": "Nike Air Cold",
@@ -82,8 +80,7 @@
       "available": true,
       "image": "6.jpg",
       "id": 6,
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "name": "Puma 3HPI",
@@ -96,8 +93,7 @@
       "available": true,
       "image": "7.jpg",
       "id": 7,
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "name": "Puma 3002",
@@ -110,8 +106,7 @@
       "available": true,
       "image": "8.jpg",
       "id": 8,
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "id": 9,
@@ -124,8 +119,7 @@
       "selected": false,
       "available": true,
       "image": "9.jpg",
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "id": 10,
@@ -138,8 +132,7 @@
       "available": true,
       "price": 159,
       "image": "10.jpg",
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "id": 11,
@@ -152,8 +145,7 @@
       "selected": false,
       "available": true,
       "image": "11.jpg",
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "id": 12,
@@ -166,8 +158,7 @@
       "available": true,
       "price": 139,
       "image": "12.jpg",
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "name": "Asics High",
@@ -180,8 +171,7 @@
       "available": true,
       "image": "13.jpg",
       "id": 13,
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "name": "Puma XSS",
@@ -194,8 +184,7 @@
       "available": true,
       "image": "14.jpg",
       "id": 14,
-      "reservedBy": [
-      ]
+      "reservedBy": []
     },
     {
       "name": "Puma Rout",
@@ -208,8 +197,7 @@
       "available": true,
       "image": "15.jpg",
       "id": 15,
-      "reservedBy": [
-      ]
+      "reservedBy": []
     }
   ],
   "comments": [
@@ -244,7 +232,7 @@
           "reference": "300732",
           "category": "multi",
           "price": 98,
-          "quantity": 54,
+          "quantity": 0,
           "selected": false,
           "available": true,
           "image": "3.jpg",
@@ -261,7 +249,7 @@
           "available": true,
           "image": "1.jpg",
           "id": 1,
-          "cartQuantity": 1
+          "cartQuantity": 2
         }
       ],
       "delivery": [
