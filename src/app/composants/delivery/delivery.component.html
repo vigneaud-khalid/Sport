@@ -1,0 +1,52 @@
+<h1 class="order-title text-light text-center mb-5">Votre commande</h1>
+
+<h3 class="my-4 py-3 text-light text-center order-section-title-background">Votre adresse de livraison</h3>
+<form [formGroup] = "form" class="text-light" (ngSubmit)="onSubmit()">
+    <div class="form-group row mb-3 mx-1">
+        <label for="lastName" class="col-2 col-form-label">Nom</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="lastName" name="lastName" required formControlName="lastName">
+        </div>
+    </div>
+    <div class="form-group row mb-3 mx-1">
+        <label for="firstName" class="col-2 col-form-label">Prénom</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="firstName" name="firstName" required formControlName="firstName">
+        </div>
+    </div>
+    <div class="form-group row mb-3 mx-1">
+        <label for="street" class="col-2 col-form-label">Rue</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="street" name="street" required formControlName="street">
+        </div>
+    </div>
+    <div class="form-group row mb-3 mx-1">
+        <label for="city" class="col-2 col-form-label">Ville</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="city" name="city" required formControlName="city">
+        </div>
+    </div>
+    <div class="form-group row mb-3 mx-1">
+        <label for="postalCode" class="col-2 col-form-label">Code Postal</label>
+        <div class="col-10">
+            <input type="number" class="form-control" id="postalCode" name="postalCode"required formControlName="postalCode">
+        </div>
+    </div>
+    <div class="form-group row mb-3 mx-1">
+        <label for="phone" class="col-2 col-form-label">Tel</label>
+        <div class="col-10">
+            <input type="tel" class="form-control" id="phone" name="phone" required formControlName="phone">
+        </div>
+    </div>
+    <div class="form-group row mb-5 mx-1">
+        <label for="remarks" class="col-12 mb-3">Vos remarques à notre attention</label>
+        <div class="col-12 text-center">
+            <textarea id="remarks" class="form-control" name="remarks" rows="5" cols="33" required formControlName="remarks"></textarea>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <a href="product" class="btn btn-success btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light" role="button">Reprendre mes achats</a>
+        <a href="cart" class="btn btn-primary btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light" role="button">Retour au panier</a>
+        <button class="btn btn-info btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light" type="submit">&#10003; Poursuivre la commande</button> 
+    </div>
+</form>

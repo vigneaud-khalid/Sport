@@ -1,0 +1,29 @@
+<div class="text-center">
+    <img src="{{url+'home.png'}}" class="img-fluid" alt="rear view on feet from someone walking">
+</div>
+
+<div class="brand mb-3 mb-md-5">
+    <img src="{{url+'logo.svg'}}" class="logo" alt="timer">
+    <h1>Sport Market</h1>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-md-lg btn-info text-light mb-3 mb-md-5">Consulter notre catalogue</button>
+</div>
+
+<div class="container">
+    <!-- carousel -->
+    <div class="carousel">
+        <ng-container *ngFor="let product of products; let i = index">
+            <img *ngIf="i === currentSlide" [src]="url+product.image" class="slide" @carouselAnimation/>
+        </ng-container>
+
+        <!-- controls -->
+        <button class="control prev" (click)="onPreviousClick()">
+            <span class="arrow left"></span>
+        </button>
+        <button class="control next" (click)="onNextClick()">
+            <span class="arrow right"></span>
+        </button>
+    </div>
+</div>

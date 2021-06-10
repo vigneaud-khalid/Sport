@@ -1,0 +1,49 @@
+<div class="brand">
+    <img src="../../assets/img/logo.svg" class="logo" alt="timer">
+    <h1>Sport Market</h1>
+</div>
+
+<form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && isAuthenticated()" #f="ngForm" novalidate>
+    <div class="form-group row mx-5 mb-3">
+        <input type="email" class="form-control col-4 d-inline" name="email" [(ngModel)]="form.email" required email
+            #email="ngModel" placeholder="email" />
+        <div class="alert-danger " *ngIf="email.errors && f.submitted">
+            <div *ngIf="email.errors.required">Email is really required</div>
+            <div *ngIf="email.errors.email">
+                Email must be a valid email address
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mx-5">
+        <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6"
+            #password="ngModel" placeholder="password" />
+        <div class="alert alert-danger" role="alert" *ngIf="password.errors && f.submitted">
+            <div *ngIf="password.errors.required">Password is required</div>
+            <div *ngIf="password.errors.minlength">
+                Your password has more than 5 characters
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="form-group mx-5">
+        <button class="btn btn-primary">
+            Login
+        </button>
+    </div>
+    <div class="form-group">
+        <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+            Login failed: {{ errorMessage }}
+        </div>
+    </div>
+</form>
+
+<div class="inscription-link text-center"> 
+    <span >Vous n'êtes pas inscrit ?</span>
+    <div>
+        <button (click)="register()"  class="btn btn-primary btn-sm  m-2">
+            <span >S'inscrire</span>
+        </button>
+    </div>
+</div>
+

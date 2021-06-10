@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+.main-background {
+    background-color: #8164aa;
+}
+.brand {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.logo {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    color: #fff;
+    font-variant: small-caps;
+}
+.order-title {
+    margin-top: 5rem;
+}
+.titleAD {
+    text-align: center;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+.AD-controlFields{
+    color: red;
+    font-weight: bold;
+}
+.order-section-title-background {
+    background-color: #49155E;
+}
+.carousel-caption>h4{
+    color: black;
+    font-weight: bold;
+    font-size:xx-large;
+}
+.carousel-caption>h2{
+    color: black;
+    font-weight: bold;
+    font-size:x-large;
+}

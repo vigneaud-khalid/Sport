@@ -1,0 +1,558 @@
+{
+  "products": [
+    {
+      "name": "Puma 3001",
+      "description": "Sport men running shoes",
+      "reference": "302952",
+      "category": "ride",
+      "price": "133",
+      "quantity": "46",
+      "selected": false,
+      "available": true,
+      "image": "1.jpg",
+      "id": 1,
+      "reservedBy": [
+
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Puma 301",
+      "description": "Casual running shoes",
+      "reference": "300953",
+      "category": "cross",
+      "price": 131,
+      "quantity": "37",
+      "selected": true,
+      "available": true,
+      "image": "2.jpg",
+      "reservedBy": []
+    },
+    {
+      "id": 3,
+      "name": "New Balance 4X",
+      "description": "Professional running shoes",
+      "reference": "300732",
+      "category": "multi",
+      "price": 98,
+      "quantity": 54,
+      "selected": false,
+      "available": true,
+      "image": "3.jpg",
+      "reservedBy": [
+
+      ]
+    },
+    {
+      "id": 4,
+      "name": "New Balance 3X",
+      "description": "High quality sport running shoes",
+      "reference": "301546",
+      "category": "cross",
+      "quantity": "3",
+      "selected": false,
+      "available": true,
+      "price": 139,
+      "image": "4.jpg",
+      "reservedBy": []
+    },
+    {
+      "id": 5,
+      "name": "New Balance 7X",
+      "description": "Sport men running shoes",
+      "reference": "31593",
+      "category": "ride",
+      "quantity": "78",
+      "selected": false,
+      "available": true,
+      "price": 89,
+      "image": "5.jpg",
+      "reservedBy": []
+    },
+    {
+      "name": "Nike Air Cold",
+      "description": "High quality sport running shoes",
+      "reference": "301576",
+      "category": "running",
+      "price": "135",
+      "quantity": "4",
+      "selected": false,
+      "available": true,
+      "image": "6.jpg",
+      "id": 6,
+      "reservedBy": []
+    },
+    {
+      "name": "Puma 3HPI",
+      "description": "Professional running shoes",
+      "reference": "300952",
+      "category": "ride",
+      "price": "89",
+      "quantity": "34",
+      "selected": false,
+      "available": true,
+      "image": "7.jpg",
+      "id": 7,
+      "reservedBy": []
+    },
+    {
+      "name": "Puma 3002",
+      "description": "Professional running shoes",
+      "reference": "301546",
+      "category": "ride",
+      "price": "34",
+      "quantity": "56",
+      "selected": false,
+      "available": true,
+      "image": "8.jpg",
+      "id": 8,
+      "reservedBy": []
+    },
+    {
+      "id": 9,
+      "name": "RunShoes 4X",
+      "description": "Professional running shoes",
+      "reference": "300732",
+      "category": "multi",
+      "price": 98,
+      "quantity": 54,
+      "selected": false,
+      "available": true,
+      "image": "9.jpg",
+      "reservedBy": []
+    },
+    {
+      "id": 10,
+      "name": "New Balance VX",
+      "description": "High quality sport running shoes",
+      "reference": "301646",
+      "category": "cross",
+      "quantity": 143,
+      "selected": false,
+      "available": true,
+      "price": 159,
+      "image": "10.jpg",
+      "reservedBy": []
+    },
+    {
+      "id": 11,
+      "name": "Adidas Run",
+      "description": "Professional running shoes",
+      "reference": "300732",
+      "category": "multi",
+      "price": 98,
+      "quantity": 154,
+      "selected": false,
+      "available": true,
+      "image": "11.jpg",
+      "reservedBy": []
+    },
+    {
+      "id": 12,
+      "name": "New Balance 3X",
+      "description": "High quality sport running shoes",
+      "reference": "301546",
+      "category": "cross",
+      "quantity": 43,
+      "selected": false,
+      "available": true,
+      "price": 139,
+      "image": "12.jpg",
+      "reservedBy": []
+    },
+    {
+      "name": "Asics High",
+      "description": "Sport men running shoes for mountains and trails",
+      "reference": "31544",
+      "category": "ride",
+      "price": 114,
+      "quantity": "7",
+      "selected": true,
+      "available": true,
+      "image": "13.jpg",
+      "id": 13,
+      "reservedBy": []
+    },
+    {
+      "name": "Puma XSS",
+      "description": "Casual running shoes",
+      "reference": "302546",
+      "category": "ride",
+      "price": "96",
+      "quantity": "82",
+      "selected": false,
+      "available": true,
+      "image": "14.jpg",
+      "id": 14,
+      "reservedBy": []
+    },
+    {
+      "name": "Puma Rout",
+      "description": "Sport men running shoes",
+      "reference": "312952",
+      "category": "ride",
+      "price": "101",
+      "quantity": "98",
+      "selected": false,
+      "available": true,
+      "image": "15.jpg",
+      "id": 15,
+      "reservedBy": []
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Brillant",
+      "articleId": 1
+    },
+    {
+      "id": 2,
+      "body": "Sympa",
+      "articleId": 2
+    },
+    {
+      "body": "Really nice !!!",
+      "articleId": 4,
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "romain@mail.com",
+      "password": "bestPassw0rd",
+      "firstname": "Romain ",
+      "lastname": " Pierlot",
+      "id": 1,
+      "cart": [
+        {
+          "id": 3,
+          "name": "New Balance 4X",
+          "description": "Professional running shoes",
+          "reference": "300732",
+          "category": "multi",
+          "price": 98,
+          "quantity": 0,
+          "selected": false,
+          "available": true,
+          "image": "3.jpg",
+          "cartQuantity": 1
+        },
+        {
+          "name": "Puma 3001",
+          "description": "Sport men running shoes",
+          "reference": "302952",
+          "category": "ride",
+          "price": "133",
+          "quantity": "46",
+          "selected": false,
+          "available": true,
+          "image": "1.jpg",
+          "id": 1,
+          "cartQuantity": 2
+        }
+      ],
+      "delivery": [
+        {
+          "lastName": "Barb",
+          "firstName": "",
+          "street": "",
+          "city": "",
+          "postalCode": "",
+          "phone": "",
+          "remarks": ""
+        }
+      ],
+      "payment": [
+        {
+          "cardHolder": "",
+          "cardNumber": "",
+          "cardExpirationDate": "",
+          "cryptogram": ""
+        }
+      ],
+      "reservations": [
+
+      ]
+    },
+    {
+      "email": "pedrtto@mail.com",
+      "password": "bestPassw0rd",
+      "firstname": "Romain ",
+      "lastname": " Neyrat",
+      "id": 2
+    },
+    {
+      "email": "pedro@mail.com",
+      "password": "bestPassw0rd",
+      "firstname": "Romain ",
+      "lastname": " Leblanc",
+      "id": 3
+    },
+    {
+      "email": "pedrtto@mail.com",
+      "password": "bestPassw0rd",
+      "firstname": "Romain ",
+      "lastname": "Pedaanc",
+      "id": 4
+    },
+    {
+      "email": "marco@mail.com",
+      "password": "$2a$10$uQH7NKDPC/gLna1Na3yzq.hv5liNbAZjVf1F.iZj3tY35ino/H1QC",
+      "firstname": "Roalot",
+      "lastname": "Marco Polo",
+      "id": 5
+    },
+    {
+      "email": "marcffo@mail.com",
+      "password": "$2a$10$0OZv46vP3FboGEgFAHkepOxM.X/BtnkDXOXTXca1T/tbZTPgC8x0W",
+      "firstname": "Roaot",
+      "lastname": "Marcofff Polo",
+      "id": 6
+    },
+    {
+      "email": "marcffRRRo@mail.com",
+      "password": "$2a$10$PvJYuHVWka38npHHHDSJP.WTSvcnq2yiXGl.nCmit3qjl8/oz71D2",
+      "firstname": "Roeot",
+      "lastname": "MarcRRofff Polo",
+      "id": 7
+    },
+    {
+      "email": "maro@mail.com",
+      "password": "$2a$10$UCNGudH9ipy40AmZBzs7Jevw00xUbIS/gBalTpZumpZHMCJ0wIhMi",
+      "firstname": "Root",
+      "lastname": "Molo",
+      "id": 8
+    },
+    {
+      "email": "marjo@mail.com",
+      "password": "$2a$10$Kd/rSbq4ARaIzHxXTR.BHeaAu5Xh3E6LoWWpBHDqvKfQ7PZO1RDcu",
+      "firstname": "Rooot",
+      "lastname": "klj",
+      "id": 9
+    },
+    {
+      "email": "marfo@mail.com",
+      "password": "$2a$10$aVnYrRw.qHfHAl/xYjO6buSgZ/dJuF/6ygV66unVFLlwWClb84P6i",
+      "firstname": "Roiot",
+      "lastname": "Moflo",
+      "id": 10
+    },
+    {
+      "email": "nicotineee@clop.fr",
+      "password": "$2a$10$7qGcrK1haTq2TCWhqzM6MuXn.vZ.eqsUPwZNA0NyIeyzWtdDHWi1e",
+      "firstname": "Romuot",
+      "lastname": "khalid",
+      "id": 11
+    },
+    {
+      "email": "nicotinez@clop.fr",
+      "password": "$2a$10$w3tsUO0gzCaE8UTFHWV/VOrMFAo.u073Uln4mAas0Hq2HSaeeq8wm",
+      "firstname": "Rotot",
+      "lastname": "AAAAAA",
+      "id": 12
+    },
+    {
+      "email": "aaaa@aaaa",
+      "password": "$2a$10$PHM5FQgFc46pHauhYJ42Uevt3CgNg5Ut.avxMzqFJ/qcWxtwuf1jC",
+      "firstname": "Romgrlot",
+      "lastname": "aaaa",
+      "id": 13
+    },
+    {
+      "email": "hutch@mail.com",
+      "password": "123456",
+      "firstname": "Chutch ",
+      "lastname": " Pouvin",
+      "id": 14
+    },
+    {
+      "email": "tutch@mail.com",
+      "password": "123456",
+      "firstname": "Tutch ",
+      "lastname": " Limoin",
+      "id": 15
+    },
+    {
+      "email": "tuitch@mail.com",
+      "password": "$2a$10$3F6PBG1a.Hc5x0Ofn2BSZeLw4u7bzAcvZIxVcHqU.iY8h1b/xrqZO",
+      "firstname": "Tuitch ",
+      "lastname": " Liimoin",
+      "id": 16
+    },
+    {
+      "email": "pierreFF@qui.mousse",
+      "password": "$2a$10$/Ux3WZ3VXTYqbhb8wiJUxeJTm4hu1nLcwZgCF45Q15fc4mO.ZKlWm",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "id": 17
+    },
+    {
+      "email": "pierre@qui.mousse",
+      "password": "$2a$10$4YKvAjNe/JVgFYc1h8GBIO9GQN2/EP1JfZUYe/9Q3drNAtbTWaIuO",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "id": 18
+    },
+    {
+      "email": "pierreD@qui.mousse",
+      "password": "$2a$10$A.RgrtmCqHlL18/KyqqzkOOtIar/B1rxHVJ2G8yr/w6txCu2MAAF6",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "id": 19
+    },
+    {
+      "email": "pierre@gmail.com",
+      "password": "$2a$10$ojpTakL4YZMvTEo3GkWZ4.l5Lail9eZkLTP53VcNKXpdiR4tGXkCC",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "id": 20
+    },
+    {
+      "email": "pierre1@gmail.com",
+      "password": "$2a$10$YKX9osGAqCoi5G575WZLzuumPEh.6KwqGGVx79Nd.b.EHg14MoyMa",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "id": 21
+    },
+    {
+      "email": "pierre2@gmail.com",
+      "password": "$2a$10$uoNjYc3vtGuwrR7Wu8QkFOEQRZyDPqrDpapls1IrmxI6StHbPlcVu",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "id": 22
+    },
+    {
+      "email": "pierre3@gmail.com",
+      "password": "$2a$10$ZSOOFvwg0mcwjSZtUlRctuxhzVrdDLK05efa1oAarYiYtur4yupFi",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "id": 23
+    },
+    {
+      "email": "aaaa@aaaaa",
+      "password": "$2a$10$/sPQuVDw0EB9RCSIcYPuVOepjfdYE0ccPyraEInZbSHOKrHzK9TsC",
+      "firstname": "Administrateur",
+      "lastname": "eerrrrr",
+      "id": 24
+    },
+    {
+      "email": "khalid@gmail.com",
+      "password": "$2a$10$kMH//TBOIzA8aDjqQQ.31.tSn4iKH.lFNn7PGeWJp7itvx4Py.UFK",
+      "firstname": "Khalid",
+      "lastname": "khalid",
+      "id": 25
+    },
+    {
+      "email": "pierre4@gmail.com",
+      "password": "$2a$10$g2oA0JxKQc1GGcKwnatKC.748O2h37gXZqiFzYysINROoQqi.BPRS",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 26
+    },
+    {
+      "email": "pierre5@gmail.com",
+      "password": "$2a$10$C3VZi2YwU4HrBMJRCCuqOeDkNCUMphCEhvqLRTRaRDNtNCwgsXonW",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 27
+    },
+    {
+      "email": "pierre6@gmail.com",
+      "password": "$2a$10$G04NoKMx6QVXt2SgMlypR.YJvg5k55L.RSQ6R7s2DUgN.tnPhW7im",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 28
+    },
+    {
+      "email": "khalidu@gmail.com",
+      "password": "$2a$10$pjE2BYvKmr8rBuSFKogOMOrqhKPXb0dErzL9H7rB6mjAinbZ0e.q.",
+      "firstname": "Khalidu",
+      "lastname": "khalid",
+      "role": "admin",
+      "id": 29
+    },
+    {
+      "email": "khalidou@gmail.com",
+      "password": "$2a$10$elAGz.ZV1e3WfXyq2AS.i.5xfPS8WjnBwo/MBWa5XyMF6AhnM9h8i",
+      "firstname": "Khalidou",
+      "lastname": "khalid",
+      "role": "admin",
+      "id": 30
+    },
+    {
+      "email": "pierre7@gmail.com",
+      "password": "$2a$10$yb6w8M3M.leFumMgFu2xWOYXl1oEBpOJtIhWfyQpag.SzJNZoB.M2",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 31
+    },
+    {
+      "email": "tuijtch@mail.com",
+      "password": "$2a$10$KglePX3KtVi5uVAW8fDIlurFlTlwt7VfPCB01ztjtP8Yu1Yjt660.",
+      "firstname": "Tuitch ",
+      "lastname": " Liimoin",
+      "id": 32
+    },
+    {
+      "email": "pierremou@qui.mousse",
+      "password": "$2a$10$/FsgqMRMVwxXZ5G7U1Z9uu9nIUb4blrz1Wbl7havjWIVlXSobezPO",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 33
+    },
+    {
+      "email": "pierremo@qui.mousse",
+      "password": "$2a$10$tE9P2DKrCKGbualgbmNtYeR0oXFYizqYduoRrXgBEckWs5LuxReM6",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 34
+    },
+    {
+      "email": "pierremoul@qui.mousse",
+      "password": "$2a$10$UCUG/0GTeb.Q.2N/fqbUwuZ8/4JfRK76uszp4OIrkW8ORUDgYhjzi",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 35
+    },
+    {
+      "email": "pierre8@gmail.com",
+      "password": "$2a$10$kXu7ayvOAFjysnyRsawnq.Otz9oSTu1gFMFFK5xSVkBPuf2um8yVq",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 36
+    },
+    {
+      "email": "amadou@gmail.com",
+      "password": "$2a$10$/PAvEcp7LIrW3duCSCiUFuZrAhrHMygIGU//3zry0VTnCU/WMWaBy",
+      "firstname": "Amadou",
+      "lastname": "Diallo",
+      "role": "user",
+      "id": 37
+    },
+    {
+      "email": "pierre12@gmail.com",
+      "password": "$2a$10$N9cwVvUdwNYwwb/Kq2HniOr6WXwkCeUroXhaRGoNwpRL6wt.6upEC",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 38
+    },
+    {
+      "email": "pierre13@gmail.com",
+      "password": "$2a$10$WfxS0F2Y2k29PIeeqFZ9Se9tK8Ob/wkoBTKTZAjFzUYiYm35JhRku",
+      "firstname": "Pierre",
+      "lastname": "Moulins",
+      "role": "user",
+      "id": 39
+    }
+  ]
+}

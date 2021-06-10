@@ -1,0 +1,48 @@
+.fa-star {
+    color: gray;
+    cursor: pointer;
+    padding: 0.0625rem;
+}
+
+.fa-star.gold {
+    color: #ffdc0f;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stars {
+    display: inline-flex;
+    justify-content: left;
+    font-size: 1em;
+}
+
+.btn {
+    transition: ease-in 0.125s;
+}
+
+.btn:hover {
+    transform: scale(1.1); 
+}
+
+img {
+    transition: ease-in 0.2s;
+}
+
+img:hover {
+    transform: scale(0.9);
+}
+
+@media (max-width: 576px) {
+    .card-responsiveness {
+        width: 100%;
+    }
+}
+@media (min-width: 577px) {
+    .card-responsiveness {
+        width: 33%;
+    }
+}
