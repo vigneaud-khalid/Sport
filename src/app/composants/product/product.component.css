@@ -1,3 +1,183 @@
+/*---------------------------*
+ #Template - modele CSS
+*----------------------------*/
+.row.grid-view.theme1 {
+    border-color:#8164aa
+}
+
+#text {
+    color:#8164aa
+}
+
+.card .product-card {
+    border-color:#8164aa
+}
+
+.card.d-inline-block.card-responsiveness {
+    background-color:#8164aa;
+    border-color:#8164aa;
+    color:#8164aa
+}
+
+.fa-star {
+    color: gray;
+    cursor: pointer;
+    padding: 0.0625rem;
+}
+
+.fa-star.gold {
+    color: #ffdc0f;
+}
+
+.stars {
+    display: inline-flex;
+    justify-content: left;
+    font-size: 1em;
+}
+
+a:hover {
+    transform: scale(1.1)
+}
+
+@media (max-width: 576px) {
+    .card-responsiveness {
+        width: 100%;
+        
+    }
+}
+@media (min-width: 577px) {
+    .card-responsiveness {
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 1440px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 100%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Gilroy-Medium ☞";
+    line-height: 1;
+    margin: 0;
+}
+
+p {
+    margin: 0px;
+}
+
+a,
+
+img {
+    max-width: 100%;
+}
+
+:focus {
+    outline: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+span {
+    display: inline-block;
+}
+
+span.separator {
+    color: #bfbfbf;
+    margin: 0 8px;
+    line-height: 1;
+    font-size: 14px;
+}
+
+.zoom-in img {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.zoom-in:hover img {
+    -webkit-transform: scale(1.045) rotate(0.05deg);
+    transform: scale(1.045) rotate(0.05deg);
+}
+
+/* SPORT MARKET */
+.main-background {
+    background-color: #8164aa;
+}
+.brand {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.logo {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    color: #8164aa;
+    font-variant: small-caps;
+}
+.order-title {
+    margin-top: 5rem;
+}
+.titleAD {
+    text-align: center;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.product-thumbnail img,
+.product-thumb img {
+    border-radius: 15px;
+    
+}
+
+body {
+    background-color: #8164aa;
+    font-family: "Gilroy-Regular ☞";
+    font-weight: 400;
+    font-size: 14px;
+    color: #f0f0f0;
+    line-height: 24px;
+    visibility: visible;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 991px) {
+    .total-products {
+        margin-left: 20px;
+    }
+}
+
+/*=======================
+	-  STARS STYLE
+========================*/
+
 .fa-star {
     color: gray;
     cursor: pointer;
@@ -10,39 +190,166 @@
 
 .rating {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+
 }
 
 .stars {
     display: inline-flex;
     justify-content: left;
-    font-size: 1em;
+    font-size: 1.2em;
+    display:block;
+    width:150px;
+    line-height:50px;
+    text-align:left;
+
 }
 
-.btn {
-    transition: ease-in 0.125s;
+a:hover {
+    transform: scale(1.1)
 }
 
-.btn:hover {
-    transform: scale(1.1); 
+li.list-group-item {
+    background-color: #8164aa;
+    color: #ffffff;
 }
 
-img {
-    transition: ease-in 0.2s;
+/*------------------*
+  Product Component Pages
+*------------------*/
+
+.tab-content .tab-pane.active .grid-view .product-card {
+    -webkit-animation: zoomIn 0.5s ease;
+    animation: zoomIn 0.5s ease;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    background: #8164aa;
+    color: #ffffff;
+    border-color:#8164aa
+    
 }
 
-img:hover {
-    transform: scale(0.9);
+.tab-content .tab-pane.active .grid-view-list .product-card {
+    -webkit-animation: fadeInRight 0.5s ease;
+    animation: fadeInRight 0.5s ease;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+
+}
+
+/* product desc style */
+
+.product-desc {
+    padding: 20px 10px 15px 10px;
+}
+
+.product-desc .title {
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #707070;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-family: "Gilroy-Regular ☞";
+    font-weight: 400;
+}
+
+.product-price {
+    color: #1d1d1d;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    font-family: "Gilroy-Bold ☞";
+}
+
+.product-price .del {
+    color: #9b9b9b;
+    font-weight: 400;
+    margin-right: 2px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+/* modal style1 */
+
+.modal.style1 .modal-dialog {
+    max-width: 1020px;
+}
+
+.modal.style1 .modal-header {
+    border: none;
+    padding: 6px 0.625rem;
+    height: 30px;
+}
+
+.modal.style1 .modal-header .close {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    padding: 0;
+}
+
+.modal.style1 .modal-body {
+    padding: 30px 30px 90px;
+    background: #8164aa;
+}
+
+.modal.style1 .product-head .title {
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: "Gilroy-Regular ☞";
+    margin: 0 0 20px 0;
+}
+
+.modal.style1 .product-head .sub-title {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0 0 14px 0;
+}
+
+.modal.style1 .product-head .star-content .star-on {
+    color: #fdd835;
+    font-size: 14px;
+}
+
+.modal.style1 .product-head .star-content .de-selected {
+    color: #e0e0e0;
+}
+
+.modal.style1 .product-body {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.modal.style1 .new-price {
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 30px;
+    color: #ffffff;
+    font-size: 26px;
+    font-family: "Gilroy-Bold ☞";
+    margin-bottom: 30px;
 }
 
 @media (max-width: 576px) {
-    .card-responsiveness {
-        width: 100%;
+    .modal.style1 .product-head .title {
+        margin: 0 0 2rem 0;
+        font-size: 18px;
+        line-height: 1.4;
     }
 }
-@media (min-width: 577px) {
-    .card-responsiveness {
-        width: 33%;
-    }
-}
+
+
+
+
+
+
+

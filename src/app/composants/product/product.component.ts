@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Products } from 'src/app/interfaces/products';
 import { CartService } from 'src/app/shared/cart.service';
 import { ProductsService } from 'src/app/shared/products.service';
@@ -12,7 +12,7 @@ import { UsersService } from 'src/app/shared/users.service';
 })
 export class ProductComponent implements OnInit {
   url="../../../assets/img/";
-  products: Products[]|null = null;
+  @Input() products: Products[] = [];
   productToAdd?: any;
   productToReserve?: any;
   user?: any;

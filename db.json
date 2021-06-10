@@ -10,10 +10,7 @@
       "selected": false,
       "available": true,
       "image": "1.jpg",
-      "id": 1,
-      "reservedBy": [
-
-      ]
+      "id": 1
     },
     {
       "id": 2,
@@ -25,8 +22,7 @@
       "quantity": "37",
       "selected": true,
       "available": true,
-      "image": "2.jpg",
-      "reservedBy": []
+      "image": "2.jpg"
     },
     {
       "id": 3,
@@ -38,10 +34,7 @@
       "quantity": 54,
       "selected": false,
       "available": true,
-      "image": "3.jpg",
-      "reservedBy": [
-
-      ]
+      "image": "3.jpg"
     },
     {
       "id": 4,
@@ -53,8 +46,7 @@
       "selected": false,
       "available": true,
       "price": 139,
-      "image": "4.jpg",
-      "reservedBy": []
+      "image": "4.jpg"
     },
     {
       "id": 5,
@@ -66,8 +58,7 @@
       "selected": false,
       "available": true,
       "price": 89,
-      "image": "5.jpg",
-      "reservedBy": []
+      "image": "5.jpg"
     },
     {
       "name": "Nike Air Cold",
@@ -79,8 +70,7 @@
       "selected": false,
       "available": true,
       "image": "6.jpg",
-      "id": 6,
-      "reservedBy": []
+      "id": 6
     },
     {
       "name": "Puma 3HPI",
@@ -92,8 +82,7 @@
       "selected": false,
       "available": true,
       "image": "7.jpg",
-      "id": 7,
-      "reservedBy": []
+      "id": 7
     },
     {
       "name": "Puma 3002",
@@ -105,8 +94,7 @@
       "selected": false,
       "available": true,
       "image": "8.jpg",
-      "id": 8,
-      "reservedBy": []
+      "id": 8
     },
     {
       "id": 9,
@@ -118,8 +106,7 @@
       "quantity": 54,
       "selected": false,
       "available": true,
-      "image": "9.jpg",
-      "reservedBy": []
+      "image": "9.jpg"
     },
     {
       "id": 10,
@@ -131,8 +118,7 @@
       "selected": false,
       "available": true,
       "price": 159,
-      "image": "10.jpg",
-      "reservedBy": []
+      "image": "10.jpg"
     },
     {
       "id": 11,
@@ -144,8 +130,7 @@
       "quantity": 154,
       "selected": false,
       "available": true,
-      "image": "11.jpg",
-      "reservedBy": []
+      "image": "11.jpg"
     },
     {
       "id": 12,
@@ -157,8 +142,7 @@
       "selected": false,
       "available": true,
       "price": 139,
-      "image": "12.jpg",
-      "reservedBy": []
+      "image": "12.jpg"
     },
     {
       "name": "Asics High",
@@ -170,8 +154,7 @@
       "selected": true,
       "available": true,
       "image": "13.jpg",
-      "id": 13,
-      "reservedBy": []
+      "id": 13
     },
     {
       "name": "Puma XSS",
@@ -183,8 +166,7 @@
       "selected": false,
       "available": true,
       "image": "14.jpg",
-      "id": 14,
-      "reservedBy": []
+      "id": 14
     },
     {
       "name": "Puma Rout",
@@ -195,9 +177,8 @@
       "quantity": "98",
       "selected": false,
       "available": true,
-      "image": "15.jpg",
-      "id": 15,
-      "reservedBy": []
+      "image": "10.jpg",
+      "id": 15
     }
   ],
   "comments": [
@@ -226,16 +207,42 @@
       "id": 1,
       "cart": [
         {
+          "name": "Puma XSS",
+          "description": "Casual running shoes",
+          "reference": "302546",
+          "category": "ride",
+          "price": "96",
+          "quantity": "82",
+          "selected": false,
+          "available": true,
+          "image": "14.jpg",
+          "id": 14,
+          "cartQuantity": 3
+        },
+        {
           "id": 3,
           "name": "New Balance 4X",
           "description": "Professional running shoes",
           "reference": "300732",
           "category": "multi",
           "price": 98,
-          "quantity": 0,
+          "quantity": 54,
           "selected": false,
           "available": true,
           "image": "3.jpg",
+          "cartQuantity": 2
+        },
+        {
+          "id": 2,
+          "name": "Puma 301",
+          "description": "Casual running shoes",
+          "reference": "300953",
+          "category": "cross",
+          "price": 131,
+          "quantity": "37",
+          "selected": true,
+          "available": true,
+          "image": "2.jpg",
           "cartQuantity": 1
         },
         {
@@ -249,12 +256,12 @@
           "available": true,
           "image": "1.jpg",
           "id": 1,
-          "cartQuantity": 2
+          "cartQuantity": 1
         }
       ],
       "delivery": [
         {
-          "lastName": "Barb",
+          "lastName": "",
           "firstName": "",
           "street": "",
           "city": "",
@@ -270,9 +277,6 @@
           "cardExpirationDate": "",
           "cryptogram": ""
         }
-      ],
-      "reservations": [
-
       ]
     },
     {
