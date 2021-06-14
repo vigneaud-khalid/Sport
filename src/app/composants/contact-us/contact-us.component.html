@@ -1,79 +1,158 @@
+<!-- EB ContactUs -->
 <div class="brand">
     <img src="../../assets/img/logo.svg" class="logo" alt="timer">
     <h1>Sport Market</h1>
 </div>
-<header id="head" class="secondary"></header>
-<div class="container">
-    <ol class="breadcrumb">
-        <li><a href="http://localhost:4200/product">Search Products</a></li>
-    </ol>
-    <div class="row">
-        <article class="col-sm-9 maincontent">
-            <div class="section-title text-center mb-15">
-                <h1 class="title text-dark text-capitalize">Contact us</h1>
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+    <h1 class="title text-dark text-capitalize">Contact us</h1>
+    <mat-card class="shipping-card">
+        <mat-card-header>
+            <mat-card-title>Your Information</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Company" formControlName="company">
+                    </mat-form-field>
+                </div>
             </div>
-            <br>
-            <p>
-                We’d love to hear from you. Interested in working together? Fill out the form below with some info about
-                your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
-            </p>
-            <br>
-            <form>
-                <div class="row">
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Success  !</strong> Your email has been sended successfully.
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" placeholder="Name">
-                    </div>
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" placeholder="Email">
-                    </div>
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" placeholder="Phone">
-                    </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="First name" formControlName="firstName">
+                        <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+                            First name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
-                    </div>
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Last name" formControlName="lastName">
+                        <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
+                            Last name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <label class="checkbox"><input type="checkbox"> Sign up for newsletter</label>
-                    </div>
-                    <div class="col-sm-4 text-right">
-                        <button class="btn btn-primary">Send message</button>
-                    </div>
-                </div>
-            </form>
-        </article>
-        <aside class="col-sm-3 sidebar sidebar-right">
-            <div class="widget">
-                <h4>Address</h4>
-                <address>
-                    Boulevard street, Nice, 06000, FRANCE
-                </address>
-                <h4>Phone:</h4>
-                <address>
-                    +33 06.32.32.32.32
-                </address>
             </div>
-        </aside>
-    </div>
-</div>
-<section class="container-full top-space">
-    <div id="map"></div>
-</section>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <textarea matInput placeholder="Address" formControlName="address"></textarea>
+                        <mat-error *ngIf="addressForm.controls['address'].hasError('required')">
+                            Address is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row" *ngIf="!hasUnitNumber">
+                <div class="col">
+                    <button mat-button type="button" (click)="hasUnitNumber = !hasUnitNumber">
+                        + Add C/O, Apt, Suite, Unit
+                    </button>
+                </div>
+            </div>
+            <div class="row" *ngIf="hasUnitNumber">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <textarea matInput placeholder="Address 2" formControlName="address2"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="City" formControlName="city">
+                        <mat-error *ngIf="addressForm.controls['city'].hasError('required')">
+                            City is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <mat-select placeholder="State" formControlName="state">
+                            <mat-option *ngFor="let state of states" [value]="state.abbreviation">
+                                {{ state.name }}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="addressForm.controls['state'].hasError('required')">
+                            State is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput #postalCode maxlength="5" placeholder="Postal Code" type="number"
+                            formControlName="postalCode">
+                        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-radio-group formControlName="shipping">
+                        <!-- <mat-radio-button value="free">Free Shipping</mat-radio-button>
+                        <mat-radio-button value="priority">Priority Shipping</mat-radio-button>
+                        <mat-radio-button value="nextday">Next Day Shipping</mat-radio-button> -->
+                        <mat-checkbox value="free">Subscribe to our Newsletter</mat-checkbox>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Section: Social media -->
+        <!-- Section: Form -->
+        <section class="">
+            <form action="">
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+                    <!--Grid column-->
+                    <div class="col-auto">
+                        <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                        </p>
+                    </div>
+                    <!--Grid column-->
 
-<!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <input type="text" placeholder="Name" name="name" ngModel required #name="ngModel">
-    <input type="text" placeholder="Email" email name="email" ngModel required #email="ngModel">
-    <textarea placeholder="Messages" name="messages" ngModel required #messages="ngModel"></textarea>
-    <input type="submit" value="Send">
-</form> -->
+                    <!--Grid column-->
+                    <div class="col-md-5 col-12">
+                        <!-- Email input -->
+                        <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example2" class="form-control" />
+                            <label class="form-label" for="form5Example2">Email address</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                    <div class="col-auto">
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-outline-light mb-4">
+                            Subscribe
+                        </button>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+
+            </form>
+        </section>
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" href="http://localhost:4200/product">Sport Market</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+

@@ -26,10 +26,11 @@
                         </p>
                         <ul class="list-group list-group-flush" id="contenu">
                             <li class="list-group-item">Description :   {{ product.description }}</li>
-                            <li class="list-group-item">Quantité : {{product.quantity}}</li>
-                            <li class="list-group-item">Référence : {{product.reference}}</li>
+                            <li class="list-group-item">Category : {{product.category}}</li>
+                            <li class="list-group-item">Quantity : {{product.quantity}}</li>
+                            <li class="list-group-item">Reference : {{product.reference}}</li>
                         </ul>
-                        <h5 class="text-left my-3">Prix : <span class="text-info">{{product.price}}€</span></h5>
+                        <h5 class="text-left my-3">Price : <span class="text-info">{{product.price}}€</span></h5>
                         <h5 class="fw-bolder">Popular Item</h5>
                         <div class="rating">
                             <div class="stars">
@@ -44,7 +45,7 @@
                         </div>
                     </div>
                     <button type="button" class="btn btn-primary" data-toggle="modal"
-                        [attr.data-target]="'#product-details-'+product.id">DETAILS</button>
+                        [attr.data-target]="'#product-details-'+product.id">Details</button>
                     <div class="product-desc py-0">
                     </div>
                 </div>
