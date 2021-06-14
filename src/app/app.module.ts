@@ -32,6 +32,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ContactUsComponent } from './composants/contact-us/contact-us.component';
 import { MatSlider, MatSliderModule } from '@angular/material/slider';
+import { ProfileComponent } from './composants/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { MatSlider, MatSliderModule } from '@angular/material/slider';
     PaymentComponent,
     ProductDetailsComponent,
     ContactusComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

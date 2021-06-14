@@ -21,6 +21,7 @@ import { PaymentComponent } from './composants/payment/payment.component';
 import { ContactUsComponent } from './composants/contact-us/contact-us.component';
 import { ProductDetailsComponent } from './composants/product-details/product-details.component';
 import { PagesadminGuard } from './guards/pagesadmin.guard';
+import { ProfileComponent } from './composants/profile/profile.component';
 
 const routes: Routes = [
     // localhost:4200/
@@ -38,7 +39,8 @@ const routes: Routes = [
    
     // localhost:4200/market
    // { path: 'market', component: MarketComponent },
-
+  // localhost:4200/profile
+  { path: 'profile', component: ProfileComponent },
     // localhost:4200/product
     { path: 'product', component: ProductComponent },
     // localhost:4200/product
