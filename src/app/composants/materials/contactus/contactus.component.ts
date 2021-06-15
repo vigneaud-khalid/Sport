@@ -1,18 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.css']
+  selector: 'app-contactus',
+  templateUrl: './contactus.component.html',
+  styleUrls: ['./contactus.component.css']
 })
-export class ContactUsComponent implements OnInit {
-  
-  
-  ngOnInit(): void {
-  }
-  
+export class ContactusComponent {
   addressForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
@@ -94,6 +88,6 @@ export class ContactUsComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   onSubmit(): void {
-    alert('Thanks for your Email!');
+    alert('Thanks!');
   }
 }

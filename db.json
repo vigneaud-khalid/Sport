@@ -3,8 +3,9 @@
     {
       "name": "Puma 3001",
       "description": "Sport men running shoes",
+      "description2": "The Puma 3001 : Sport men running shoes, Nike Air VaporMax 2020 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.“We wanted to look at not only Nike’s waste stream but other industrial waste streams and how we could leverage that content,” says Nike product design lead Jesi Small. “We let that drive a lot of the decision-making.”...Puma 3001",
       "reference": "302952",
-      "category": "ride",
+      "category": "Ride",
       "price": "133",
       "quantity": 37,
       "selected": false,
@@ -13,15 +14,17 @@
       "id": 1,
       "reservedBy": [
         "barbey.arthur@gmail.com",
-        "barbey.arthur@gmail.com"
+        "barbey.arthur@gmail.com",
+        "norris.chuck@gmail.com"
       ]
     },
     {
       "id": 2,
       "name": "Puma 301",
       "description": "Casual running shoes",
+      "description2": "The Puma 301 : Casual running shoes 2021 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight.......... How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The Sport men running shoes. New :Puma 301",
       "reference": "300953",
-      "category": "cross",
+      "category": "Cross",
       "price": 131,
       "quantity": 31,
       "selected": true,
@@ -29,15 +32,17 @@
       "image": "2.jpg",
       "reservedBy": [
         "barbey.arthur@gmail.com",
-        "barbey.arthur@gmail.com"
+        "barbey.arthur@gmail.com",
+        "norris.chuck@gmail.com"
       ]
     },
     {
       "id": 3,
       "name": "New Balance 4X",
       "description": "Professional running shoes",
+      "description2": "The New Balance 4X Professional running shoes Flyknit is one of Nike’s most sustainable shoes to date, ..........made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The New Balance 4X Professional...2021",
       "reference": "300732",
-      "category": "multi",
+      "category": "Multi",
       "price": 98,
       "quantity": 50,
       "selected": false,
@@ -49,8 +54,9 @@
       "id": 4,
       "name": "New Balance 3X",
       "description": "High quality sport running shoes",
+      "description2": "The New Balance 3X 2021 Flyknit is one of Nike’s most sustainable shoes to date. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.....The New Balance 3X 2021",
       "reference": "301546",
-      "category": "cross",
+      "category": "Cross",
       "quantity": "3",
       "selected": false,
       "available": true,
@@ -62,9 +68,10 @@
       "id": 5,
       "name": "New Balance 7X",
       "description": "Sport men running shoes",
+      "description2": "The New Balance 7X 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
       "reference": "31593",
-      "category": "ride",
-      "quantity": 76,
+      "category": "Ride",
+      "quantity": "78",
       "selected": false,
       "available": true,
       "price": 89,
@@ -74,8 +81,9 @@
     {
       "name": "Nike Air Cold",
       "description": "High quality sport running shoes",
+      "description2": "The Nike Air Cold 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
       "reference": "301576",
-      "category": "running",
+      "category": "Running",
       "price": "135",
       "quantity": "4",
       "selected": false,
@@ -87,6 +95,7 @@
     {
       "name": "Puma 3HPI",
       "description": "Professional running shoes",
+      "description2": "The Puma 3HPI is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. Puma 3HPI......Puma 3HPI.......Puma 3HPI",
       "reference": "300952",
       "category": "ride",
       "price": "89",
@@ -100,8 +109,9 @@
     {
       "name": "Puma 3002",
       "description": "Professional running shoes",
+      "description2": "The Puma 3002 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. Puma 3002....Puma 3002....Puma 3002",
       "reference": "301546",
-      "category": "ride",
+      "category": "Ride",
       "price": "34",
       "quantity": "56",
       "selected": false,
@@ -114,8 +124,9 @@
       "id": 9,
       "name": "RunShoes 4X",
       "description": "Professional running shoes",
+      "description2": "The RunShoes 4X 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
       "reference": "300732",
-      "category": "multi",
+      "category": "Multi",
       "price": 98,
       "quantity": 54,
       "selected": false,
@@ -127,8 +138,9 @@
       "id": 10,
       "name": "New Balance VX",
       "description": "High quality sport running shoes",
+      "description2": "The New Balance VX2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. New Balance VX.....New Balance VX",
       "reference": "301646",
-      "category": "cross",
+      "category": "Cross",
       "quantity": 143,
       "selected": false,
       "available": true,
@@ -140,8 +152,9 @@
       "id": 11,
       "name": "Adidas Run",
       "description": "Professional running shoes",
+      "description2": "The New Balance VX 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The New Balance VX 2021...The New Balance VX 2021",
       "reference": "300732",
-      "category": "multi",
+      "category": "Multi",
       "price": 98,
       "quantity": 154,
       "selected": false,
@@ -153,8 +166,9 @@
       "id": 12,
       "name": "New Balance 3X",
       "description": "High quality sport running shoes",
+      "description2": "The New Balance 3X 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.The New Balance 3X 2021 ......The New Balance 3X 2021 ",
       "reference": "301546",
-      "category": "cross",
+      "category": "Cross",
       "quantity": 43,
       "selected": false,
       "available": true,
@@ -165,8 +179,9 @@
     {
       "name": "Asics High",
       "description": "Sport men running shoes for mountains and trails",
+      "description2": "The Asics High 2021 : is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.....Sport men running shoes for mountains and trails...The Asics High 2021",
       "reference": "31544",
-      "category": "ride",
+      "category": "Ride",
       "price": 114,
       "quantity": "7",
       "selected": true,
@@ -178,8 +193,9 @@
     {
       "name": "Puma XSS",
       "description": "Casual running shoes",
+      "description2": "The Puma XSS 2021 : is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements....Casual running shoes...The Puma XSS 2021 :",
       "reference": "302546",
-      "category": "ride",
+      "category": "Ride",
       "price": "96",
       "quantity": "82",
       "selected": false,
@@ -191,13 +207,14 @@
     {
       "name": "Puma Rout",
       "description": "Sport men running shoes",
+      "description2": "The Puma Rout 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. Sport men running shoes......Puma Rout",
       "reference": "312952",
-      "category": "ride",
+      "category": "Ride",
       "price": "101",
       "quantity": "98",
       "selected": false,
       "available": true,
-      "image": "15.jpg",
+      "image": "10.jpg",
       "id": 15,
       "reservedBy": []
     }
@@ -699,6 +716,68 @@
         }
       ],
       "id": 40
+    },
+    {
+      "email": "norris.chuck@gmail.com",
+      "password": "$2a$10$ZG0qdmDZFFIjhNIbH2mmJuTzkecLUlQRyqeEu5Raz2xi1vjQKxDv.",
+      "firstname": "Chuck",
+      "lastname": "Norris",
+      "role": "user",
+      "cart": [
+        {
+          "id": 2,
+          "name": "Puma 301",
+          "description": "Casual running shoes",
+          "description2": "The Puma 301 : Casual running shoes 2021 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight.......... How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The Sport men running shoes. New :Puma 301",
+          "reference": "300953",
+          "category": "Cross",
+          "price": 131,
+          "quantity": 31,
+          "selected": true,
+          "available": true,
+          "image": "2.jpg",
+          "reservedBy": [
+            "barbey.arthur@gmail.com",
+            "barbey.arthur@gmail.com",
+            "norris.chuck@gmail.com"
+          ],
+          "cartQuantity": 1
+        },
+        {
+          "id": 3,
+          "name": "New Balance 4X",
+          "description": "Professional running shoes",
+          "description2": "The New Balance 4X Professional running shoes Flyknit is one of Nike’s most sustainable shoes to date, ..........made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The New Balance 4X Professional...2021",
+          "reference": "300732",
+          "category": "Multi",
+          "price": 98,
+          "quantity": 50,
+          "selected": false,
+          "available": true,
+          "image": "3.jpg",
+          "reservedBy": [],
+          "cartQuantity": 1
+        },
+        {
+          "id": 5,
+          "name": "New Balance 7X",
+          "description": "Sport men running shoes",
+          "description2": "The New Balance 7X 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
+          "reference": "31593",
+          "category": "Ride",
+          "quantity": "78",
+          "selected": false,
+          "available": true,
+          "price": 89,
+          "image": "5.jpg",
+          "reservedBy": [],
+          "cartQuantity": 1
+        }
+      ],
+      "reservations": [],
+      "delivery": [],
+      "orders": [],
+      "id": 41
     }
   ]
 }

@@ -10,7 +10,6 @@ const httpOptions = {
   
 @Injectable({providedIn:"root"})
 export class ProductsService {
-
     constructor(private http:HttpClient){
     }
 //let host= environment.host;    //  le repository  environment  rajoute //localhost:4200   à l'URL stocké dans la variable host

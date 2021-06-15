@@ -1,0 +1,71 @@
+<div class="brand">
+    <img src="../../assets/img/logo.svg" class="logo" alt="timer">
+    <h1>Sport Market</h1>
+</div>
+<div class="titleAD">
+    <h2>Edit Profile</h2>
+</div>
+<!--<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>-->
+<!--<form>-->
+<!-- <img src="../../../assets/img/portraitclilent.jpg" class="portraitclilent" alt="portraitclient" /> -->
+<!-- <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Nom</span>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">prenom</span>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+</div> -->
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="../../../assets/img/portraitclilent.jpg" alt="Card image cap">
+    <!-- <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div> -->
+</div>
+<form #myForm="ngForm">
+    <div class="form-group">
+        <label for="exampleInputUsername" class="col-">Firstname</label>
+        <input type="text" class="form-control " id="username" placeholder="Firstname" aria-describedby="firstname"
+        name="firstname" [(ngModel)]="user.firstname" placeholder="Enter  Firstname">
+        <small id="firstnameHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFirstNameLabel">Lastname</label>
+        <input type="text" class="form-control mb-2" id="lastname" placeholder="" aria-describedby="lastname"
+        name="lastname" [(ngModel)]="user.lastname" placeholder="Enter Lastname">
+        <small id="lastnameHelp" class="form-text text-muted"></small>
+    </div>
+    
+    <!-- <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div> -->
+
+    <div class="d-grid gap-2">
+      <!-- <button class="btn btn-primary" type="button">Edit</button>  -->
+        <button class="btn btn-primary" type="button">Purchase history</button>
+        <button class="btn btn-primary" type="button">Carts history</button>
+        <button class="btn btn-primary" type="button">Display Favorites</button>
+        <button class="btn btn-primary" type="button">Invoice histories</button>
+        <button class="btn btn-primary" type="button">Password reset</button>
+        <button class="btn btn-primary" type="button">Change delivery address</button>
+        <button class="btn btn-primary" type="button">History of reductions</button>
+    </div>
+    <div></div>
+    <button type="button" class="btn btn-secondary btn-lg btn btn-space mx-2">Cancel</button>
+    <button type="button" class="btn btn-primary btn-lg btn btn-space pull-right mx-2">Save</button>
+</form>
+<ul class="list-group">
+    <li *ngFor="let elt of users" class="list-group-item">
+        {{ elt.firstname }} {{ elt.lastname }}
+    </li>
+    <button class="btn btn-primary" (click)="userEdit(elt.idUser)">
+        Edit
+    </button>
+</ul>

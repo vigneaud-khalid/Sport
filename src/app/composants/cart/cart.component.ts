@@ -6,6 +6,7 @@ import { ProductsService } from 'src/app/shared/products.service';
 import { ReservationService } from 'src/app/shared/reservation.service';
 import { UsersService } from 'src/app/shared/users.service';
 import { TokenStorageService } from 'src/app/shared/token-storage.service';
+import { DataService } from 'src/app/shared/data.service';
 
 @Component({
   selector: 'app-cart',
@@ -26,7 +27,8 @@ export class CartComponent implements OnInit {
               private cartService: CartService, 
               private userService: UsersService,
               private reservationService: ReservationService,
-              private tokenService: TokenStorageService) { }
+              private tokenService: TokenStorageService,
+              private dataService: DataService) { }
 
   ngOnInit(): void {
     this.loadUserId();
@@ -63,6 +65,7 @@ export class CartComponent implements OnInit {
       if(this.cartProducts != null) {
         this.cartProducts = this.cartProducts.filter((item: any) => item.id !== id); 
         this.cartService.updateUserCart(this.activeUserId, this.cartProducts).subscribe();
+        this.dataService.cartProductsNumber.next(this.cartProducts.length);
       }
     });
   }

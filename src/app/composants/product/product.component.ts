@@ -5,6 +5,7 @@ import { ProductsService } from 'src/app/shared/products.service';
 import { ReservationService } from 'src/app/shared/reservation.service';
 import { UsersService } from 'src/app/shared/users.service';
 import { TokenStorageService } from 'src/app/shared/token-storage.service';
+import { DataService } from 'src/app/shared/data.service';
 
 @Component({
   selector: 'app-product',
@@ -25,7 +26,8 @@ export class ProductComponent implements OnInit {
               private productsService: ProductsService, 
               private cartService: CartService, 
               private userService: UsersService,
-              private reservationService: ReservationService) { }
+              private reservationService: ReservationService,
+              private dataService: DataService) { }
 
   ngOnInit(): void {
     this.loadUserId();
@@ -67,6 +69,7 @@ export class ProductComponent implements OnInit {
       this.cartProducts.push(Object.assign(this.productToAdd, {cartQuantity: 1})); 
     }
     this.cartService.addUserCartProduct(this.activeUserId, this.cartProducts).subscribe();
+    this.dataService.cartProductsNumber.next(this.cartProducts.length);
   }
 
   loadModalData(id: any) {

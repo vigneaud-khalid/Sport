@@ -6,46 +6,60 @@
         </div>
     </div>
 </header>
-
-<div *ngIf="products">
-    <div *ngFor="let product of products; let i = index;" class="card d-inline-block card-responsiveness"
-        attr.id="{{product.id}}">
-        <img class="card-img-top" src="{{ url + product.image }}" alt="Card image cap">
-        <div class="card-body">
-            <div class="card-title">
-                <h5 class="d-inline">{{product.name}}</h5>
-                <span class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</span>
-            </div>
-            <p class="card-text">
-                The Pegasus 38 is built on a fresh last to provide more room in the toe
-                box; runners might notice it feels similar to models prior to the Pegasus 36.
-                • A new individual midfoot webbing system allows every runner to lace up to a
-                personalized fit.
-            </p>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span class="text-primary">Description: </span>{{product.description}}</li>
-                <li class="list-group-item"><span class="text-primary">Quantité: </span>{{product.quantity}}</li>
-                <li class="list-group-item"><span class="text-primary">Référence: </span>{{product.reference}}</li>
-            </ul>
-            <h5 class="text-center my-3">Prix: <span class="text-info">{{product.price}}€</span></h5>
-            <h5 class="fw-bolder">Popular Item</h5>
-            <div class="rating">
-                <div class="stars">
-                    <i class="fa fa-star gold"></i>
-                    <i class="fa fa-star gold"></i>
-                    <i class="fa fa-star gold"></i>
-                    <i class="fa fa-star gold"></i>
-                    <i class="fa fa-star gold"></i>
+<!-- <div *ngIf="products"></div> -->
+<div class="tab-content container" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="row grid-view theme1">
+            <div class="col-sm-6 col-md-4 mb-30" *ngFor="let product of products; let i = index;"
+                class="card d-inline-block card-responsiveness" attr.id="{{product.id}}">>
+                <div class="card product-card">
+                    <span class="badge bg-dark text-white" style="width: 25%;">Sale</span>
+                    <img class="first-img" width="420" src="{{ url + product.image }}" alt="thumbnail">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h5 class="d-inline"> {{product.name}}</h5>
+                        </div>
+                        <p class="card-text">
+                        </p>
+                        <ul class="list-group list-group-flush" id="contenu">
+                            <li class="list-group-item description">Description: {{product.description}}</li>
+                            <li class="list-group-item category">Category: {{product.category}}</li>
+                            <li class="list-group-item">Quantity: {{product.quantity}}</li>
+                            <li class="list-group-item">Reference: {{product.reference}}</li>
+                        </ul>
+                        <h5 class="text-center my-3">Price : <span class="text-info">{{product.price}}€</span></h5>
+                        <h5 class="fw-bolder text-center">Popular Item</h5>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                                <i class="fa fa-star gold"></i>
+                            </div>
+                            <ul class="product-links d-flex justify-content-center">
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success" data-toggle="modal"
+                        [attr.data-target]="'#product-details-'+product.id">Details</button>
+                    <div class="product-desc py-0">
+                    </div>
                 </div>
-            </div>
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-                <button class="btn btn-outline-info mt-3 me-3" data-bs-target="#reservationModal" data-bs-toggle="modal"
-                    (click)="loadModalData(product.id)">Reserve it</button>
-                <button class="btn btn-outline-primary mt-3" (click)="addProductToCart(product.id)">Add to cart</button>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+                    <button class="btn btn-info mt-3 me-3 text-light reserve" data-bs-target="#reservationModal" data-bs-toggle="modal"
+                        (click)="loadModalData(product.id)">Reserve it</button>
+                    <button class="btn btn-primary mt-3" (click)="addProductToCart(product.id)">Add to cart</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<div class="text-end">
+    <a href="product" class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light" role="button">Search Products</a>
+    <a href="cart" class="btn btn-info btn-lg my-3 my-md-5 me-5" role="button">My cart</a>
+</div>
+
 
 <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -67,3 +81,7 @@
         </div>
     </div>
 </div>
+
+<ng-container *ngIf="products">
+    <app-product-details [products]="products"></app-product-details>
+</ng-container>

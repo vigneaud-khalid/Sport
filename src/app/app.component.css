@@ -1,0 +1,44 @@
+/* Cart icon */
+
+.navigation {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-top: 15px solid #d60e96;
+}
+
+.logo {
+    max-height: 70px;
+}
+
+li {
+    list-style: none;
+  }
+
+.fa, .fas {
+    font-family: 'FontAwesome';
+}  
+
+ul li a {
+    font-size: 1.2rem;
+    color: #ffffff;
+    bottom: -10px;
+}
+
+ul li a.cart:hover {
+    text-decoration: none;
+    color: #d60e96;
+}
+
+ul li a.cart .cart-basket {
+    font-size: .8rem;
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #1a66c2;
+    border-radius: 50%;
+}
