@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit {
             var role = data[0].role;
             console.log('ROLE : ' + data[0].role);
             this.tokenStorage.saveRole(role);
+            this.tokenStorage.saveUser(data[0]);
+            this.tokenStorage.getUser();
           })
         this.isLoggedIn = true;
         this.isLoginFailed = false;
@@ -50,6 +52,7 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/home');
       },
       err => {
+        console.log('trigered');
         this.errorMessage = err.error;
         this.isLoginFailed = true;
       })

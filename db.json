@@ -6,13 +6,14 @@
       "reference": "302952",
       "category": "ride",
       "price": "133",
-      "quantity": "46",
+      "quantity": 37,
       "selected": false,
       "available": true,
       "image": "1.jpg",
       "id": 1,
       "reservedBy": [
-
+        "barbey.arthur@gmail.com",
+        "barbey.arthur@gmail.com"
       ]
     },
     {
@@ -22,11 +23,14 @@
       "reference": "300953",
       "category": "cross",
       "price": 131,
-      "quantity": "37",
+      "quantity": 31,
       "selected": true,
       "available": true,
       "image": "2.jpg",
-      "reservedBy": []
+      "reservedBy": [
+        "barbey.arthur@gmail.com",
+        "barbey.arthur@gmail.com"
+      ]
     },
     {
       "id": 3,
@@ -35,13 +39,11 @@
       "reference": "300732",
       "category": "multi",
       "price": 98,
-      "quantity": 54,
+      "quantity": 50,
       "selected": false,
       "available": true,
       "image": "3.jpg",
-      "reservedBy": [
-
-      ]
+      "reservedBy": []
     },
     {
       "id": 4,
@@ -62,7 +64,7 @@
       "description": "Sport men running shoes",
       "reference": "31593",
       "category": "ride",
-      "quantity": "78",
+      "quantity": 76,
       "selected": false,
       "available": true,
       "price": 89,
@@ -224,37 +226,11 @@
       "firstname": "Romain ",
       "lastname": " Pierlot",
       "id": 1,
-      "cart": [
-        {
-          "id": 3,
-          "name": "New Balance 4X",
-          "description": "Professional running shoes",
-          "reference": "300732",
-          "category": "multi",
-          "price": 98,
-          "quantity": 0,
-          "selected": false,
-          "available": true,
-          "image": "3.jpg",
-          "cartQuantity": 1
-        },
-        {
-          "name": "Puma 3001",
-          "description": "Sport men running shoes",
-          "reference": "302952",
-          "category": "ride",
-          "price": "133",
-          "quantity": "46",
-          "selected": false,
-          "available": true,
-          "image": "1.jpg",
-          "id": 1,
-          "cartQuantity": 2
-        }
-      ],
+      "cart": [],
+      "reservations": [],
       "delivery": [
         {
-          "lastName": "Barb",
+          "lastName": "",
           "firstName": "",
           "street": "",
           "city": "",
@@ -263,16 +239,75 @@
           "remarks": ""
         }
       ],
-      "payment": [
+      "orders": [
         {
           "cardHolder": "",
           "cardNumber": "",
           "cardExpirationDate": "",
-          "cryptogram": ""
+          "cryptogram": "",
+          "amount": 126.69,
+          "cart": [
+            {
+              "name": "Puma 3001",
+              "description": "Sport men running shoes",
+              "reference": "302952",
+              "category": "ride",
+              "price": "133",
+              "quantity": 46,
+              "selected": false,
+              "available": true,
+              "image": "1.jpg",
+              "id": 1,
+              "reservedBy": [],
+              "cartQuantity": 1
+            }
+          ],
+          "delivery": [
+            {
+              "lastName": "",
+              "firstName": "",
+              "street": "",
+              "city": "",
+              "postalCode": "",
+              "phone": "",
+              "remarks": ""
+            }
+          ]
+        },
+        {
+          "cardHolder": "",
+          "cardNumber": "",
+          "cardExpirationDate": "",
+          "cryptogram": "",
+          "amount": 124.89,
+          "cart": [
+            {
+              "id": 2,
+              "name": "Puma 301",
+              "description": "Casual running shoes",
+              "reference": "300953",
+              "category": "cross",
+              "price": 131,
+              "quantity": 37,
+              "selected": true,
+              "available": true,
+              "image": "2.jpg",
+              "reservedBy": [],
+              "cartQuantity": 1
+            }
+          ],
+          "delivery": [
+            {
+              "lastName": "",
+              "firstName": "",
+              "street": "",
+              "city": "",
+              "postalCode": "",
+              "phone": "",
+              "remarks": ""
+            }
+          ]
         }
-      ],
-      "reservations": [
-
       ]
     },
     {
@@ -553,6 +588,117 @@
       "lastname": "Moulins",
       "role": "user",
       "id": 39
+    },
+    {
+      "email": "barbey.arthur@gmail.com",
+      "password": "$2a$10$Tq0MDHEjKkVTBCkkdkSqUuO6742BqfB/NiQi3ZcdWq08yFt6yHdCq",
+      "firstname": "Arthur",
+      "lastname": "Barbey",
+      "role": "user",
+      "cart": [],
+      "reservations": [],
+      "delivery": [
+        {
+          "lastName": "",
+          "firstName": "",
+          "street": "",
+          "city": "",
+          "postalCode": "",
+          "phone": "",
+          "remarks": ""
+        }
+      ],
+      "orders": [
+        {
+          "cardHolder": "Arthur",
+          "cardNumber": 787,
+          "cardExpirationDate": "12/23",
+          "cryptogram": 345,
+          "amount": 126.69,
+          "cart": [
+            {
+              "name": "Puma 3001",
+              "description": "Sport men running shoes",
+              "reference": "302952",
+              "category": "ride",
+              "price": "133",
+              "quantity": 39,
+              "selected": false,
+              "available": true,
+              "image": "1.jpg",
+              "id": 1,
+              "reservedBy": [
+                "barbey.arthur@gmail.com",
+                "barbey.arthur@gmail.com"
+              ],
+              "cartQuantity": 1
+            }
+          ],
+          "delivery": [
+            {
+              "lastName": "Barbey",
+              "firstName": "Arthur",
+              "street": "1 rue ",
+              "city": "Emeu",
+              "postalCode": 77184,
+              "phone": "06",
+              "remarks": "blabla"
+            }
+          ]
+        },
+        {
+          "cardHolder": "",
+          "cardNumber": "",
+          "cardExpirationDate": "",
+          "cryptogram": "",
+          "amount": 199.8,
+          "cart": [
+            {
+              "name": "Puma 3001",
+              "description": "Sport men running shoes",
+              "reference": "302952",
+              "category": "ride",
+              "price": "133",
+              "quantity": 38,
+              "selected": false,
+              "available": true,
+              "image": "1.jpg",
+              "id": 1,
+              "reservedBy": [
+                "barbey.arthur@gmail.com",
+                "barbey.arthur@gmail.com"
+              ],
+              "cartQuantity": 1
+            },
+            {
+              "id": 5,
+              "name": "New Balance 7X",
+              "description": "Sport men running shoes",
+              "reference": "31593",
+              "category": "ride",
+              "quantity": 77,
+              "selected": false,
+              "available": true,
+              "price": 89,
+              "image": "5.jpg",
+              "reservedBy": [],
+              "cartQuantity": 1
+            }
+          ],
+          "delivery": [
+            {
+              "lastName": "",
+              "firstName": "",
+              "street": "",
+              "city": "",
+              "postalCode": "",
+              "phone": "",
+              "remarks": ""
+            }
+          ]
+        }
+      ],
+      "id": 40
     }
   ]
 }

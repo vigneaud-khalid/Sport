@@ -10,10 +10,10 @@ export class PaymentService {
 
   constructor(private http:HttpClient) { }
 
-  postPaymentData(data: any):Observable<any> {
+  postUserOrderData(id: any, data: any):Observable<any> {
     let host = environment.host;
-    return this.http.patch<any>(host + "/users/1", {
-      "payment": [data]
+    return this.http.patch<any>(host + "/users/" + id, {
+      "orders": data
     });
   }
 }

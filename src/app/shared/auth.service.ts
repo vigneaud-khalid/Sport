@@ -30,7 +30,11 @@ export class AuthService {
       lastname,
       email,
       password,
-      role
+      role,
+      cart: [],
+      reservations: [],
+      delivery: [],
+      orders: []
     }, httpOptions);
   
 };

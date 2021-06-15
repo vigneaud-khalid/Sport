@@ -12,6 +12,11 @@ export class UsersService {
 
   reachableHost:string= "http://localhost:3000";
 
+  getAllUserData(id: any):Observable<any> {
+    let host = this.reachableHost;
+    return this.http.get<any>(host + "/users/" + id);
+  }
+
   getUserById(id: any): Observable<any>{
     let host= this.reachableHost;
     return this.http.get<any>(host+"/users/"+id);

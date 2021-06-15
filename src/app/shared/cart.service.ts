@@ -11,18 +11,13 @@ export class CartService {
 
   constructor(private http:HttpClient) { }
 
-  getAllCartProducts():Observable<any> {
+  addUserCartProduct(id: any, data: any):Observable<any> {
     let host = environment.host;
-    return this.http.get<any>(host + "/users/1");
+    return this.http.patch<any>(host + "/users/" + id, { "cart": data });
   }
 
-  addCartProduct(data: any):Observable<any> {
-    let host = environment.host;
-    return this.http.patch<any>(host + "/users/1", { "cart": data });
-  }
-
-  updateCart(data: any): Observable<any>{
+  updateUserCart(id: any, data: any): Observable<any>{
       let host = environment.host;
-      return this.http.patch<any>(host + "/users/1", {"cart": data});
+      return this.http.patch<any>(host + "/users/" + id, {"cart": data});
   }
 }

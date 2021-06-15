@@ -4,6 +4,7 @@ import { CartService } from 'src/app/shared/cart.service';
 import { ProductsService } from 'src/app/shared/products.service';
 import { ReservationService } from 'src/app/shared/reservation.service';
 import { UsersService } from 'src/app/shared/users.service';
+import { TokenStorageService } from 'src/app/shared/token-storage.service';
 
 @Component({
   selector: 'app-product',
@@ -12,6 +13,7 @@ import { UsersService } from 'src/app/shared/users.service';
 })
 export class ProductComponent implements OnInit {
   url="../../../assets/img/";
+  activeUserId?: any;
   products: Products[]|null = null;
   productToAdd?: any;
   productToReserve?: any;
@@ -19,15 +21,22 @@ export class ProductComponent implements OnInit {
   cartProducts: any[] = [];
   reservedProducts: any[] = [];
 
-  constructor(private productsService: ProductsService, 
+  constructor(private tokenService: TokenStorageService,
+              private productsService: ProductsService, 
               private cartService: CartService, 
               private userService: UsersService,
               private reservationService: ReservationService) { }
 
   ngOnInit(): void {
+    this.loadUserId();
     this.loadProducts();
-    this.loadCartProducts();
+    this.loadUserCartProducts();
     this.loadReservedProducts();
+  }
+
+  loadUserId() {
+    this.activeUserId = this.tokenService.getUser().id;
+    console.log(this.activeUserId);
   }
 
   loadProducts() {
@@ -36,15 +45,16 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  loadCartProducts() {
-    this.cartService.getAllCartProducts().subscribe(data => {
+  loadUserCartProducts() {
+    this.userService.getAllUserData(this.activeUserId).subscribe(data => {
       this.cartProducts = data.cart;
     });
   }
 
   loadReservedProducts() {
-    this.reservationService.getAllReservedProducts().subscribe(data => {
+    this.reservationService.getAllUserReservedProducts(this.activeUserId).subscribe(data => {
       this.reservedProducts = data.reservations;
+      console.log(this.reservedProducts);
     });
   }
 
@@ -56,14 +66,14 @@ export class ProductComponent implements OnInit {
       this.productToAdd = this.products.filter((item: any) => item.id === id)[0];
       this.cartProducts.push(Object.assign(this.productToAdd, {cartQuantity: 1})); 
     }
-    this.cartService.addCartProduct(this.cartProducts).subscribe();
+    this.cartService.addUserCartProduct(this.activeUserId, this.cartProducts).subscribe();
   }
 
   loadModalData(id: any) {
     this.productsService.getProduct(id).subscribe(data => {
       this.productToReserve = data;
     });
-    this.userService.getUserById(1).subscribe(data => {
+    this.userService.getUserById(this.activeUserId).subscribe(data => {
       this.user = data;
     });
   }
@@ -77,7 +87,7 @@ export class ProductComponent implements OnInit {
       // Add product to the reservations list of the user
       const {reservedBy, ...partialObject} = this.productToReserve;
       this.reservedProducts.push(partialObject); 
-      this.reservationService.reserveProduct(this.reservedProducts).subscribe();
+      this.reservationService.reserveUserProduct(this.activeUserId, this.reservedProducts).subscribe();
 
       // Add user email address to the reserved product 
       this.productToReserve.reservedBy.push(this.user.email);

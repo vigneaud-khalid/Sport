@@ -11,9 +11,9 @@ export class DeliveriesService {
 
   constructor(private http:HttpClient) { }
 
-  postDeliveryAddress(data: any):Observable<any> {
+  postUserDeliveryAddress(id: any, data: any):Observable<any> {
     let host = environment.host;
-    return this.http.patch<any>(host + "/users/1", {
+    return this.http.patch<any>(host + "/users/" + id, {
       "delivery": [data]
     });
   }

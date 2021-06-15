@@ -1,5 +1,11 @@
 <h1 class="order-title text-light text-center mb-5">Mon panier</h1>
 
+<ng-container *ngIf="cartProducts">
+    <div *ngIf="!cartProducts.length" class="container text-center mb-5">
+        <h2>Nothing has been added to your cart yet</h2>
+    </div>
+</ng-container>
+
 <div class="card-group" *ngIf="cartProducts">
     <div *ngFor="let cartProduct of cartProducts; let i = index;" class="card bg-transparent" attr.id="{{cartProduct.id}}">
         <img class="card-img-top" src="{{url + cartProduct.image}}" alt="Card image cap">
@@ -22,7 +28,7 @@
                 <p class="card-text text-light text-center">Quantité</p>
                 <form id='myform' class="text-center">
                     <input type='button' value='-' class='bg-info text-light' field='quantity' (click)="qtyminus(i, cartProduct.cartQuantity)"/>
-                    <input type='text' name='quantity' value='{{cartProduct.cartQuantity}}' class='qty text-center w-25' />
+                    <input type='text' name='quantity' value='{{cartProduct.cartQuantity}}' class='qty text-center w-25' (change)="onChangeEvent(i, $event)"/>
                     <input type='button' value='+' class='bg-info text-light' field='quantity' (click)="qtyplus(i, cartProduct.cartQuantity)"/>
                 </form>            
             </div>
@@ -35,10 +41,15 @@
     </div> 
 </div>
 
-<div class="text-end">
-    <a href="product" class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light" role="button">Reprendre mes achats</a>
-    <a href="purchases" class="btn btn-info btn-lg my-3 my-md-5 me-5" role="button">Commander ></a>
-</div>
+<ng-container *ngIf="cartProducts">
+    <div *ngIf="cartProducts.length > 0" class="text-end">
+        <a href="product" class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light" role="button">Reprendre mes achats</a>
+        <a href="purchases" class="btn btn-info btn-lg my-3 my-md-5 me-5" role="button">Commander ></a>
+    </div>
+    <div *ngIf="!cartProducts.length" class="text-center">
+        <a href="product" class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light" role="button">Reprendre mes achats</a>
+    </div>
+</ng-container>
 
 <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
     <div class="modal-dialog">

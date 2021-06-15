@@ -34,6 +34,7 @@ export class TokenStorageService {
   }
   getUser(): any {
     const user = sessionStorage.getItem(USER_KEY);
+    console.log(user);
     if (user) {
       return JSON.parse(user);
     }

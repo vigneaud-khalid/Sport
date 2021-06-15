@@ -10,13 +10,13 @@ export class ReservationService {
 
   constructor(private http:HttpClient) { }
 
-  getAllReservedProducts():Observable<any> {
+  getAllUserReservedProducts(id: any):Observable<any> {
     let host = environment.host;
-    return this.http.get<any>(host + "/users/1");
+    return this.http.get<any>(host + "/users/" + id);
   }
 
-  reserveProduct(data: any):Observable<any> {
+  reserveUserProduct(id: any, data: any):Observable<any> {
     let host = environment.host;
-    return this.http.patch<any>(host + "/users/1", { "reservations": data });
+    return this.http.patch<any>(host + "/users/" + id, { "reservations": data });
   }
 }

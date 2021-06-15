@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { cartProducts } from 'src/app/interfaces/cartProducts';
-import { CartService } from 'src/app/shared/cart.service';
+import { UsersService } from 'src/app/shared/users.service';
+import { TokenStorageService } from 'src/app/shared/token-storage.service';
 
 @Component({
   selector: 'app-purchases',
@@ -9,17 +10,25 @@ import { CartService } from 'src/app/shared/cart.service';
 })
 export class PurchasesComponent implements OnInit {
 
+  activeUserId?: any;
   cartProducts: cartProducts[]|null = null;
   totalPrice = 0;
 
-  constructor(private cartService: CartService) { }
+  constructor(private userService: UsersService, 
+              private tokenService: TokenStorageService) { }
   
   ngOnInit(): void {
-    this.loadCartProducts();
+    this.loadUserId();
+    this.loadUserCartProducts();
   }
 
-  loadCartProducts() {
-    this.cartService.getAllCartProducts().subscribe(data => {
+  loadUserId() {
+    this.activeUserId = this.tokenService.getUser().id;
+    console.log(this.activeUserId);
+  }
+
+  loadUserCartProducts() {
+    this.userService.getAllUserData(this.activeUserId).subscribe(data => {
       this.cartProducts = data.cart;
       if (this.cartProducts != null) {
         for(let cartProduct of this.cartProducts) {
