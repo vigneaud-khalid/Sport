@@ -10,7 +10,10 @@ import { DataService } from 'src/app/shared/data.service';
 })
 export class AppComponent {
   title = 'Sport';
+  isLoggedIn: any;
+  userRole: any;
   activeUserId?: any;
+  activeUserRole?: any;
   cartProducts: any[] = [];
   cartProductsNumber: any;
 
@@ -20,20 +23,29 @@ export class AppComponent {
     this.dataService.cartProductsNumber.subscribe( value => {
       this.cartProductsNumber = value;
     });
+    this.dataService.isLoggedIn.subscribe( value => {
+      this.isLoggedIn = value;
+    });
+    this.dataService.userRole.subscribe( value => {
+      this.userRole = value;
+    });
+    this.dataService.activeUserId.subscribe( value => {
+      this.activeUserId = value;
+    });
+    this.dataService.activeUserRole.subscribe( value => {
+      this.activeUserRole = value;
+    });
   }
 
   ngOnInit(): void {
-    this.loadUserId();
-    this.loadUserCartProductsNumber();
+    this.loadUserIdAndRole();
+    if (this.isLoggedIn) this.loadUserCartProductsNumber();
   }
 
-  ngOnChanges(): void {
-    this.loadUserCartProductsNumber();
-  }
-
-  loadUserId() {
+  loadUserIdAndRole() {
     this.activeUserId = this.tokenService.getUser().id;
-    console.log(this.activeUserId);
+    this.activeUserRole = this.tokenService.getUser().role;
+    console.log(this.activeUserRole);
   }
 
   loadUserCartProductsNumber() {

@@ -4,6 +4,7 @@ import { ProductsService } from 'src/app/shared/products.service';
 import { CartService } from '../../shared/cart.service';
 import { TokenStorageService } from 'src/app/shared/token-storage.service';
 import { UsersService } from 'src/app/shared/users.service';
+import { DataService } from 'src/app/shared/data.service';
 
 @Component({
   selector: 'app-product-details',
@@ -24,7 +25,8 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private productsService: ProductsService, 
               private cartService: CartService,
               private userService: UsersService,
-              private tokenService: TokenStorageService) { 
+              private tokenService: TokenStorageService,
+              private dataService: DataService) { 
 
   }
 
@@ -54,7 +56,7 @@ export class ProductDetailsComponent implements OnInit {
 
   addProductToCart(id: any) {
     if (this.cartProducts.some(item => item.id === id)) {
-      alert("Ce produit a déjà été ajouté au panier");
+      alert("This product has already been added to the cart");
     }
     else if(this.products != null && this.cartProducts != undefined) {
       this.productToAdd = this.products.filter((item: any) => item.id === id)[0];
@@ -62,5 +64,6 @@ export class ProductDetailsComponent implements OnInit {
     }
     console.log(this.cartProducts);
     this.cartService.addUserCartProduct(this.activeUserId, this.cartProducts).subscribe();
+    this.dataService.cartProductsNumber.next(this.cartProducts.length);
   }
 }

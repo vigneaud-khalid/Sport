@@ -22,14 +22,15 @@ import { ContactUsComponent } from './composants/contact-us/contact-us.component
 import { ProductDetailsComponent } from './composants/product-details/product-details.component';
 import { PagesadminGuard } from './guards/pagesadmin.guard';
 import { ProfileComponent } from './composants/profile/profile.component';
+import { LogoutComponent } from './composants/logout/logout.component';
 
 const routes: Routes = [
+    // localhost:4200/login 
+    { path: 'login', component: LoginComponent },
     // localhost:4200/
     { path: 'home', component: HomeComponent },
     // localhost:4200/register
-    { path: 'register', component: RegisterComponent },   
-    // localhost:4200/login 
-    { path: 'login', component: LoginComponent },            
+    { path: 'register', component: RegisterComponent },               
     { path: 'administration', component: AdministrationComponent, canActivate: [AdminGuard] },
 
     { path: 'supp-comment', component: SuppCommentComponent, canActivate: [PagesadminGuard] },
@@ -59,11 +60,13 @@ const routes: Routes = [
     { path: 'delivery', component: DeliveryComponent },
     // localhost:4200/delivery
     { path: 'payment', component: PaymentComponent },
+    // localhost:4200/logout
+    { path: 'logout', component: LogoutComponent},
     // localhost:4200/error
     { path: 'error', component: ErrorComponent },
 
     // pathMatch = "full" signifie que tout chemin d'url doit correspondre
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
     // On affichera error.component en cas de chemin inexistant
     { path: '**', redirectTo: '/error' }  
 ];

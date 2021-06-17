@@ -722,8 +722,57 @@
       "password": "$2a$10$ZG0qdmDZFFIjhNIbH2mmJuTzkecLUlQRyqeEu5Raz2xi1vjQKxDv.",
       "firstname": "Chuck",
       "lastname": "Norris",
-      "role": "user",
+      "role": "admin",
       "cart": [
+        {
+          "id": 3,
+          "name": "New Balance 4X",
+          "description": "Professional running shoes",
+          "description2": "The New Balance 4X Professional running shoes Flyknit is one of Nike’s most sustainable shoes to date, ..........made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The New Balance 4X Professional...2021",
+          "reference": "300732",
+          "category": "Multi",
+          "price": 98,
+          "quantity": 50,
+          "selected": false,
+          "available": true,
+          "image": "3.jpg",
+          "reservedBy": [],
+          "cartQuantity": 1
+        },
+        {
+          "name": "Puma 3001",
+          "description": "Sport men running shoes",
+          "description2": "The Puma 3001 : Sport men running shoes, Nike Air VaporMax 2020 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.“We wanted to look at not only Nike’s waste stream but other industrial waste streams and how we could leverage that content,” says Nike product design lead Jesi Small. “We let that drive a lot of the decision-making.”...Puma 3001",
+          "reference": "302952",
+          "category": "Ride",
+          "price": "133",
+          "quantity": 37,
+          "selected": false,
+          "available": true,
+          "image": "1.jpg",
+          "id": 1,
+          "reservedBy": [
+            "barbey.arthur@gmail.com",
+            "barbey.arthur@gmail.com",
+            "norris.chuck@gmail.com"
+          ],
+          "cartQuantity": 1
+        },
+        {
+          "name": "Nike Air Cold",
+          "description": "High quality sport running shoes",
+          "description2": "The Nike Air Cold 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
+          "reference": "301576",
+          "category": "Running",
+          "price": "135",
+          "quantity": "4",
+          "selected": false,
+          "available": true,
+          "image": "6.jpg",
+          "id": 6,
+          "reservedBy": [],
+          "cartQuantity": 1
+        },
         {
           "id": 2,
           "name": "Puma 301",
@@ -742,42 +791,24 @@
             "norris.chuck@gmail.com"
           ],
           "cartQuantity": 1
-        },
-        {
-          "id": 3,
-          "name": "New Balance 4X",
-          "description": "Professional running shoes",
-          "description2": "The New Balance 4X Professional running shoes Flyknit is one of Nike’s most sustainable shoes to date, ..........made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The New Balance 4X Professional...2021",
-          "reference": "300732",
-          "category": "Multi",
-          "price": 98,
-          "quantity": 50,
-          "selected": false,
-          "available": true,
-          "image": "3.jpg",
-          "reservedBy": [],
-          "cartQuantity": 1
-        },
-        {
-          "id": 5,
-          "name": "New Balance 7X",
-          "description": "Sport men running shoes",
-          "description2": "The New Balance 7X 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
-          "reference": "31593",
-          "category": "Ride",
-          "quantity": "78",
-          "selected": false,
-          "available": true,
-          "price": 89,
-          "image": "5.jpg",
-          "reservedBy": [],
-          "cartQuantity": 1
         }
       ],
       "reservations": [],
       "delivery": [],
       "orders": [],
       "id": 41
+    },
+    {
+      "email": "a.b@gmail.com",
+      "password": "$2a$10$N/DhRiG0SOMGzY7YVPqWB.sSl1C1FbWFnyCwAckMHgpeqRWyuzWmq",
+      "firstname": "Arty",
+      "lastname": "Krays",
+      "role": "admin",
+      "cart": [],
+      "reservations": [],
+      "delivery": [],
+      "orders": [],
+      "id": 42
     }
   ]
 }

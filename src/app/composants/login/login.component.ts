@@ -5,6 +5,7 @@ import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/shared/auth.service';
 import { TokenStorageService } from 'src/app/shared/token-storage.service';
 import { UsersService } from 'src/app/shared/users.service';
+import { DataService } from 'src/app/shared/data.service';
 
 @Component({
   selector: 'app-login',
@@ -20,14 +21,24 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
 
   errorMessage = '';
-  //user:User={};
-  //user: User = {};
   user: User = {};
   users: Array<User> = new Array<User>();
-  constructor(private router: Router, private authService: AuthService,
-    private usersService: UsersService, private tokenStorage: TokenStorageService) { }
 
-  ngOnInit(): void { }
+  userRole: any;
+
+  constructor(private router: Router, 
+              private authService: AuthService,
+              private usersService: UsersService, 
+              private tokenStorage: TokenStorageService,
+              private dataService: DataService) { }
+
+  ngOnInit(): void { 
+    this.dataService.isLoggedIn.subscribe( value => {
+      this.isLoggedIn = value;
+      console.log(this.isLoggedIn);
+    });
+    console.log(this.isLoggedIn);
+  }
 
   isAuthenticated() {
     const { email, password } = this.form;
@@ -42,11 +53,14 @@ export class LoginComponent implements OnInit {
             console.log('data : ' + data[0].role);
             var role = data[0].role;
             console.log('ROLE : ' + data[0].role);
+            this.userRole = data[0].role;
+            this.dataService.userRole.next(this.userRole);    
             this.tokenStorage.saveRole(role);
             this.tokenStorage.saveUser(data[0]);
             this.tokenStorage.getUser();
           })
         this.isLoggedIn = true;
+        this.dataService.isLoggedIn.next(this.isLoggedIn);
         this.isLoginFailed = false;
         alert("You are successfully logged in !!!!");
         this.router.navigateByUrl('/home');

@@ -34,6 +34,7 @@ import { ContactUsComponent } from './composants/contact-us/contact-us.component
 import { MatSlider, MatSliderModule } from '@angular/material/slider';
 import { ProfileComponent } from './composants/profile/profile.component';
 import { DataService } from './shared/data.service';
+import { LogoutComponent } from './composants/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { DataService } from './shared/data.service';
     ProductDetailsComponent,
     ContactusComponent,
     ContactUsComponent,
-    ProfileComponent
+    ProfileComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
