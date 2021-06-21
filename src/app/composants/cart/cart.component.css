@@ -10,3 +10,7 @@
 .btn:hover {
     background-color: RoyalBlue;
 }
+
+.custom-select {
+    width: 35%;
+}

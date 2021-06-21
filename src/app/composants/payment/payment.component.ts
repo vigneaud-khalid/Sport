@@ -119,7 +119,7 @@ export class PaymentComponent implements OnInit {
                 // Delete all cart products
                 this.cartService.updateUserCart(this.activeUserId, []).subscribe();
                 alert('Thank you for your order. Your order is being processed.');
-                // location.href='product';
+                location.href='product';
               }
             }
           });

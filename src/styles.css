@@ -19,6 +19,13 @@ h1 {
 .order-title {
     margin-top: 5rem;
 }
+
+@media (min-width: 576px) and (max-width: 974px) {
+    .order-title {
+        margin-top: 7rem;
+    }
+}
+
 .titleAD {
     text-align: center;
     margin-top: 0rem;

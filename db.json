@@ -7,7 +7,7 @@
       "reference": "302952",
       "category": "Ride",
       "price": "133",
-      "quantity": 37,
+      "quantity": 36,
       "selected": false,
       "available": true,
       "image": "1.jpg",
@@ -26,7 +26,7 @@
       "reference": "300953",
       "category": "Cross",
       "price": 131,
-      "quantity": 31,
+      "quantity": 30,
       "selected": true,
       "available": true,
       "image": "2.jpg",
@@ -128,7 +128,7 @@
       "reference": "300732",
       "category": "Multi",
       "price": 98,
-      "quantity": 54,
+      "quantity": 53,
       "selected": false,
       "available": true,
       "image": "9.jpg",
@@ -612,7 +612,27 @@
       "firstname": "Arthur",
       "lastname": "Barbey",
       "role": "user",
-      "cart": [],
+      "cart": [
+        {
+          "name": "Puma 3001",
+          "description": "Sport men running shoes",
+          "description2": "The Puma 3001 : Sport men running shoes, Nike Air VaporMax 2020 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.“We wanted to look at not only Nike’s waste stream but other industrial waste streams and how we could leverage that content,” says Nike product design lead Jesi Small. “We let that drive a lot of the decision-making.”...Puma 3001",
+          "reference": "302952",
+          "category": "Ride",
+          "price": "133",
+          "quantity": 37,
+          "selected": false,
+          "available": true,
+          "image": "1.jpg",
+          "id": 1,
+          "reservedBy": [
+            "barbey.arthur@gmail.com",
+            "barbey.arthur@gmail.com",
+            "norris.chuck@gmail.com"
+          ],
+          "cartQuantity": 1
+        }
+      ],
       "reservations": [],
       "delivery": [
         {
@@ -723,79 +743,123 @@
       "firstname": "Chuck",
       "lastname": "Norris",
       "role": "admin",
-      "cart": [
+      "cart": [],
+      "reservations": [],
+      "messages": [
         {
-          "id": 3,
-          "name": "New Balance 4X",
-          "description": "Professional running shoes",
-          "description2": "The New Balance 4X Professional running shoes Flyknit is one of Nike’s most sustainable shoes to date, ..........made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The New Balance 4X Professional...2021",
-          "reference": "300732",
-          "category": "Multi",
-          "price": 98,
-          "quantity": 50,
-          "selected": false,
-          "available": true,
-          "image": "3.jpg",
-          "reservedBy": [],
-          "cartQuantity": 1
-        },
-        {
-          "name": "Puma 3001",
-          "description": "Sport men running shoes",
-          "description2": "The Puma 3001 : Sport men running shoes, Nike Air VaporMax 2020 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.“We wanted to look at not only Nike’s waste stream but other industrial waste streams and how we could leverage that content,” says Nike product design lead Jesi Small. “We let that drive a lot of the decision-making.”...Puma 3001",
-          "reference": "302952",
-          "category": "Ride",
-          "price": "133",
-          "quantity": 37,
-          "selected": false,
-          "available": true,
-          "image": "1.jpg",
-          "id": 1,
-          "reservedBy": [
-            "barbey.arthur@gmail.com",
-            "barbey.arthur@gmail.com",
-            "norris.chuck@gmail.com"
-          ],
-          "cartQuantity": 1
-        },
-        {
-          "name": "Nike Air Cold",
-          "description": "High quality sport running shoes",
-          "description2": "The Nike Air Cold 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
-          "reference": "301576",
-          "category": "Running",
-          "price": "135",
-          "quantity": "4",
-          "selected": false,
-          "available": true,
-          "image": "6.jpg",
-          "id": 6,
-          "reservedBy": [],
-          "cartQuantity": 1
-        },
-        {
-          "id": 2,
-          "name": "Puma 301",
-          "description": "Casual running shoes",
-          "description2": "The Puma 301 : Casual running shoes 2021 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight.......... How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The Sport men running shoes. New :Puma 301",
-          "reference": "300953",
-          "category": "Cross",
-          "price": 131,
-          "quantity": 31,
-          "selected": true,
-          "available": true,
-          "image": "2.jpg",
-          "reservedBy": [
-            "barbey.arthur@gmail.com",
-            "barbey.arthur@gmail.com",
-            "norris.chuck@gmail.com"
-          ],
-          "cartQuantity": 1
+          "company": null,
+          "firstName": "Arthur",
+          "lastName": "Bar",
+          "address": "1 rue",
+          "address2": null,
+          "city": "Emeu",
+          "state": "LA",
+          "postalCode": 77184,
+          "message": "Blablabla"
         }
       ],
-      "reservations": [],
-      "delivery": [],
-      "orders": [],
+      "delivery": [
+        {
+          "lastName": "",
+          "firstName": "",
+          "street": "",
+          "city": "",
+          "postalCode": "",
+          "phone": "",
+          "remarks": ""
+        }
+      ],
+      "orders": [
+        {
+          "cardHolder": "",
+          "cardNumber": "",
+          "cardExpirationDate": "",
+          "cryptogram": "",
+          "amount": 206.1,
+          "cart": [
+            {
+              "id": 9,
+              "name": "RunShoes 4X",
+              "description": "Professional running shoes",
+              "description2": "The RunShoes 4X 2021 is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.",
+              "reference": "300732",
+              "category": "Multi",
+              "price": 98,
+              "quantity": 54,
+              "selected": false,
+              "available": true,
+              "image": "9.jpg",
+              "reservedBy": [],
+              "cartQuantity": 1,
+              "size": "44",
+              "color": "Purple"
+            },
+            {
+              "id": 2,
+              "name": "Puma 301",
+              "description": "Casual running shoes",
+              "description2": "The Puma 301 : Casual running shoes 2021 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight.......... How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements. The Sport men running shoes. New :Puma 301",
+              "reference": "300953",
+              "category": "Cross",
+              "price": 131,
+              "quantity": 31,
+              "selected": true,
+              "available": true,
+              "image": "2.jpg",
+              "reservedBy": [
+                "barbey.arthur@gmail.com",
+                "barbey.arthur@gmail.com",
+                "norris.chuck@gmail.com"
+              ],
+              "cartQuantity": 1,
+              "size": "48",
+              "color": "Brown"
+            }
+          ],
+          "delivery": []
+        },
+        {
+          "cardHolder": "",
+          "cardNumber": "",
+          "cardExpirationDate": "",
+          "cryptogram": "",
+          "amount": 126.69,
+          "cart": [
+            {
+              "name": "Puma 3001",
+              "description": "Sport men running shoes",
+              "description2": "The Puma 3001 : Sport men running shoes, Nike Air VaporMax 2020 Flyknit is one of Nike’s most sustainable shoes to date, made with at least 50 percent recycled content by weight. How the shoe achieved that designation can be credited to a creative implementation of circular design principles in its varied elements.“We wanted to look at not only Nike’s waste stream but other industrial waste streams and how we could leverage that content,” says Nike product design lead Jesi Small. “We let that drive a lot of the decision-making.”...Puma 3001",
+              "reference": "302952",
+              "category": "Ride",
+              "price": "133",
+              "quantity": 37,
+              "selected": false,
+              "available": true,
+              "image": "1.jpg",
+              "id": 1,
+              "reservedBy": [
+                "barbey.arthur@gmail.com",
+                "barbey.arthur@gmail.com",
+                "norris.chuck@gmail.com"
+              ],
+              "cartQuantity": 1,
+              "size": "46",
+              "color": "Yellow"
+            }
+          ],
+          "delivery": [
+            {
+              "lastName": "",
+              "firstName": "",
+              "street": "",
+              "city": "",
+              "postalCode": "",
+              "phone": "",
+              "remarks": ""
+            }
+          ]
+        }
+      ],
       "id": 41
     },
     {
@@ -809,6 +873,12 @@
       "delivery": [],
       "orders": [],
       "id": 42
+    }
+  ],
+  "newsLetter": [
+    {
+      "id": 1,
+      "email": ""
     }
   ]
 }

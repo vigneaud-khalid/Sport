@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit {
 
   userRole: any;
 
+  cartProductsNumber: any;
+
   constructor(private router: Router, 
               private authService: AuthService,
               private usersService: UsersService, 
@@ -54,7 +56,9 @@ export class LoginComponent implements OnInit {
             var role = data[0].role;
             console.log('ROLE : ' + data[0].role);
             this.userRole = data[0].role;
-            this.dataService.userRole.next(this.userRole);    
+            this.dataService.userRole.next(this.userRole);
+            this.cartProductsNumber = data[0].cart.length;    
+            this.dataService.cartProductsNumber.next(this.cartProductsNumber);
             this.tokenStorage.saveRole(role);
             this.tokenStorage.saveUser(data[0]);
             this.tokenStorage.getUser();

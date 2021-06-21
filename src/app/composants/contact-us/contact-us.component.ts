@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ContactService } from 'src/app/shared/contact.service';
+import { TokenStorageService } from 'src/app/shared/token-storage.service';
 
 
 @Component({
@@ -9,9 +11,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactUsComponent implements OnInit {
   
-  
-  ngOnInit(): void {
-  }
+  activeUserId?: any;
   
   addressForm = this.fb.group({
     company: null,
@@ -24,7 +24,11 @@ export class ContactUsComponent implements OnInit {
     postalCode: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
     ],
-    shipping: ['free', Validators.required]
+    message: [null, Validators.required]
+  });
+
+  newsLetter = this.fb.group({
+    email: [null, Validators.required]
   });
 
   hasUnitNumber = false;
@@ -91,9 +95,39 @@ export class ContactUsComponent implements OnInit {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private tokenService: TokenStorageService,
+              private contactService: ContactService,
+              private fb: FormBuilder) {}
+  
+    ngOnInit(): void {
+    this.loadUserId();
+  }
+  
+  loadUserId() {
+    this.activeUserId = this.tokenService.getUser().id;
+    console.log(this.activeUserId);
+  }
 
   onSubmit(): void {
-    alert('Thanks for your Email!');
+    const {company, address2, ...partialObject} = this.addressForm.value;
+    console.log(partialObject);
+    if (Object.keys(partialObject).some(prop => partialObject[prop] === null)) {
+      alert("Please fill in all required fields");
+    }
+    else {
+      this.contactService.postUserMessage(this.activeUserId, this.addressForm.value).subscribe();
+      alert('Thank you for your message, we make sure to answer you quickly!');  
+    }
+  }
+
+  onSubmitEmail() {
+    console.log(this.newsLetter.value.email);
+    if (Object.keys(this.newsLetter.value).some(prop => this.newsLetter.value[prop] === null || "")) {
+      alert("Please fill in your email");
+    }
+    else {
+      this.contactService.subscribeToNewsLetter(this.addressForm.value.email).subscribe();
+      alert('Thank you for your newsletter subscription, we make sure to keep you updated with all the new things that will come up!');  
+    }
   }
 }

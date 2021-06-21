@@ -34,7 +34,8 @@ export class AuthService {
       cart: [],
       reservations: [],
       delivery: [],
-      orders: []
+      orders: [],
+      messages: []
     }, httpOptions);
   
 };

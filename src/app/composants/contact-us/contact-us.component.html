@@ -92,12 +92,11 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <mat-radio-group formControlName="shipping">
-                        <!-- <mat-radio-button value="free">Free Shipping</mat-radio-button>
-                        <mat-radio-button value="priority">Priority Shipping</mat-radio-button>
-                        <mat-radio-button value="nextday">Next Day Shipping</mat-radio-button> -->
-                        <mat-checkbox value="free">Subscribe to our Newsletter</mat-checkbox>
-                    </mat-radio-group>
+                    <mat-form-field class="full-width">
+                        <mat-label>Your message</mat-label>
+                        <textarea matInput #message maxlength="500" formControlName="message"></textarea>
+                        <mat-hint align="end">{{message.value.length}} / 500</mat-hint>
+                    </mat-form-field>
                 </div>
             </div>
         </mat-card-content>
@@ -113,7 +112,7 @@
         <!-- Section: Social media -->
         <!-- Section: Form -->
         <section class="">
-            <form action="">
+            <form [formGroup]="newsLetter" (ngSubmit)="onSubmitEmail()">
                 <!--Grid row-->
                 <div class="row d-flex justify-content-center">
                     <!--Grid column-->
@@ -128,7 +127,7 @@
                     <div class="col-md-5 col-12">
                         <!-- Email input -->
                         <div class="form-outline form-white mb-4">
-                            <input type="email" id="form5Example2" class="form-control" />
+                            <input type="email" id="form5Example2" class="form-control" formControlName="email"/>
                             <label class="form-label" for="form5Example2">Email address</label>
                         </div>
                     </div>

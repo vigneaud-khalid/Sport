@@ -1,17 +1,15 @@
 <div *ngIf="products">
     <div class="modal fade theme1 style1" *ngFor="let product of products" [id]="'product-details-'+product.id"
-        tabindex="-1" role="dialog">
+        tabindex="-1" role="dialog" aria-labelledby="'productDetailsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-8 mx-auto col-lg-5 mb-5 mb-lg-0">
-                            <div class="product-sync-init mb-20">
+                        <div class="col-md-8 mx-auto col-lg-5 mb-lg-0">
+                            <div class="product-sync-init">
                                 <div class="single-product">
                                     <div class="product-thumb">
                                         <img width="460" src="{{ url + product.image }}" alt="product-thumb">
@@ -19,25 +17,36 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-7 mt-5 mt-md-0">
+                        <div class="col-lg-7 mt-3">
                             <div class="modal-product-info">
                                 <div class="product-head">
                                     <div class="product-thumbnail position-relative">
-                                        <span class="btn btn-danger top-right">New</span>
+                                        <span class="btn btn-danger top-right mb-3">New</span>
                                     </div>
-                                    <h2 class="title">Product Name : {{ product.name }}</h2>
-                                    <h3 class="sub-title">Category : {{ product.category }} </h3>
+                                    <h2 class="sub-title">{{ product.name }}</h2>
+                                    <h3 class="title">Category : {{ product.category }} </h3>
                                 </div>
                                 <div class="product-body">
                                     <span class="product-price text-center"> <span class="new-price">Best Sellers</span>
                                     </span>
+                                    <div class="star-content mb-3">
+                                        <div class="rating">
+                                            <div class="stars">
+                                                <i class="fa fa-star gold"></i>
+                                                <i class="fa fa-star gold"></i>
+                                                <i class="fa fa-star gold"></i>
+                                                <i class="fa fa-star gold"></i>
+                                                <i class="fa fa-star gold"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <p>In stock : {{ product.quantity }}</p>
                                     <!-- <p>. USED</p> -->
                                     <!-- <p>. COLLECTIBLE</p> -->
                                 </div>
                                 <div class="product-footer">
                                     <div class="product-count style d-flex flex-column flex-sm-row my-4">
-                                        <p class="lead">Description : {{product.description2}}</p>
+                                        <p class="lead">{{product.description2}}</p>
                                         <div class="pro-social-links mt-10">
                                         </div>
                                     </div>
@@ -46,64 +55,13 @@
                                         <div class="modal-product-info">
                                             <div class="product-head">
                                                 <h2 class="title">New Products 2021</h2>
-                                                <h4 class="sub-title">Reference: {{ product.reference }} </h4>
-                                                <div class="star-content mb-20">
-                                                    <div class="rating">
-                                                        <div class="stars">
-                                                            <i class="fa fa-star gold"></i>
-                                                            <i class="fa fa-star gold"></i>
-                                                            <i class="fa fa-star gold"></i>
-                                                            <i class="fa fa-star gold"></i>
-                                                            <i class="fa fa-star gold"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-body">
-                                                    <p>Description : {{ product.description }}</p>
-                                                    <span class="product-price text-center"> <span class="new-price">Price :
-                                                            {{ product.price
-                                                            }} €</span>
-                                                    </span>
-                                                    <button class="btn btn-primary"
-                                                        (click)="addProductToCart(product.id)">Add to cart</button>
-                                                </div>
-                                                <div class="product-count style d-flex flex-column flex-sm-row mt-30 mb-30">
-                                                    <span class="mr-2"><i class="ion-android-add"></i></span>
-                                                    <div class="d-flex">
-                                                        <div class="card-body">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <select
-                                                                        class="md-form mdb-select colorful-select dropdown-primary">
-                                                                        <option value="" disabled selected>Choose your
-                                                                            option</option>
-                                                                        <option value="1">White</option>
-                                                                        <option value="2">Black</option>
-                                                                        <option value="3">Pink</option>
-                                                                    </select>
-                                                                    <label>Select color</label>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <select
-                                                                        class="md-form mdb-select colorful-select dropdown-primary">
-                                                                        <option value="" disabled selected>Choose your
-                                                                            option</option>
-                                                                        <option value="1">XS</option>
-                                                                        <option value="2">S</option>
-                                                                        <option value="3">L</option>
-                                                                    </select>
-                                                                    <label>Select size</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="text-center">
-                                                                <!-- <button type="button" class="btn btn-secondary"
-                                                                    data-dismiss="modal">Close</button> -->
-                                                                <a href="product"
-                                                                    class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light"
-                                                                    role="button">Search Products</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <h4 class="title">Reference: {{ product.reference }} </h4>
+                                                <p class="text-center" style="font-size: 24px">Price: <span class="text-info">{{ product.price}}€</span></p>
+                                                <div class="text-center">
+                                                    <button class="btn btn-lg btn-primary" (click)="addProductToCart(product.id)">Add to cart</button>
+                                                    <a href="product"
+                                                        class="btn btn-success btn-lg my-3 my-md-5 me-5 text-light"
+                                                        role="button">Search Products</a>
                                                 </div>
                                             </div>
                                         </div>

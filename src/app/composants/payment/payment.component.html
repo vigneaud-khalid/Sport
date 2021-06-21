@@ -1,33 +1,33 @@
-<h1 class="order-title text-light text-center mb-5">Votre commande</h1>
+<h1 class="order-title text-light text-center mb-5">Your order</h1>
 
-<h3 class="my-4 py-3 text-light text-center order-section-title-background">Paiement</h3>
+<h3 class="my-4 py-3 text-light text-center order-section-title-background">Payment</h3>
 <form [formGroup] = "paymentInformations" class="text-light" (ngSubmit)="checkQuantitiesAndRespond()">
     <div class="form-group mb-4 text-center">
         <img src="{{url}}" alt="Cards">
     </div>
     <div class="form-group mb-3 text-center">
-        <h5>Paiement d'un montant de</h5>
+        <h5>Payment in the amount of</h5>
         <h5 class="text-info">{{totalPrice | number:'1.0-2'}}€</h5>
     </div>
     <div class="form-group mb-3 mx-3">
-        <label for="cardHolder">Titulaire de la carte</label>
+        <label for="cardHolder">Card Holder</label>
         <input type="text" class="form-control mt-2" id="cardHolder" name="cardHolder" required formControlName="cardHolder">
     </div>
     <div class="form-group mb-3 mx-3">
-        <label for="cardNumber">Numéro de la carte</label>
+        <label for="cardNumber">Card Number</label>
         <input type="number" class="form-control mt-2" id="cardNumber" name="cardNumber" required formControlName="cardNumber">
     </div>
     <div class="form-group mb-3 mx-3">
-        <label for="cardExpirationDate">Expire fin</label>
+        <label for="cardExpirationDate">Card Expiration Date</label>
         <input type="text" class="form-control mt-2" id="cardExpirationDate" name="cardExpirationDate" placeholder="MM/AA" required formControlName="cardExpirationDate">
     </div>
     <div class="form-group mb-5 mx-3">
-        <label for="cryptogram">Cryptogramme</label>
+        <label for="cryptogram">Cryptogram</label>
         <input type="number" class="form-control mt-2" id="cryptogram" name="cryptogram" placeholder="Nombre composé de 3 chiffres au dos de la carte" required formControlName="cryptogram">
     </div>
     <div class="form-group text-center">
-        <a href="product" class="btn btn-success btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light" role="button">Reprendre mes achats</a>
-        <a href="cart" class="btn btn-primary btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light" role="button">Retour au panier</a>
-        <button type="submit" class="btn btn-info btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light">&#10003; Valider paiement</button>    
+        <a href="product" class="btn btn-success btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light" role="button">Resume my purchases</a>
+        <a href="cart" class="btn btn-primary btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light" role="button">Back to cart</a>
+        <button type="submit" class="btn btn-info btn-lg my-3 d-block mx-5 my-md-5 d-md-inline-block text-light">&#10003; Validate payment</button>    
     </div>
 </form>

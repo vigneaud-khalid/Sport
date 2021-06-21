@@ -39,7 +39,8 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.loadUserIdAndRole();
-    if (this.isLoggedIn) this.loadUserCartProductsNumber();
+    this.loadUserCartProductsNumber();
+    console.log(this.cartProductsNumber);
   }
 
   loadUserIdAndRole() {

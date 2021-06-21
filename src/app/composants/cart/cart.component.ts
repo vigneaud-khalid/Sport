@@ -18,6 +18,8 @@ export class CartComponent implements OnInit {
   url="../../../assets/img/";
   products: Products[]|null = null;
   cartProducts: cartProducts[]|null = null;
+  colors?: any;
+  sizes?: any;
   reservedProducts: any[] = [];
   productToReserve?: any;
   user?: any;
@@ -51,6 +53,12 @@ export class CartComponent implements OnInit {
   loadUserCartProducts() {
     this.userService.getAllUserData(this.activeUserId).subscribe(data => {
       this.cartProducts = data.cart;
+      if (this.cartProducts != null) {
+        this.colors = new Array(this.cartProducts.length).fill('');
+        this.sizes = new Array(this.cartProducts.length).fill('');
+      }
+      console.log(this.colors);
+      console.log(this.sizes);
     });
   }
 
@@ -105,6 +113,16 @@ export class CartComponent implements OnInit {
     }
   }
 
+  onSizeChangeEvent(i: any, event: any) {
+    this.sizes[i] = event.target.value;
+    console.log(this.sizes);
+  }
+
+  onColorChangeEvent(i: any, event: any) {
+    this.colors[i] = event.target.value;
+    console.log(this.colors);
+  }
+
   loadModalData(id: any) {
     console.log(id);
     this.productsService.getProduct(id).subscribe(data => {
@@ -134,6 +152,19 @@ export class CartComponent implements OnInit {
       this.productsService.updateProduct(this.productToReserve).subscribe();  
 
       alert("This product has been successfully reserved");
+    }
+  }
+
+  checkUserEntries() {
+    console.log('trigered');
+    if (this.sizes.includes('') || this.colors.includes('')) 
+      alert('Please choose a size and a color for each product');
+    else if (this.cartProducts) {
+      for (let i = 0; i < this.cartProducts.length; i++) {
+        this.cartProducts[i] = Object.assign(this.cartProducts[i], {size: this.sizes[i], color: this.colors[i]}) 
+      }
+      this.cartService.updateUserCart(this.activeUserId, this.cartProducts).subscribe();
+      location.href='purchases';
     }
   }
 }
